@@ -1,0 +1,89 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+header{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 85%), rgba(-1, 0, 0, 0));
+    height: 6em;
+}
+ul {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    top: 2.4em;
+    right: 3em;
+    grid-gap: 3em;
+}
+a {
+    text-decoration: none;
+    background-color: lightpink;
+    color: black;
+    padding: .5em 2em;
+    border-radius: .5em;
+}
+body{
+    height: 100vh;
+    background-image: url(images/aboutBG.avif); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-color: rgba(20, 20, 20, .6);
+    background-blend-mode: lighten;
+}
+img {
+    width: 37%;
+    position: relative;
+    top: 17%;
+    left: 9%;
+}
+h1 {
+    font-size: 2.5em;
+    margin-bottom: .1em;
+    width: 45%;
+    position: relative;
+    left: 41%;
+    top: -19%;
+}
+p {
+    font-size: 1.5em;
+    width: 45%;
+    position: relative;
+    left: 41%;
+    top: -19%;
+}
