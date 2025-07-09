@@ -60,6 +60,7 @@ span {
     margin-left: auto;
     margin-right: auto;
     border-radius: .35em;
+    margin-bottom: 5em;
 }
 .polaroid {
     width: 96%;
@@ -72,7 +73,7 @@ span {
 body {
 	background-color: beige;
     height: 100vh;
-    background-image: url(images/study1bg2.png); 
+    background-image: url(images/study3bg2.png); 
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
@@ -80,8 +81,6 @@ body {
     background-blend-mode: lighten;
 }
 article {
-    background-color: white;
-    border: solid;
     width: 48%;
     margin-top: 1em;
     margin-left: auto;
@@ -91,18 +90,14 @@ article {
 .logo {
 	width: 30%;
 }
-.container {
-	display: inline-flex;
-    grid-gap: 177px;
-    align-items: center;
-}
 p {
 	margin-right: 2em;
     font-size: 20px;
 }
-.nextbt {
-    text-align: end;
-    width: 85%;
+.previousbt {
+    text-align: start;
+    width: 45%;
     position: relative;
-    bottom: 24px;
+    bottom: 42px;
+    margin-left: 13%;
 }
