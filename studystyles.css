@@ -1,8 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,17 +23,8 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-    background-color: rgba(104, 200, 220, .5);
-    background-blend-mode: lighten;
-}
 ol, ul {
 	list-style: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
 }
 header{
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 85%), rgba(-1, 0, 0, 0));
@@ -59,18 +45,51 @@ a {
     padding: .5em 2em;
     border-radius: .5em;
 }
-iframe {
-    position: relative;
-    left: 33%;
-    height: 850px;
+h1 {
+	font-size: 3em;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
-img {
-    width: 35%;
+span {
+	visibility: hidden;
 }
-.contactBG1 {
-    position: relative;
-    top: -238px;
-    right: 620px;
-    z-index: -1;
-    opacity: .2;
+.box {
+	background-color: lightpink;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: .35em;
+}
+.polaroid {
+    width: 96%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    border: solid 1px;
+}
+body {
+	background-color: beige
+}
+article {
+    background-color: white;
+    border: solid;
+    width: 48%;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0;
+}
+.logo {
+	width: 30%;
+}
+.container {
+	display: inline-flex;
+    grid-gap: 177px;
+    align-items: center;
+}
+p {
+	margin-right: 2em;
+    font-size: 20px;
 }
