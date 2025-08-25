@@ -38,7 +38,7 @@ ul {
     right: 3em;
     grid-gap: 3em;
 }
-a {
+header a {
     text-decoration: none;
     background-color: lightpink;
     color: black;
@@ -94,10 +94,24 @@ p {
 	margin-right: 2em;
     font-size: 20px;
 }
-.previousbt {
-    text-align: start;
-    width: 45%;
+.next {
+    width: 3.5%;
+    background-color: lightpink;
+    padding: .5em;
+    border-radius: 2em;
     position: relative;
-    bottom: 42px;
-    margin-left: 13%;
+    bottom: 281px;
+    left: 108.8%;
+}
+header a:hover {
+    background-color: palevioletred;
+}
+.previous:hover {
+    background-color: palevioletred;
+}
+.next:hover {
+    background-color: palevioletred;
+}
+.active a {
+    background-color: gray;
 }

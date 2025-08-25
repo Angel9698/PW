@@ -38,7 +38,7 @@ ul {
     right: 3em;
     grid-gap: 3em;
 }
-a {
+header a {
     text-decoration: none;
     background-color: lightpink;
     color: black;
@@ -62,12 +62,13 @@ span {
     border-radius: .35em;
 }
 .polaroid {
-    width: 96%;
+    width: 95%;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 1em;
     border: solid 1px;
+    height: 392.67px;
 }
 body {
 	background-color: beige;
@@ -82,11 +83,12 @@ body {
 article {
     background-color: white;
     border: solid;
-    width: 48%;
+    width: 44%;
+    min-width: 730px;
     margin-top: 1em;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 0;
+    height: 550px;
 }
 .logo {
 	width: 30%;
@@ -95,21 +97,40 @@ article {
 	display: inline-flex;
     grid-gap: 177px;
     align-items: center;
+    margin-top: 10px;
 }
 p {
 	margin-right: 2em;
     font-size: 20px;
 }
-.previousbt {
-    text-align: start;
-    width: 45%;
+.next {
+    width: 3.5%;
+    background-color: lightpink;
+    padding: .5em;
+    border-radius: 2em;
     position: relative;
-    bottom: 42px;
-    margin-left: 13%;
+    bottom: 281px;
+    left: 108.8%;
 }
-.nextbt {
-    text-align: end;
-    width: 85%;
+.previous {
+    width: 3.5%;
+    background-color: lightpink;
+    padding: .5em;
+    border-radius: 2em;
     position: relative;
-    bottom: 24px;
+    bottom: 280px;
+    right: 20%;
+    rotate: 180deg;
+}
+header a:hover {
+    background-color: palevioletred;
+}
+.previous:hover {
+    background-color: palevioletred;
+}
+.next:hover {
+    background-color: palevioletred;
+}
+.active a {
+    background-color: gray;
 }

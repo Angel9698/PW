@@ -91,3 +91,9 @@ h2 {
     top: 30%;
     left: 43%;
 }
+a:hover {
+    background-color: palevioletred;
+}
+.active a {
+    background-color: gray;
+}

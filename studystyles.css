@@ -38,7 +38,7 @@ ul {
     right: 3em;
     grid-gap: 3em;
 }
-a {
+header a{
     text-decoration: none;
     background-color: lightpink;
     color: black;
@@ -62,7 +62,7 @@ span {
     border-radius: .35em;
 }
 .polaroid {
-    width: 96%;
+    width: 95%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -82,11 +82,12 @@ body {
 article {
     background-color: white;
     border: solid;
-    width: 48%;
+    width: 44%;
+    min-width: 730px;
     margin-top: 1em;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 0;
+    height: 550px;
 }
 .logo {
 	width: 30%;
@@ -95,14 +96,27 @@ article {
 	display: inline-flex;
     grid-gap: 177px;
     align-items: center;
+    margin-top: 10px;
 }
 p {
 	margin-right: 2em;
     font-size: 20px;
 }
-.nextbt {
-    text-align: end;
-    width: 85%;
+.next {
+    width: 3.5%;
+    background-color: lightpink;
+    padding: .5em;
+    border-radius: 2em;
     position: relative;
-    bottom: 24px;
+    bottom: 280px;
+    left: 115%;
+}
+header a:hover {
+    background-color: palevioletred;
+}
+.next:hover {
+    background-color: palevioletred;
+}
+.active a {
+    background-color: gray;
 }

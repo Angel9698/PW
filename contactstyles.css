@@ -59,6 +59,9 @@ a {
     padding: .5em 2em;
     border-radius: .5em;
 }
+a:hover {
+    background-color: palevioletred;
+}
 iframe {
     position: relative;
     left: 33%;
@@ -73,4 +76,7 @@ img {
     right: 620px;
     z-index: -1;
     opacity: .2;
+}
+.active a {
+    background-color: gray;
 }
