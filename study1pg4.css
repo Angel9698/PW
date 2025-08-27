@@ -60,7 +60,7 @@ span {
     margin-left: auto;
     margin-right: auto;
     border-radius: .35em;
-    margin-bottom: 5em;
+    margin-bottom: 3em;
 }
 body {
 	background-color: beige;
@@ -73,38 +73,39 @@ body {
     background-blend-mode: lighten;
 }
 article {
-    width: 48%;
+    width: 100%;
     margin-top: 1em;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 0;
 }
 .container {
     margin-top: -15px;
 }
 p {
-	margin-right: 1em;
-    margin-left: 1em;
+    margin-right: auto;
+    margin-left: auto;
     font-size: 20px;
+    width: 58%;
+    min-width: 730px;
 }
 .previous {
-    width: 3.2%;
+    width: 1.5%;
+    min-width: 30px;
     background-color: lightpink;
     padding: .5em;
     border-radius: 2em;
-    position: relative;
-    bottom: 264px;
-    right: 14.4%;
+    position: absolute;
+    bottom: 280px;
+    left: 150px;
     rotate: 180deg;
 }
 .next {
-    width: 3.2%;
+    width: 1.5%;
+    min-width: 30px;
     background-color: lightpink;
     padding: .5em;
     border-radius: 2em;
-    position: relative;
-    bottom: 266px;
-    left: 104.3%;
+    position: absolute;
+    bottom: 280px;
+    right: 150px;
 }
 header a:hover {
     background-color: palevioletred;
@@ -117,4 +118,30 @@ header a:hover {
 }
 .active a {
     background-color: gray;
+}
+@media screen and (max-width: 1340px) { 
+    h1 {
+        padding: 0 2em;
+        font-size: 2.5em;
+    }
+    .previous {
+        left: 100px;
+    }
+    .next {
+        right: 100px;
+    }
+}
+@media screen and (max-width: 1120px) { 
+    h1 {
+        padding: 0;
+        font-size: 2em;
+    }
+    .next {
+        left: 55%;
+        bottom: 14px;
+    }
+    .previous {
+        left: 41%;
+        bottom: 14px;
+    }
 }

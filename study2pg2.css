@@ -62,12 +62,13 @@ span {
     border-radius: .35em;
 }
 .polaroid {
-    width: 96%;
+    width: 92%;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 1em;
     border: solid 1px;
+    height: 450px;
 }
 body {
 	background-color: beige;
@@ -82,31 +83,44 @@ body {
 article {
     background-color: white;
     border: solid;
-    width: 31%;
+    width: 25%;
+    min-width: 425px;
     margin-top: 1em;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 0;
+    height: 546px;
 }
 .logo {
 	width: 30%;
 }
 .container {
-    padding: 2em;
+    padding: 1.6em;
     text-align: center;
 }
 p {
     margin-right: 2em;
     font-size: 20px;
 }
-.next {
-    width: 3.5%;
+.previous {
+    width: 1.5%;
+    min-width: 30px;
     background-color: lightpink;
     padding: .5em;
     border-radius: 2em;
-    position: relative;
-    bottom: 281px;
-    left: 108.8%;
+    position: absolute;
+    bottom: 280px;
+    left: 150px;
+    rotate: 180deg;
+}
+.next {
+    width: 1.5%;
+    min-width: 30px;
+    background-color: lightpink;
+    padding: .5em;
+    border-radius: 2em;
+    position: absolute;
+    bottom: 280px;
+    right: 150px;
 }
 header a:hover {
     background-color: palevioletred;
@@ -119,4 +133,30 @@ header a:hover {
 }
 .active a {
     background-color: gray;
+}
+@media screen and (max-width: 1340px) { 
+    h1 {
+        padding: 0 2em;
+        font-size: 2.5em;
+    }
+    .previous {
+        left: 100px;
+    }
+    .next {
+        right: 100px;
+    }
+}
+@media screen and (max-width: 1120px) { 
+    h1 {
+        padding: 0;
+        font-size: 2em;
+    }
+    .next {
+        left: 55%;
+        bottom: 14px;
+    }
+    .previous {
+        left: 41%;
+        bottom: 14px;
+    }
 }
