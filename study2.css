@@ -68,9 +68,10 @@ span {
     margin-left: auto;
     margin-right: auto;
     margin-top: 1em;
+    height: 85%;
 }
 .polar1 {
-    height: 461px;
+    height: 87%;
 }
 body {
 	background-color: beige;
@@ -86,16 +87,12 @@ article {
     background-color: white;
     border: solid;
     width: 20%;
-    min-width: 350px;
+    min-width: 280px;
     margin-top: 1.5em;
-    border-radius: 0;
     rotate: -3deg;
-    height: 511px;
 }
 .article2 {
     rotate: 3deg;
-    width: 20%;
-    min-width: 410px;
 }
 .logo {
 	width: 30%;
@@ -104,11 +101,13 @@ article {
 	text-align: center;
 }
 p {
-    padding: .5em;
+    width: fit-content;
+    margin: auto;
     font-size: 20px;
+    padding: 5% 0;
 }
 .top-margin-p {
-    padding: .1em;
+    padding: 3% 0;
 }
 .articlescontainer {
     display: inline-flex;
@@ -154,25 +153,6 @@ header a:hover {
 @media screen and (max-width: 1340px) { 
     h1 {
         font-size: 2.5em;
-    }
-    .container {
-        grid-gap: 0;
-        margin-top: -17px;
-    }
-    article {
-        height: 485px;
-    }
-    .article2 {
-        min-width: 390px;
-    }
-    .polar1 {
-        height: 437px;
-    }
-    p {
-        padding: 1.2em 0;
-    }
-    .top-margin-p {
-        padding: .9em 0;
     }
     .previous {
         left: 100px;

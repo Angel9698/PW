@@ -68,7 +68,6 @@ span {
     margin-right: auto;
     margin-top: 1em;
     border: solid 1px;
-    height: 392.67px;
 }
 body {
 	background-color: beige;
@@ -84,12 +83,12 @@ article {
     background-color: white;
     border: solid;
     width: 44%;
-    min-width: 730px;
+    min-width: 500px;
+    max-width: 730px;
     margin-top: 1em;
     margin-left: auto;
     margin-right: auto;
     border-radius: 0;
-    height: 550px;
 }
 .logo {
 	width: 30%;
@@ -99,7 +98,6 @@ article {
     text-align: center;
 }
 p {
-    margin-top: 1.2em;
     font-size: 20px;
 }
 .previous {
@@ -139,6 +137,9 @@ header a:hover {
     h1 {
         padding: 0 2em;
         font-size: 2.5em;
+    }
+    .container {
+    grid-gap: 0;
     }
     .previous {
         left: 100px;
