@@ -62,12 +62,15 @@ span {
     border-radius: .35em;
 }
 .polaroid {
-    width: 96%;
+    width: 93%;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 1em;
     border: solid 1px;
+}
+.polar1 {
+    width: 87%;
 }
 body {
 	background-color: beige;
@@ -82,14 +85,16 @@ body {
 article {
     background-color: white;
     border: solid;
-    width: 18%;
+    width: 17%;
     margin-top: 1em;
     border-radius: 0;
     rotate: -3deg;
+    min-width: 240px;
 }
 .article2 {
     rotate: 3deg;
-    width: 37%;
+    width: 34%;
+    min-width: 480px;
 }
 .logo {
 	width: 30%;
@@ -105,6 +110,7 @@ p {
     display: inline-flex;
     grid-gap: 10px;
     justify-content: center;
+    margin-top: 1em;
 }
 .previous {
     width: 1.5%;

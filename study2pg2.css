@@ -68,7 +68,6 @@ span {
     margin-right: auto;
     margin-top: 1em;
     border: solid 1px;
-    height: 450px;
 }
 body {
 	background-color: beige;
@@ -83,12 +82,12 @@ body {
 article {
     background-color: white;
     border: solid;
-    width: 25%;
+    width: 30%;
     min-width: 425px;
+    max-width: 510px;
     margin-top: 1em;
     margin-left: auto;
     margin-right: auto;
-    height: 546px;
 }
 .logo {
 	width: 30%;
