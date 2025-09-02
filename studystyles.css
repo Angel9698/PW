@@ -89,17 +89,20 @@ article {
     margin-left: auto;
     margin-right: auto;
 }
-.logo {
-	width: 30%;
-}
-.container {
-	display: inline-flex;
-    grid-gap: 20%;
-    align-items: center;
-}
 p {
-	margin-right: 2em;
+    padding: .5em;
     font-size: 20px;
+}
+.previous {
+    width: 1.5%;
+    min-width: 30px;
+    background-color: lightpink;
+    padding: .5em;
+    border-radius: 2em;
+    position: absolute;
+    bottom: 280px;
+    left: 150px;
+    rotate: 180deg;
 }
 .next {
     width: 1.5%;
@@ -136,6 +139,10 @@ header a:hover {
     h1 {
         padding: 0;
         font-size: 2em;
+    }
+    .previous {
+        left: 41%;
+        bottom: 14px;
     }
     .next {
         left: 55%;

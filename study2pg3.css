@@ -98,6 +98,7 @@ article {
     text-align: center;
 }
 p {
+    padding: .5em;
     font-size: 20px;
 }
 .previous {

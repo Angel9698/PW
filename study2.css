@@ -63,15 +63,15 @@ span {
     border-radius: .35em;
 }
 .polaroid {
-    width: 90%; 
+    width: 90%;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 1em;
-    height: 85%;
+    height: 81%;
 }
 .polar1 {
-    height: 87%;
+    height: 81%;
 }
 body {
 	background-color: beige;
@@ -94,20 +94,13 @@ article {
 .article2 {
     rotate: 3deg;
 }
-.logo {
-	width: 30%;
-}
 .container {
 	text-align: center;
 }
 p {
     width: fit-content;
-    margin: auto;
-    font-size: 20px;
-    padding: 5% 0;
-}
-.top-margin-p {
-    padding: 3% 0;
+    font-size: 16px;
+    padding: 0 .25em;
 }
 .articlescontainer {
     display: inline-flex;

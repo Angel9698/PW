@@ -89,17 +89,9 @@ article {
     margin-left: auto;
     margin-right: auto;
 }
-.logo {
-	width: 30%;
-}
-.container {
-	display: inline-flex;
-    grid-gap: 20%;
-    align-items: center;
-}
 p {
-	margin-right: 2em;
     font-size: 20px;
+    padding: .5em;
 }
 .previous {
     width: 1.5%;
@@ -138,9 +130,6 @@ header a:hover {
     h1 {
         padding: 0 2em;
         font-size: 2.5em;
-    }
-    .container {
-        grid-gap: 0;
     }
     .previous {
         left: 100px;

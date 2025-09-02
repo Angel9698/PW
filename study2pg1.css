@@ -60,15 +60,6 @@ span {
     margin-left: auto;
     margin-right: auto;
     border-radius: .35em;
-    margin-bottom: 5em;
-}
-.polaroid {
-    width: 96%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1em;
-    border: solid 1px;
 }
 body {
 	background-color: beige;
@@ -80,15 +71,27 @@ body {
     background-color: rgba(245, 245, 220, .9);
     background-blend-mode: lighten;
 }
-.logo {
-	width: 30%;
+.polaroid {
+    width: 95%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    border: solid 1px;
+}
+article {
+    background-color: white;
+    border: solid;
+    width: 44%;
+    min-width: 500px;
+    max-width: 730px;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
 }
 p {
-    margin-right: auto;
-    margin-left: auto;
     font-size: 20px;
-    width: 58%;
-    min-width: 730px;
+    padding: .5em;
 }
 .previous {
     width: 1.5%;
