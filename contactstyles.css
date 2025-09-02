@@ -63,19 +63,21 @@ a:hover {
     background-color: palevioletred;
 }
 iframe {
-    position: relative;
-    left: 33%;
-    height: 850px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 600px;
 }
 img {
     width: 35%;
 }
 .contactBG1 {
-    position: relative;
-    top: -238px;
-    right: 620px;
+    position: absolute;
+    top: -6%;
+    right: 62%;
     z-index: -1;
     opacity: .2;
+    min-width: 500px;
 }
 .active a {
     background-color: gray;

@@ -63,11 +63,11 @@ body{
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
-    background-color: rgba(20, 20, 20, .6);
+    background-color: rgba(20, 20, 20, .8);
     background-blend-mode: saturation;
 }
 h1{
-    width: fit-content;
+    width: 617px;
     font-size: 5em;
     position: relative;
     top: 25%;
