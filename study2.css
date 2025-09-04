@@ -30,6 +30,10 @@ header{
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 85%), rgba(-1, 0, 0, 0));
     height: 6em;
 }
+nav {
+    display: flex;
+    justify-content: end;
+}
 ul {
     display: flex;
     justify-content: end;
@@ -38,13 +42,38 @@ ul {
     right: 3em;
     grid-gap: 3em;
 }
-header a {
+header a{
     text-decoration: none;
     background-color: lightpink;
     color: black;
     padding: .5em 2em;
     border-radius: .5em;
+    position: relative;
+    z-index: 2;
+}.dropdown li {
+	padding: 1rem;
+	padding-right: 0;
 }
+.dropdown li a {
+    padding: .5em .35em;
+}
+nav ul li ul {
+    position: absolute;
+    left: -15px;
+    top: -10px;
+    z-index: 1;
+    display: none;
+    width: 135px;
+    background-color: darkcyan;
+    padding-top: 2.6em;
+    border-radius: .5em;
+    border: 2px solid;
+	}
+  ul li:hover > ul, ul li:focus-within > ul, ul li ul:hover, ul li ul:focus {
+	visibility: visible;
+	opacity: 1;
+	display: block;
+  }
 h1 {
     padding: 0 1em;
 	font-size: 3em;
