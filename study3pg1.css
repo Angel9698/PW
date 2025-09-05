@@ -30,6 +30,14 @@ header{
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 85%), rgba(-1, 0, 0, 0));
     height: 6em;
 }
+ul {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    top: 2.4em;
+    right: 3em;
+    grid-gap: 3em;
+}
 nav {
     display: flex;
     justify-content: end;
@@ -64,7 +72,7 @@ nav ul li ul {
     z-index: 1;
     display: none;
     width: 135px;
-    background-color: darkcyan;
+    background-color: cornflowerblue;
     padding-top: 2.6em;
     border-radius: .5em;
     border: 2px solid;
@@ -89,10 +97,9 @@ span {
     margin-left: auto;
     margin-right: auto;
     border-radius: .35em;
-    margin-bottom: 5em;
 }
 .polaroid {
-    width: 96%;
+    width: 92%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -109,15 +116,26 @@ body {
     background-color: rgba(245, 245, 220, .9);
     background-blend-mode: lighten;
 }
+article {
+    background-color: white;
+    border: solid;
+    width: 32%;
+    min-width: 380px;
+    max-width: 460px;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0;
+}
 .logo {
 	width: 30%;
 }
+.container {
+    padding: .5em;
+    text-align: center;
+}
 p {
-    margin-right: auto;
-    margin-left: auto;
     font-size: 20px;
-    width: 58%;
-    min-width: 730px;
 }
 .previous {
     width: 1.5%;
@@ -127,8 +145,18 @@ p {
     border-radius: 2em;
     position: absolute;
     bottom: 280px;
-    left: 150px;
+    left: 20%;
     rotate: 180deg;
+}
+.next {
+    width: 1.5%;
+    min-width: 30px;
+    background-color: lightpink;
+    padding: .5em;
+    border-radius: 2em;
+    position: absolute;
+    bottom: 280px;
+    right: 20%;
 }
 header a:hover {
     background-color: palevioletred;
@@ -141,13 +169,27 @@ header a:hover {
 }
 .active a {
     background-color: gray;
-}@media screen and (max-width: 1340px) { 
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: cornflowerblue;
+    opacity: .96;
+}
+footer p {
+    width: 200px;
+    min-width: 0;
+    text-align: center;
+    font-size: 24px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width: 1340px) { 
     h1 {
         padding: 0 2em;
         font-size: 2.5em;
-    }
-    .previous {
-        left: 100px;
     }
 }
 @media screen and (max-width: 1120px) { 
@@ -155,8 +197,10 @@ header a:hover {
         padding: 0;
         font-size: 2em;
     }
+    .next {
+        right: 15%;
+    }
     .previous {
-        left: 41%;
-        bottom: 14px;
+        left: 15%;
     }
 }

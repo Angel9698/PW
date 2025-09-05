@@ -96,6 +96,22 @@ a:hover {
 .active a {
     background-color: gray;
 }
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: cornflowerblue;
+    opacity: .96;
+}
+footer p {
+    width: 200px;
+    min-width: 0;
+    text-align: center;
+    position: unset;
+    font-size: 24px;
+    margin-right: auto;
+    margin-left: auto;
+}
 @media screen and (max-width: 980px) { 
     img {
         left: 0%;

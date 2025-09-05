@@ -130,7 +130,7 @@ p {
     border-radius: 2em;
     position: absolute;
     bottom: 280px;
-    left: 150px;
+    left: 20%;
     rotate: 180deg;
 }
 .next {
@@ -141,7 +141,7 @@ p {
     border-radius: 2em;
     position: absolute;
     bottom: 280px;
-    right: 150px;
+    right: 20%;
 }
 header a:hover {
     background-color: palevioletred;
@@ -155,16 +155,26 @@ header a:hover {
 .active a {
     background-color: gray;
 }
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: cornflowerblue;
+    opacity: .96;
+}
+footer p {
+    width: 200px;
+    min-width: 0;
+    text-align: center;
+    font-size: 24px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
 @media screen and (max-width: 1340px) { 
     h1 {
         padding: 0 2em;
         font-size: 2.5em;
-    }
-    .previous {
-        left: 100px;
-    }
-    .next {
-        right: 100px;
     }
 }
 @media screen and (max-width: 1120px) { 
@@ -173,11 +183,9 @@ header a:hover {
         font-size: 2em;
     }
     .next {
-        left: 55%;
-        bottom: 14px;
+        right: 15%;
     }
     .previous {
-        left: 41%;
-        bottom: 14px;
+        left: 15%;
     }
 }

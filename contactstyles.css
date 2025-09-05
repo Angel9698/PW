@@ -66,7 +66,7 @@ iframe {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 600px;
+    height: 900px;
 }
 img {
     width: 35%;
@@ -81,4 +81,20 @@ img {
 }
 .active a {
     background-color: gray;
+}
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: cornflowerblue;
+    opacity: .96;
+    padding: .1em 0;
+}
+footer p {
+    width: 200px;
+    min-width: 0;
+    text-align: center;
+    font-size: 24px;
+    margin-right: auto;
+    margin-left: auto;
 }
