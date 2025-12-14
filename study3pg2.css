@@ -50,7 +50,24 @@ header a{
     border-radius: .5em;
     position: relative;
     z-index: 2;
-}.dropdown li {
+}
+.logo:hover {
+    background-color: transparent;
+}
+.logo {
+    background-color: transparent;
+}
+#logo {
+    position: absolute;
+    padding: .5em;
+    width: 225px;
+    z-index: 1;
+    min-width: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 65%);
+}
+.dropdown li {
 	padding: 1rem;
 	padding-right: 0;
 }
@@ -91,7 +108,7 @@ span {
     border-radius: .35em;
 }
 .polaroid {
-    width: 93%;
+    width: 85%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -99,7 +116,7 @@ span {
     border: solid 1px;
 }
 .polar1 {
-    width: 87%;
+    width: 77%;
 }
 body {
 	background-color: beige;
@@ -118,12 +135,14 @@ article {
     margin-top: 1em;
     border-radius: 0;
     rotate: -3deg;
-    min-width: 240px;
+    min-width: 233px;
+    height: 470px;
 }
 .article2 {
     rotate: 3deg;
-    width: 34%;
-    min-width: 480px;
+    width: 30%;
+    min-width: 418px;
+    height: 470px;
 }
 .logo {
 	width: 30%;
@@ -132,7 +151,7 @@ article {
 	text-align: center;
 }
 p {
-    padding: 1em;
+    padding: .5em;
     font-size: 20px;
 }
 .articlescontainer {
@@ -194,6 +213,9 @@ footer p {
     h1 {
         padding: 0 2em;
         font-size: 2.5em;
+    }
+    article, .article2 {
+        height: 410px;
     }
 }
 @media screen and (max-width: 1120px) { 

@@ -42,6 +42,22 @@ header{
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 85%), rgba(-1, 0, 0, 0));
     height: 6em;
 }
+.logo:hover {
+    background-color: transparent;
+}
+.logo {
+    background-color: transparent;
+}
+#logo {
+    position: absolute;
+    padding: .5em;
+    width: 225px;
+    z-index: 1;
+    min-width: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 65%);
+}
 ul {
     display: flex;
     justify-content: end;
