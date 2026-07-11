@@ -66,6 +66,7 @@ header a{
     border-radius: .5em;
     position: relative;
     z-index: 2;
+    font-size: 20px;
 }.dropdown li {
 	padding: 1rem;
 	padding-right: 0;

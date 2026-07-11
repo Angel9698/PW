@@ -74,6 +74,7 @@ a {
     color: black;
     padding: .5em 2em;
     border-radius: .5em;
+    font-size: 20px;
 }
 a:hover {
     background-color: palevioletred;
@@ -99,7 +100,7 @@ img {
     background-color: gray;
 }
 footer {
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100%;
     background-color: cornflowerblue;
