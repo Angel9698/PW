@@ -106,6 +106,12 @@ p {
     top: 33%;
     line-height: 1.15em;
 }
+section h1{
+    top: 45%;
+}
+section p{
+    top: 52%;
+}
 a:hover {
     background-color: palevioletred;
 }
