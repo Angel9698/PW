@@ -134,6 +134,11 @@ footer p {
     margin-right: auto;
     margin-left: auto;
 }
+@media screen and (max-width: 1880px) { 
+    p {
+        font-size: 20px;
+    }
+}
 @media screen and (max-width: 980px) { 
     img {
         left: 0%;
