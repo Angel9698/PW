@@ -90,20 +90,19 @@ img {
     left: 9%;
 }
 h1 {
-    font-size: 2.5em;
-    margin-bottom: .1em;
+    font-size: 3.5em;
     width: 45%;
-    position: relative;
+    position: absolute;
     left: 41%;
-    top: -19%;
+    top: 27%;
 }
 p {
     font-size: 1.5em;
     width: 45%;
     min-width: 500px;
-    position: relative;
+    position: absolute;
     left: 41%;
-    top: -19%;
+    top: 33%;
     line-height: 1.15em;
 }
 a:hover {
