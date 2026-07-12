@@ -180,3 +180,8 @@ footer p {
     margin-right: auto;
     margin-left: auto;
 }
+@media screen and (max-height: 804px) {
+    footer {
+        position: unset;
+    }
+}

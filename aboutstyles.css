@@ -95,19 +95,19 @@ h1 {
     width: 45%;
     position: absolute;
     left: 41%;
-    top: 24%;
+    top: 25%;
 }
 p {
     font-size: 1.5em;
     width: 45%;
-    min-width: 850px;
+    min-width: 700px;
     position: absolute;
     left: 41%;
     top: 30%;
     line-height: 1.15em;
 }
 section h1{
-    top: 42%;
+    top: 44%;
 }
 section p{
     top: 49%;
@@ -137,11 +137,38 @@ footer p {
 }
 @media screen and (max-width: 2190px) { 
     p {
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 1800px) { 
+    p {
         font-size: 20px;
     }
 }
 @media screen and (max-width: 980px) { 
     img {
         left: 0%;
+    }
+}
+@media screen and (max-height: 1076px) {
+    h1 {
+        font-size: 2.5em;
+    }
+}
+@media screen and (max-height: 770px) {
+    h1 {
+        font-size: 2em;
+        top: 26%;
+    }
+    section h1 {
+        top: 45%;
+    }
+}
+@media screen and (max-height: 850px) {
+    body {
+        height: 110vh;
+    }
+    footer {
+        bottom: -84px;
     }
 }

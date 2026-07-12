@@ -130,13 +130,13 @@ article {
     border: solid;
     width: 44%;
     min-width: 500px;
-    max-width: 730px;
-    margin-top: 1em;
+    max-width: 610px;
+    margin-top: 2em;
     margin-left: auto;
     margin-right: auto;
 }
 p {
-    padding: .5em;
+    padding: 1em;
     font-size: 20px;
 }
 .previous {
@@ -189,24 +189,16 @@ footer p {
     margin-left: auto;
     margin-right: auto;
 }
-@media screen and (max-width: 1340px) { 
-    h1 {
-        padding: 0 2em;
-        font-size: 2.5em;
-    }
+@media screen and (max-width: 1900px) { 
     .container {
         grid-gap: 0;
     }
+    .next, .previous {
+        bottom: 250px;
+    }
 }
-@media screen and (max-width: 1120px) { 
-    h1 {
-        padding: 0;
-        font-size: 2em;
-    }
-    .next {
-        right: 15%;
-    }
-    .previous {
-        left: 15%;
+@media screen and (max-height: 992px) {
+    footer {
+        position: unset;
     }
 }

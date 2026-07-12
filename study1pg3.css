@@ -131,13 +131,13 @@ article {
     width: 44%;
     min-width: 500px;
     max-width: 730px;
-    margin-top: 1em;
+    margin-top: 2em;
     margin-left: auto;
     margin-right: auto;
 }
 p {
     font-size: 20px;
-    padding: .5em;
+    padding: 1em;
 }
 .previous {
     width: 1.5%;
@@ -189,21 +189,16 @@ footer p {
     margin-left: auto;
     margin-right: auto;
 }
-@media screen and (max-width: 1340px) { 
-    h1 {
-        padding: 0 2em;
-        font-size: 2.5em;
-    }
-}
-@media screen and (max-width: 1120px) { 
-    h1 {
-        padding: 0;
-        font-size: 2em;
-    }
+@media screen and (max-width: 1900px) { 
     .next {
-        right: 15%;
+        bottom: 250px;
     }
     .previous {
-        left: 15%;
+        bottom: 250px;
+    }
+}
+@media screen and (max-height: 864px) {
+    footer {
+        position: unset;
     }
 }

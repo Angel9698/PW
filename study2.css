@@ -114,11 +114,11 @@ span {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: .8em;
+    margin-top: 1.4em;
     height: 79%;
 }
 .polar1 {
-    height: 80%;
+    height: 79%;
 }
 body {
 	background-color: beige;
@@ -134,7 +134,7 @@ article {
     background-color: white;
     border: solid;
     width: 20%;
-    min-width: 263px;
+    min-width: 340px;
     margin-top: 1.5em;
     rotate: -3deg;
 }
@@ -146,14 +146,22 @@ article {
 }
 p {
     width: fit-content;
-    font-size: 18px;
-    padding: 0 .25em;
+    font-size: 20px;
+    padding: 1em;
+}
+.container p:last-of-type {
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 24px;
 }
 .articlescontainer {
     display: inline-flex;
     width: 100%;
     grid-gap: 10px;
     justify-content: center;
+    margin-top: 2em;
 }
 .previous {
     width: 1.5%;
