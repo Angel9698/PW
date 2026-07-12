@@ -42,7 +42,7 @@ table {
 }
 header{
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 85%), rgba(-1, 0, 0, 0));
-    height: 6em;
+    height: 9.5em;
 }
 .logo:hover {
     background-color: transparent;
@@ -88,6 +88,71 @@ iframe {
 img {
     width: 35%;
 }
+/* 1. Center the form on the page and set a maximum width */
+form {
+  max-width: 450px;
+  margin: 150px auto;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* 2. Style the spacing and layout of form rows */
+form div {
+  margin-bottom: 20px;
+}
+
+/* 3. Style the labels to sit cleanly above the fields */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333333;
+  font-size: 20px;
+}
+
+/* 4. Style both inputs and textareas together */
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box; /* Prevents padding from breaking width */
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+  background-color: aliceblue;
+}
+
+/* 5. Highlight fields when the user clicks into them */
+input[type="email"]:focus,
+textarea :focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.15);
+}
+
+/* 6. Make the submission button look modern and interactive */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #0066cc;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* 7. Change button color slightly when hovered */
+button[type="submit"]:hover {
+  background-color: #0052a3;
+}
 .contactBG1 {
     position: absolute;
     top: -6%;
@@ -105,7 +170,7 @@ footer {
     width: 100%;
     background-color: cornflowerblue;
     opacity: .96;
-    padding: .1em 0;
+    padding: 1em 0;
 }
 footer p {
     width: 200px;

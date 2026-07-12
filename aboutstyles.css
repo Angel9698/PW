@@ -40,7 +40,7 @@ table {
 }
 header{
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 85%), rgba(-1, 0, 0, 0));
-    height: 6em;
+    height: 9.5em;
 }
 .logo:hover {
     background-color: transparent;
@@ -95,22 +95,22 @@ h1 {
     width: 45%;
     position: absolute;
     left: 41%;
-    top: 27%;
+    top: 24%;
 }
 p {
     font-size: 1.5em;
     width: 45%;
-    min-width: 500px;
+    min-width: 850px;
     position: absolute;
     left: 41%;
-    top: 33%;
+    top: 30%;
     line-height: 1.15em;
 }
 section h1{
-    top: 45%;
+    top: 42%;
 }
 section p{
-    top: 52%;
+    top: 49%;
 }
 a:hover {
     background-color: palevioletred;
@@ -124,6 +124,7 @@ footer {
     width: 100%;
     background-color: cornflowerblue;
     opacity: .96;
+    padding: 1em 0;
 }
 footer p {
     width: 200px;
@@ -134,7 +135,7 @@ footer p {
     margin-right: auto;
     margin-left: auto;
 }
-@media screen and (max-width: 1880px) { 
+@media screen and (max-width: 2190px) { 
     p {
         font-size: 20px;
     }

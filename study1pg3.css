@@ -28,7 +28,7 @@ ol, ul {
 }
 header{
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 85%), rgba(-1, 0, 0, 0));
-    height: 6em;
+    height: 9.5em;
 }
 .logo:hover {
     background-color: transparent;
@@ -66,6 +66,7 @@ header a{
     border-radius: .5em;
     position: relative;
     z-index: 2;
+    font-size: 20px;
 }.dropdown li {
 	padding: 1rem;
 	padding-right: 0;
@@ -79,8 +80,8 @@ nav ul li ul {
     top: -10px;
     z-index: 1;
     display: none;
-    width: 135px;
-    background-color: darkcyan;
+    width: 156px;
+    background-color: cornflowerblue;
     padding-top: 2.6em;
     border-radius: .5em;
     border: 2px solid;
@@ -91,7 +92,7 @@ nav ul li ul {
 	display: block;
   }
 h1 {
-	font-size: 3em;
+	font-size: 4em;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
@@ -145,7 +146,7 @@ p {
     padding: .5em;
     border-radius: 2em;
     position: absolute;
-    bottom: 280px;
+    bottom: 500px;
     left: 20%;
     rotate: 180deg;
 }
@@ -156,7 +157,7 @@ p {
     padding: .5em;
     border-radius: 2em;
     position: absolute;
-    bottom: 280px;
+    bottom: 500px;
     right: 20%;
 }
 header a:hover {
@@ -177,6 +178,7 @@ footer {
     width: 100%;
     background-color: cornflowerblue;
     opacity: .96;
+    padding: 1em 0;
 }
 footer p {
     width: 200px;
