@@ -132,13 +132,13 @@ article {
     width: 44%;
     min-width: 500px;
     max-width: 730px;
-    margin-top: 1em;
+    margin-top: 2em;
     margin-left: auto;
     margin-right: auto;
 }
 p {
     font-size: 20px;
-    padding: .5em;
+    padding: 1em;
 }
 .previous {
     width: 1.5%;
@@ -189,6 +189,14 @@ footer p {
     padding: 0;
     margin-left: auto;
     margin-right: auto;
+}
+@media screen and (max-width: 1900px) { 
+    .next {
+        bottom: 250px;
+    }
+    .previous {
+        bottom: 250px;
+    }
 }
 @media screen and (max-width: 1340px) { 
     h1 {

@@ -132,7 +132,7 @@ article {
     width: 30%;
     min-width: 350px;
     max-width: 460px;
-    margin-top: 1em;
+    margin-top: 2em;
     margin-left: auto;
     margin-right: auto;
 }
@@ -144,8 +144,14 @@ article {
     text-align: center;
 }
 p {
-    padding: .5em;
+    padding: 1em;
     font-size: 20px;
+}
+article p:last-of-type {
+    font-size: 24px;
+    padding: 0;
+    font-weight: bold;
+    text-align: center;
 }
 .previous {
     width: 1.5%;
@@ -196,6 +202,14 @@ footer p {
     padding: 0;
     margin-left: auto;
     margin-right: auto;
+}
+@media screen and (max-width: 1900px) { 
+    .next {
+        bottom: 250px;
+    }
+    .previous {
+        bottom: 250px;
+    }
 }
 @media screen and (max-width: 1340px) { 
     h1 {
