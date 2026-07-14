@@ -109,11 +109,11 @@ span {
     border-radius: .35em;
 }
 .polaroid {
-    width: 96%;
+    width: 93%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1em;
+    margin-top: 1.2em;
     border: solid 1px;
 }
 body {
@@ -129,9 +129,9 @@ body {
 article {
     background-color: white;
     border: solid;
-    width: 50%;
+    width: 30%;
     min-width: 600px;
-    margin-top: 1em;
+    margin-top: 2em;
     margin-left: auto;
     margin-right: auto;
     border-radius: 0;

@@ -109,11 +109,11 @@ span {
     border-radius: .35em;
 }
 .polaroid {
-    width: 85%;
+    width: 95%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1em;
+    margin-top: 1.2em;
     border: solid 1px;
 }
 .polar1 {
@@ -132,18 +132,17 @@ body {
 article {
     background-color: white;
     border: solid;
-    width: 17%;
-    margin-top: 1em;
+    margin-top: 2em;
     border-radius: 0;
-    rotate: -3deg;
     min-width: 233px;
     height: 470px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .article2 {
-    rotate: 3deg;
-    width: 30%;
+    width: 35%;
     min-width: 418px;
-    height: 470px;
+    height: 100%;
 }
 .logo {
 	width: 30%;
@@ -152,14 +151,8 @@ article {
 	text-align: center;
 }
 p {
-    padding: .5em;
+    padding: 1em;
     font-size: 20px;
-}
-.articlescontainer {
-    display: inline-flex;
-    grid-gap: 10px;
-    justify-content: center;
-    margin-top: 1em;
 }
 .previous {
     width: 1.5%;
@@ -225,7 +218,7 @@ footer p {
         font-size: 2.5em;
     }
     article, .article2 {
-        height: 410px;
+        height: 425px;
     }
 }
 @media screen and (max-width: 1120px) { 
