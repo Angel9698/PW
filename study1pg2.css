@@ -26,8 +26,9 @@ footer, header, hgroup, menu, nav, section {
 ol, ul {
 	list-style: none;
 }
-html {
+html, body{
     width: fit-content;
+    height: 100vh;
 }
 header{
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 85%), rgba(-1, 0, 0, 0));
@@ -123,7 +124,6 @@ span {
 body {
     width: fit-content;
 	background-color: beige;
-    height: 100vh;
     background-image: url(images/study1bg2.png); 
     background-size: cover; 
     background-repeat: no-repeat; 
@@ -134,7 +134,7 @@ body {
 article {
     width: 75%;
     min-width: 500px;
-    margin-top: 2em;
+    margin-top: 1em;
     margin-left: 5%;
     margin-right: auto;
     display: grid;
@@ -149,8 +149,9 @@ article {
 }
 h3 {
     font-size: 22px;
+    font-weight: bold;
 }
-h3, h4 {
+h4 {
     font-weight: bold;
     margin-top: .3em;
 }
@@ -174,9 +175,9 @@ p {
     background-color: lightpink;
     padding: .5em;
     border-radius: 2em;
-    position: absolute;
-    bottom: 500px;
-    left: 20%;
+    position: relative;
+    top: 10px;
+    left: 44%;
     rotate: 180deg;
 }
 .next {
@@ -185,9 +186,9 @@ p {
     background-color: lightpink;
     padding: .5em;
     border-radius: 2em;
-    position: absolute;
-    bottom: 500px;
-    right: 20%;
+    position: relative;
+    top: 10px;
+    left: 52%;
 }
 header a:hover {
     background-color: palevioletred;
@@ -210,9 +211,7 @@ footer {
     padding: 1em 0;
 }
 footer p {
-    width: 200px;
-    min-width: 0;
-    text-align: center;
+    width: fit-content;
     font-size: 24px;
     padding: 0;
     margin-left: auto;
@@ -225,7 +224,7 @@ footer p {
 }
 @media screen and (max-width: 780px) {
     nav {
-        display: unset;
+        right: 1em;
     }
     header {
         height: fit-content;
@@ -243,10 +242,9 @@ footer p {
         font-size: 17px;
     }
 }
-@media screen and (max-width: 709px) {
+@media screen and (max-width: 1460px) {
     footer {
         position: unset;
-        margin-top: 1em;
     }
 }
 @media screen and (max-width: 692px) {
