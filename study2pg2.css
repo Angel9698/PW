@@ -27,7 +27,7 @@ ol, ul {
 	list-style: none;
 }
 html, body{
-    width: fit-content;
+    width: 100%;
     height: 100vh;
 }
 header{
@@ -113,18 +113,23 @@ span {
     border-radius: .35em;
 }
 .polaroid {
-    width: 98%;
+    width: 65%;
     margin: 1em 0;
     border: solid 1px;
 }
 .first {
-    width: 58.3%;
+    width: 68%;
     margin-left: auto;
 }
+.second {
+    margin-left: auto;
+}
+.third {
+    width: 59%;
+}
 body {
-    width: fit-content;
 	background-color: beige;
-    background-image: url(images/study3bg2.png); 
+    background-image: url(images/study2bg2.png); 
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
@@ -135,11 +140,11 @@ article {
     width: 75%;
     min-width: 500px;
     margin-top: 1em;
-    margin-left: 5%;
+    margin-left: auto;
     margin-right: auto;
     display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 1em;
+    grid-gap: 2em;
 
 }
 .wrapper {
@@ -248,9 +253,12 @@ footer p {
         font-size: 17px;
     }
 }
-@media screen and (max-width: 1460px) {
+@media screen and (max-width: 711px) {
     footer {
         position: unset;
+    }
+    .second {
+        margin-left: 0;
     }
 }
 @media screen and (max-width: 692px) {

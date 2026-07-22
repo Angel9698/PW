@@ -98,19 +98,13 @@ h1 {
     top: 25%;
 }
 p {
-    font-size: 1.5em;
+    font-size: 1.8em;
     width: 45%;
     min-width: 700px;
     position: absolute;
     left: 41%;
-    top: 30%;
-    line-height: 1.15em;
-}
-section h1{
-    top: 44%;
-}
-section p{
-    top: 49%;
+    top: 32%;
+    line-height: 1.35em;
 }
 a:hover {
     background-color: palevioletred;

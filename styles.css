@@ -1,8 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,15 +23,8 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
 ol, ul {
 	list-style: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
 }
 header{
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 85%), rgba(-1, 0, 0, 0));
@@ -56,14 +44,11 @@ header{
     min-width: 0;
     top: 0;
     left: 0;
+    background-color: rgba(0, 0, 0, 65%);
 }
-a {
-    text-decoration: none;
-    background-color: lightpink;
-    color: black;
-    padding: .5em 2em;
-    border-radius: .5em;
-    font-size: 20px;
+nav {
+    display: flex;
+    justify-content: end;
 }
 ul {
     display: flex;
@@ -73,43 +58,177 @@ ul {
     right: 3em;
     grid-gap: 3em;
 }
-body{
+header a{
+    text-decoration: none;
+    background-color: lightpink;
+    color: black;
+    padding: .5em 2em;
+    border-radius: .5em;
+    position: relative;
+    z-index: 2;
+    font-size: 20px;
+}
+.dropdown li {
+	padding: 1rem;
+	padding-right: 0;
+}
+.dropdown li a {
+    padding: .5em .35em;
+}
+nav ul li ul {
+    position: absolute;
+    left: -15px;
+    top: -10px;
+    z-index: 1;
+    display: none;
+    width: 156px;
+    background-color: cornflowerblue;
+    padding-top: 2.6em;
+    border-radius: .5em;
+    border: 2px solid;
+	}
+  ul li:hover > ul, ul li:focus-within > ul, ul li ul:hover, ul li ul:focus {
+	visibility: visible;
+	opacity: 1;
+	display: block;
+  }
+h1 {
+	font-size: 4em;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+span {
+	visibility: hidden;
+}
+.box {
+	background-color: lightpink;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: .35em;
+}
+.polaroid {
+    width: 95%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    border: solid 1px;
+}
+body {
+	background-color: beige;
     height: 100vh;
-    background-image: url(images/homeBG.avif); 
+    background-image: url(images/study2bg2.png); 
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
-    background-color: rgba(20, 20, 20, .8);
-    background-blend-mode: saturation;
+    background-color: rgba(245, 245, 220, .9);
+    background-blend-mode: lighten;
 }
-h1{
-    width: 617px;
-    font-size: 5em;
-    position: relative;
-    top: 25%;
+article {
+    background-color: white;
+    border: solid;
+    width: 44%;
+    min-width: 500px;
+    max-width: 730px;
+    margin-top: 2em;
     margin-left: auto;
     margin-right: auto;
-    color: beige;
+    border-radius: 0;
 }
-h2 {
-    width: fit-content;
-    font-size: 3em;
-    position: relative;
-    top: 25%;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.2em;
-    margin-top: .2em;
-    color: beige;
+.logo {
+	width: 30%;
 }
-#workbt {
-    position: relative;
-    top: 30%;
-    left: 44%;
+.container {
+    padding: 2em;
+    text-align: center;
 }
-a:hover {
+p {
+    padding: 1em;
+    font-size: 20px;
+}
+article p:last-of-type {
+    font-size: 24px;
+    padding: 0;
+    font-weight: bold;
+    text-align: center;
+}
+.previous {
+    width: 1.5%;
+    min-width: 30px;
+    background-color: lightpink;
+    padding: .5em;
+    border-radius: 2em;
+    position: absolute;
+    bottom: 500px;
+    left: 20%;
+    rotate: 180deg;
+}
+.next {
+    width: 1.5%;
+    min-width: 30px;
+    background-color: lightpink;
+    padding: .5em;
+    border-radius: 2em;
+    position: absolute;
+    bottom: 500px;
+    right: 20%;
+}
+header a:hover {
+    background-color: palevioletred;
+}
+.previous:hover {
+    background-color: palevioletred;
+}
+.next:hover {
     background-color: palevioletred;
 }
 .active a {
     background-color: gray;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: cornflowerblue;
+    opacity: .96;
+    padding: 1em 0;
+}
+footer p {
+    width: 200px;
+    min-width: 0;
+    text-align: center;
+    font-size: 24px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width: 1900px) { 
+    .next {
+        bottom: 250px;
+    }
+    .previous {
+        bottom: 250px;
+    }
+}
+@media screen and (max-width: 1340px) { 
+    h1 {
+        font-size: 2.5em;
+    }
+    .container {
+        grid-gap: 0;
+    }
+}
+@media screen and (max-width: 1120px) { 
+    h1 {
+        padding: 0;
+        font-size: 2em;
+    }
+    .next {
+        right: 15%;
+    }
+    .previous {
+        left: 15%;
+    }
 }
