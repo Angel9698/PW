@@ -29,9 +29,15 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+    min-height: 100dvh;
 	line-height: 1;
     background-color: rgba(104, 200, 220, .5);
     background-blend-mode: lighten;
+    background-image: url(images/aboutBG.avif);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-blend-mode: multiply;
 }
 ol, ul {
 	list-style: none;
@@ -85,13 +91,11 @@ iframe {
     margin-right: auto;
     height: 900px;
 }
-img {
-    width: 35%;
-}
 h1 {
-    font-size: 4em;
+    font-size: 3em;
     text-align: center;
-    margin-top: 2em;
+    margin-top: 2.7em;
+    padding: 0 .5em;
 }
 /* 1. Center the form on the page and set a maximum width */
 form {
@@ -185,8 +189,64 @@ footer p {
     margin-right: auto;
     margin-left: auto;
 }
-@media screen and (max-height: 804px) {
+@media screen and (max-width: 1090px) {
+    .logo {
+        visibility: hidden;
+    }
+    h1 {
+        font-size: 2.5em;
+        margin-top: 128px;
+    }
+}
+@media screen and (max-height: 1050px) {
+    h1 {
+        margin-top: 96px;
+    }
+    body {
+        background-position: top;
+    }
+}
+@media screen and (max-height: 700px) {
     footer {
         position: unset;
+    }
+}
+@media screen and (max-width: 860px) {
+    h1 {
+        margin-top: 80px;
+        font-size: 24px;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header a {
+        font-size: 17px;
+    }
+    nav ul {
+        display: flex;
+        justify-content: center;
+        right: 0;
+    }
+    ul {
+        grid-gap: 1em;
+    }
+    form {
+        margin-top: 1.4em;
+    }
+    label {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 600px) {
+    header a {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 430px) {
+    header a {
+        font-size: 9px;
+    }
+    body {
+        background-size: unset;
     }
 }

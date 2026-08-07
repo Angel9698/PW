@@ -74,8 +74,9 @@ a {
     border-radius: .5em;
     font-size: 20px;
 }
-body{
-    height: 100vh;
+body {
+    min-height: 100dvh;
+    margin: 0; /* Prevents unwanted default layout scrollbars */
     background-image: url(images/aboutBG.avif); 
     background-size: cover; 
     background-repeat: no-repeat; 
@@ -83,28 +84,20 @@ body{
     background-color: rgba(20, 20, 20, .6);
     background-blend-mode: lighten;
 }
-img {
-    width: 37%;
-    min-width: 400px;
-    position: relative;
-    top: 17%;
-    left: 9%;
+div {
+    margin-top: 8em;
 }
 h1 {
-    font-size: 3.5em;
-    width: 45%;
-    position: absolute;
-    left: 41%;
-    top: 25%;
+    font-size: 3em;
+    width: fit-content;
+    margin: 0 auto;
 }
 p {
     font-size: 1.8em;
-    width: 45%;
-    min-width: 700px;
-    position: absolute;
-    left: 41%;
-    top: 32%;
-    line-height: 1.35em;
+    width: 1000px;
+    line-height: 1.25em;
+    margin: 0 auto;
+    margin-top: .7em;
 }
 a:hover {
     background-color: palevioletred;
@@ -124,45 +117,75 @@ footer p {
     width: 200px;
     min-width: 0;
     text-align: center;
-    position: unset;
     font-size: 24px;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
 }
-@media screen and (max-width: 2190px) { 
-    p {
-        font-size: 22px;
+@media screen and (max-width: 1090px) {
+    .logo {
+        visibility: hidden;
     }
-}
-@media screen and (max-width: 1800px) { 
-    p {
-        font-size: 20px;
-    }
-}
-@media screen and (max-width: 980px) { 
-    img {
-        left: 0%;
-    }
-}
-@media screen and (max-height: 1076px) {
-    h1 {
+        h1 {
         font-size: 2.5em;
     }
-}
-@media screen and (max-height: 770px) {
-    h1 {
-        font-size: 2em;
-        top: 26%;
-    }
-    section h1 {
-        top: 45%;
+    p {
+        font-size: 1.5em;
+        width: 750px;
     }
 }
-@media screen and (max-height: 850px) {
+@media screen and (max-height: 1050px) {
+    div {
+        margin-top: 6em;
+    }
     body {
-        height: 110vh;
+        background-position: top;
     }
+}
+@media screen and (max-height: 882px) {
     footer {
-        bottom: -84px;
+        position: unset;
+    }
+}
+@media screen and (max-width: 860px) {
+    div {
+        margin-top: 5em;
+    }
+    header a {
+        font-size: 17px;
+    }
+    nav ul {
+        display: flex;
+        justify-content: center;
+        right: 0;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    ul {
+        grid-gap: 1em;
+    }
+    p {
+        font-size: 18px;
+        width: unset;
+        margin: 0 2em;
+        margin-top: 0.7em;
+    }
+}
+@media screen and (max-width: 600px) {
+    header a {
+        font-size: 14px;
+    }
+    label {
+        font-size: 15px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 430px) {
+    header a {
+        font-size: 9px;
+    }
+    body {
+        background-size: unset;
     }
 }
