@@ -74,7 +74,7 @@ ul {
     grid-gap: 3em;
 }
 body{
-    height: 100vh;
+    height: 100dvh;
     background-image: url(images/homeBG.avif); 
     background-size: cover; 
     background-repeat: no-repeat; 
@@ -83,7 +83,7 @@ body{
     background-blend-mode: saturation;
 }
 h1{
-    width: 617px;
+    width: fit-content;
     font-size: 5em;
     position: relative;
     top: 25%;
@@ -112,14 +112,57 @@ p {
     line-height: 1.2em;
     color: beige;
 }
-#workbt {
+div {
+    display: flex;
+    justify-content: center;
     position: relative;
     top: 30%;
-    left: 44%;
 }
 a:hover {
     background-color: palevioletred;
 }
 .active a {
     background-color: gray;
+}
+@media screen and (max-width: 980px) {
+    .logo {
+        visibility: hidden;
+    }
+}
+@media screen and (max-width: 780px) {
+    header a {
+        font-size: 17px;
+    }
+    nav {
+        right: 0;
+    }
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        font-size: 2em;
+        padding: 0 .5em;
+    }
+    p {
+        font-size: 18px;
+    }
+    #workbt {
+        font-size: 18px;
+    }
+    ul {
+        grid-gap: 1em;
+        right: 0;
+    }
+}
+@media screen and (max-width: 390px) {
+    header a {
+        font-size: 14px;
+    }
+    h3 {
+        font-size: 19px;
+    }
 }

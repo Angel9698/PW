@@ -218,10 +218,6 @@ footer p {
     }
 }
 @media screen and (max-width: 780px) {
-    header {
-        height: fit-content;
-        margin-bottom: 4em;
-    }
     header a {
         font-size: 17px;
     }
