@@ -146,9 +146,13 @@ article {
     margin-right: auto;
 }
 .wrapper {
+    width: 50%;
     margin-left: auto;
     text-align: center;
     grid-gap: 2em;
+}
+.wrapper p {
+    margin-bottom: 1em;
 }
 h3 {
     font-size: 22px;
