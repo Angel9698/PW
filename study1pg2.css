@@ -146,8 +146,7 @@ article {
     margin-right: auto;
 }
 .wrapper {
-    width: 60%;
-    max-width: 1000px;
+    width: min(1300px, 90%);
     margin-left: auto;
     margin-right: auto;
 }
@@ -161,78 +160,8 @@ article {
     margin: 1em auto 4em;
     border: solid 1px;
 }
-.design-decisions {
-    margin-top: 5em;
-}
-
-.decision-row {
-    display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
-    gap: 3em;
-    align-items: center;
-    margin-bottom: 6em;
-}
-
-.decision-copy {
-    text-align: left;
-}
-
-.decision-copy h3 {
-    font-size: 28px;
-    line-height: 1.2;
-    margin-bottom: .75em;
-}
-
-.decision-copy p {
-    font-size: 22px;
-    line-height: 1.6;
-    margin-bottom: 1em;
-}
-
-.decision-number {
-    visibility: visible;
-    display: block;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: .15em;
-    margin-bottom: 1em;
-    opacity: .6;
-}
-
-.decision-finding {
-    font-weight: bold;
-}
-
-.decision-principles {
-    margin-top: 1.5em;
-    font-size: 18px !important;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-}
-
-.decision-visual {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1em;
-}
-
-.comparison-image img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border: 1px solid rgba(0, 0, 0, .3);
-}
-
-.image-label {
-    font-size: 18px !important;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    margin-bottom: .5em !important;
-}
 h3 {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
     margin-bottom: .5em;
 }
@@ -308,7 +237,7 @@ footer p {
 
 .principles-section > h3 {
     text-align: center;
-    font-size: 28px;
+    font-size: 32px;
     margin-bottom: 1.5em;
 }
 
@@ -344,6 +273,195 @@ footer p {
     font-weight: bold;
     margin-bottom: 1em;
     opacity: .65;
+}
+.design-decisions {
+    width: min(1400px, 92%);
+    margin: 3em auto 0;
+}
+.two {
+    margin-top: 0;
+}
+.decision-row {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.6fr) minmax(0, 1.4fr);
+    gap: clamp(2em, 2vw, 2em);
+    align-items: center;
+    margin-bottom: clamp(3em, 3vw, 3em);
+}
+
+.decision-copy {
+    text-align: left;
+}
+
+.decision-copy h3 {
+    font-size: clamp(24px, 2.4vw, 28px);
+    line-height: 1.2;
+    margin-bottom: .75em;
+}
+
+.decision-copy p {
+    font-size: clamp(17px, 1.5vw, 22px);
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.decision-number {
+    visibility: visible;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: .15em;
+    margin-bottom: 1em;
+    opacity: .6;
+}
+
+.decision-finding {
+    font-weight: bold;
+}
+
+.decision-principles {
+    margin-top: 1.5em;
+    font-size: 18px !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+.decision-visual {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1em;
+    position: relative;
+    bottom: 3px;
+}
+
+.comparison-image {
+    min-width: 0;
+}
+
+.comparison-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, .3);
+}
+
+.image-label {
+    font-size: 15px !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-bottom: .5em !important;
+}
+
+/* Alternate desktop layout */
+.decision-row.reverse .decision-copy {
+    order: 2;
+}
+
+.decision-row.reverse .decision-visual {
+    order: 1;
+}
+.zoomable {
+    cursor: zoom-in;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2em;
+
+    background-color: rgba(0, 0, 0, 0.85);
+
+    z-index: 9999;
+}
+
+.lightbox.open {
+    display: flex;
+}
+
+.lightbox-image {
+    display: block;
+
+    max-width: 95vw;
+    max-height: 90vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+
+    border: none;
+    background: transparent;
+
+    color: white;
+    font-size: 45px;
+
+    cursor: pointer;
+}
+/* TABLET */
+@media screen and (max-width: 900px) {
+
+    .decision-row {
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
+
+    /* Keep text first on smaller screens */
+    .decision-row.reverse .decision-copy {
+        order: 1;
+    }
+
+    .decision-row.reverse .decision-visual {
+        order: 2;
+    }
+
+    .decision-copy {
+        max-width: 700px;
+    }
+}
+
+
+/* MOBILE */
+@media screen and (max-width: 600px) {
+
+    .design-decisions {
+        width: 90%;
+        margin-top: 3em;
+    }
+
+    .decision-row {
+        margin-bottom: 4em;
+        gap: 1.5em;
+    }
+
+    .decision-visual {
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+    }
+
+    .decision-copy h3 {
+        font-size: 24px;
+    }
+
+    .decision-copy p {
+        font-size: 17px;
+    }
+
+    .decision-principles {
+        line-height: 1.6;
+    }
 }
 @media screen and (max-width: 980px) {
     .logo {
