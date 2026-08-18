@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="images/favicon.ico">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
         <a class="logo" href="index.html">
             <img id="logo" src="images/angel logo.png" alt="Angel Garcia logo">
@@ -21,29 +22,59 @@
         </nav>
     </header>
 
-    <main>
-        <h1>Case Study #2</h1>
+    <main id="main-content" tabindex="-1">
         <div class="box" aria-hidden="true"></div>
 
-        <div class="case-nav" aria-label="Case study navigation">
+        <nav class="case-nav" aria-label="Case study navigation">
             <a href="study1pg3.html" aria-label="Previous case study">
                 <img class="previous" src="images/arrow-right.svg" alt="">
             </a>
             <a href="study2pg1.html" aria-label="Next case study">
                 <img class="next" src="images/arrow-right.svg" alt="">
             </a>
-        </div>
+        </nav>
 
-        <section class="project-overview">
-            <h2>COSRX</h2>
-            <p class="herop">Redesigning an e-commerce experience to improve usability, minimalism, transparency, and trust.</p>
-            <div class="project-meta">
-                <p><strong>Role:</strong> UX/UI Designer</p>
-                <p><strong>Methods:</strong> Heuristic evaluation, competitive analysis</p>
-                <p><strong>Tools:</strong> Figma, VS Code, Chrome DevTools</p>
-                <p><strong>Timeline:</strong> 2 weeks</p>
-            </div>
-        </section>
+        <section class="project-intro">
+
+  <div class="project-title-group">
+    <p class="project-type">UX Case Study</p>
+
+    <h1>COSRX</h1>
+
+    <p class="project-subtitle">
+      E-commerce UX Redesign
+    </p>
+
+    <p class="project-summary">
+        Improving clarity, usability, and trust across key moments in the shopping experience.
+    </p>
+  </div>
+
+  <div class="project-meta">
+
+    <div class="meta-item">
+      <span>Role</span>
+      <p>UX/UI Designer</p>
+    </div>
+
+    <div class="meta-item">
+      <span>Methods</span>
+      <p>Heuristic Evaluation, Competitive Analysis</p>
+    </div>
+
+    <div class="meta-item">
+      <span>Tools</span>
+      <p>Figma, VS Code, Chrome DevTools</p>
+    </div>
+
+    <div class="meta-item">
+      <span>Timeline</span>
+      <p>2 Weeks</p>
+    </div>
+
+  </div>
+
+</section>
 
         <div class="hero-media">
             <img class="polaroid" src="images/cosrxhero.png" alt="COSRX redesign overview">
@@ -54,10 +85,10 @@
                 <div class="challenge-section">
                     <div class="section-label">
                         <span>01</span>
-                        <p>The Challenge</p>
+                        <h2>The Challenge</h2>
                     </div>
                     <div class="challenge-grid">
-                        <h2>Does COSRX's digital experience reflect the same simplicity, transparency, and trust as its brand?</h2>
+                        <h3>Does COSRX's digital experience reflect the same simplicity, transparency, and trust as its brand?</h3>
                         <p>COSRX is built around a minimalist approach to skincare. I wanted to explore whether those same principles carried into its digital experience and identify opportunities to improve usability without compromising the brand's visual identity.</p>
                     </div>
                 </div>
@@ -65,7 +96,7 @@
                 <div class="problem-section">
                     <div class="section-label">
                         <span>02</span>
-                        <p>The Problem</p>
+                        <h2>The Problem</h2>
                     </div>
                     <p class="problem-intro">A heuristic evaluation of two key pages uncovered three recurring usability problems.</p>
                     <div class="problem-grid">
@@ -87,7 +118,7 @@
                 <div class="matter-section">
                     <div class="section-label">
                         <span>03</span>
-                        <p>Why It Mattered</p>
+                        <h2>Why It Mattered</h2>
                     </div>
                     <div class="matter-content">
                         <p class="matter-statement">Clear, transparent information helps users make more informed decisions.</p>
@@ -114,39 +145,39 @@
                 class="artifact zoomable"
                 src="images/artifact.png"
                 alt="A visual summary of the COSRX heuristic evaluation findings"
-              >
+               tabindex="0" role="button" aria-haspopup="dialog" aria-controls="lightbox" aria-label="Open larger view: A visual summary of the COSRX heuristic evaluation findings">
 
             </section>
 
             <section class="principles-section">
-                <h3>Design Principles</h3>
+                <h2>Design Principles</h2>
                 <div class="principle-grid">
                     <div class="principle-card">
                         <span class="principle-number">01</span>
-                        <h4>Clarity</h4>
+                        <h3>Clarity</h3>
                         <p>Make important information easier to find and understand.</p>
                     </div>
                     <div class="principle-card">
                         <span class="principle-number">02</span>
-                        <h4>Consistency</h4>
+                        <h3>Consistency</h3>
                         <p>Create predictable visual patterns for interactive elements.</p>
                     </div>
                     <div class="principle-card">
                         <span class="principle-number">03</span>
-                        <h4>Hierarchy</h4>
-                        <p>Prioritize content based on what users need to see and accomplish first.</p>
+                        <h3>Hierarchy</h3>
+                        <p>Prioritize content around what users need to understand and accomplish.</p>
                     </div>
                     <div class="principle-card">
                         <span class="principle-number">04</span>
-                        <h4>Trust</h4>
-                        <p>Surface critical information that helps users make confident decisions.</p>
+                        <h3>Trust</h3>
+                        <p>Make important product and safety information more transparent.</p>
                     </div>
                 </div>
             </section>
         </article>
 
-        <h3 class="design-heading">Design Decisions</h3>
-        <section class="design-decisions" aria-label="Design decisions">
+        <h2 class="design-heading" id="design-decisions-heading">Design Decisions</h2>
+        <section class="design-decisions" aria-labelledby="design-decisions-heading">
             <div class="decision-row">
                 <div class="decision-copy">
                     <span class="decision-number">01</span>
@@ -158,11 +189,11 @@
                 <div class="decision-visual">
                     <div class="comparison-image">
                         <p class="image-label">Before</p>
-                        <img class="zoomable" src="images/beforebottom.png" alt="Original COSRX interface">
+                        <img class="zoomable" src="images/beforebottom.png" alt="Original COSRX interface" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="lightbox" aria-label="Open larger view: Original COSRX interface">
                     </div>
                     <div class="comparison-image">
                         <p class="image-label">After</p>
-                        <img class="zoomable" src="images/aftertop.png" alt="Redesigned COSRX interface">
+                        <img class="zoomable" src="images/aftertop.png" alt="Redesigned COSRX interface" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="lightbox" aria-label="Open larger view: Redesigned COSRX interface">
                     </div>
                 </div>
             </div>
@@ -172,17 +203,17 @@
                     <span class="decision-number">02</span>
                     <h3>Making Interactions More Predictable</h3>
                     <p class="decision-finding">Interactive elements did not consistently communicate how they behaved.</p>
-                    <p>I standardized the visual treatment of interactive elements and removed misleading interaction cues so links and controls more clearly communicated when they could be used.</p>
+                    <p>I standardized the visual treatment of interactive elements so links and controls more clearly communicated when they could be used, while removing cues that suggested interaction where none existed.</p>
                     <p class="decision-principles">Clarity · Consistency</p>
                 </div>
                 <div class="decision-visual">
                     <div class="comparison-image">
                         <p class="image-label">Before</p>
-                        <img class="zoomable" src="images/before2.png" alt="Original interaction design">
+                        <img class="zoomable" src="images/before2.png" alt="Original interaction design" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="lightbox" aria-label="Open larger view: Original interaction design">
                     </div>
                     <div class="comparison-image">
                         <p class="image-label">After</p>
-                        <img class="zoomable" src="images/after2.png" alt="Redesigned interaction design">
+                        <img class="zoomable" src="images/after2.png" alt="Redesigned interaction design" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="lightbox" aria-label="Open larger view: Redesigned interaction design">
                     </div>
                 </div>
             </div>
@@ -192,17 +223,17 @@
                     <span class="decision-number">03</span>
                     <h3>Simplifying the Information Hierarchy</h3>
                     <p class="decision-finding">Important content competed with secondary information.</p>
-                    <p>I reorganized the page structure to create a clearer visual path and give greater emphasis to the information users need when evaluating products. Secondary content was reduced, regrouped, or repositioned so key product details and actions could be identified more easily.</p>
+                    <p>I reorganized the Reviews page to give greater emphasis to the information users need when evaluating products. Secondary content was reduced or repositioned so reviews and product information could be identified more easily.</p>
                     <p class="decision-principles">Clarity · Hierarchy</p>
                 </div>
                 <div class="decision-visual">
                     <div class="comparison-image">
                         <p class="image-label">Before</p>
-                        <img class="zoomable" src="images/before4.png" alt="Original COSRX interface with competing content hierarchy">
+                        <img class="zoomable" src="images/before4.png" alt="Original COSRX interface with competing content hierarchy" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="lightbox" aria-label="Open larger view: Original COSRX interface with competing content hierarchy">
                     </div>
                     <div class="comparison-image">
                         <p class="image-label">After</p>
-                        <img class="zoomable" src="images/after4.png" alt="Redesigned COSRX interface with improved information hierarchy">
+                        <img class="zoomable" src="images/after4.png" alt="Redesigned COSRX interface with improved information hierarchy" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="lightbox" aria-label="Open larger view: Redesigned COSRX interface with improved information hierarchy">
                     </div>
                 </div>
             </div>
@@ -212,17 +243,17 @@
                     <span class="decision-number">04</span>
                     <h3>Improving the Quick Buy Experience</h3>
                     <p class="decision-finding">The Quick Buy interface became obscured by overlapping elements.</p>
-                    <p>I redesigned the Quick Buy interaction so essential product information and controls remained visible when the feature was activated. The goal was to make the interaction clearer and more predictable instead of introducing additional visual friction.</p>
+                    <p>I redesigned Quick Buy so essential product information and controls remained visible when the feature was activated, reducing visual interference and making the interaction easier to understand.</p>
                     <p class="decision-principles">Clarity · Consistency · Hierarchy</p>
                 </div>
                 <div class="decision-visual">
                     <div class="comparison-image">
                         <p class="image-label">Before</p>
-                        <img class="zoomable" src="images/before3.png" alt="Original COSRX Quick Buy interface with overlapping content">
+                        <img class="zoomable" src="images/before3.png" alt="Original COSRX Quick Buy interface with overlapping content" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="lightbox" aria-label="Open larger view: Original COSRX Quick Buy interface with overlapping content">
                     </div>
                     <div class="comparison-image">
                         <p class="image-label">After</p>
-                        <img class="zoomable" src="images/after3.png" alt="Redesigned COSRX Quick Buy interface">
+                        <img class="zoomable" src="images/after3.png" alt="Redesigned COSRX Quick Buy interface" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="lightbox" aria-label="Open larger view: Redesigned COSRX Quick Buy interface">
                     </div>
                 </div>
             </div>
@@ -230,8 +261,8 @@
 
         <section class="expected-impact">
             <div class="impact-intro">
-                <h3>Expected Impact</h3>
-                <h4>A clearer experience built around transparency, consistency, and trust.</h4>
+                <h2>Expected Impact</h2>
+                <h3>A clearer experience built around transparency, consistency, and trust.</h3>
                 <p>The redesign was not tested after implementation, so these outcomes remain design hypotheses. However, each design decision directly addresses usability issues identified during the heuristic evaluation.</p>
             </div>
             <div class="impact-points">
@@ -251,15 +282,71 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026</p>
-    </footer>
+<footer class="site-footer">
 
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" type="button" aria-label="Close image">&times;</button>
-        <img class="lightbox-image" id="lightbox-image" src="" alt="">
+    <div class="footer-inner">
+
+        <nav class="footer-project-nav" aria-label="Case study navigation">
+
+            <a
+                class="footer-project-link next-project"
+                href="next-project.html"
+            >
+                [Project Name] →
+            </a>
+
+        </nav>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Angel Garcia</p>
+        </div>
+
     </div>
 
-    <script src="study1pg2.js"></script>
+</footer>
+
+<!-- Lightbox -->
+<div
+    class="lightbox"
+    id="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Expanded image"
+    aria-hidden="true"
+>
+    <button
+        class="lightbox-close"
+        type="button"
+        aria-label="Close expanded image"
+    >
+        &times;
+    </button>
+
+    <img
+        class="lightbox-image"
+        id="lightbox-image"
+        src=""
+        alt=""
+    >
+</div>
+
+
+<!-- Back to Top -->
+<button
+    class="back-to-top"
+    id="backToTop"
+    type="button"
+    aria-label="Back to top"
+>
+    <span aria-hidden="true">↑</span>
+</button>
+
+
+<!-- Load JavaScript LAST -->
+<script src="study1pg2.js"></script>
+
+</body>
+</html>
+
 </body>
 </html>

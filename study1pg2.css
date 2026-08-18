@@ -27,6 +27,7 @@
     --space-6: 4rem;
     --space-7: 5rem;
     --space-8: 6rem;
+    --space-9: 7rem;
 
     --content-width: 1200px;
     --wide-width: 1400px;
@@ -45,6 +46,7 @@ html {
 
 body {
     margin: 0;
+    overflow-wrap: break-word;
     min-height: 100dvh;
     color: var(--color-text);
     font-family: var(--font-family);
@@ -63,7 +65,6 @@ p {
     text-align: left;
 }
 
-h1,
 h2,
 h3,
 h4 {
@@ -75,6 +76,7 @@ h1 {
     width: fit-content;
     margin-inline: auto;
     font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: unset;
 }
 
 h2 {
@@ -93,6 +95,56 @@ ul {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+
+/* ---------- Accessibility ---------- */
+.skip-link {
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 10000;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-sm);
+    color: #000;
+    background: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    transform: translateY(-200%);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+#main-content:focus {
+    outline: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible {
+    outline: 3px solid #000;
+    outline-offset: 3px;
+}
+
+.zoomable[role="button"] {
+    border-radius: 0.125rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
 }
 
 /* ---------- Header / navigation ---------- */
@@ -116,13 +168,13 @@ header {
     background-color: rgba(0, 0, 0, 0.65);
 }
 
-nav {
+header nav {
     position: relative;
     top: 2.4rem;
     right: 3rem;
 }
 
-nav ul {
+header nav ul {
     display: flex;
     justify-content: flex-end;
     gap: 3rem;
@@ -131,12 +183,16 @@ nav ul {
 header a {
     position: relative;
     z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
     padding: 0.5rem 2rem;
     border-radius: var(--radius-md);
     color: var(--color-text);
     background-color: var(--color-accent);
     font-size: 1.25rem;
     text-decoration: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
 }
 
 header a:hover {
@@ -153,6 +209,14 @@ header a:hover {
 }
 
 
+.case-nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+}
+
 .case-nav {
     display: flex;
     justify-content: center;
@@ -167,6 +231,7 @@ header a:hover {
     padding: 0.5rem;
     border-radius: 50%;
     background-color: var(--color-accent);
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
 }
 
 .previous {
@@ -178,23 +243,73 @@ header a:hover {
     background-color: var(--color-accent-hover);
 }
 
-.project-overview {
-    width: min(var(--content-width), 90%);
-    margin: var(--space-3) auto var(--space-4);
+/* ========================================
+   PROJECT INTRO
+======================================== */
+
+.project-intro {
+    width: min(1200px, 88%);
+    margin: 1rem auto 5rem;
 }
 
-.project-overview h2 {
-    margin-bottom: var(--space-1);
+.project-title-group {
+    max-width: 800px;
 }
 
-.herop {
-    margin-bottom: var(--space-2);
-    font-size: clamp(1.25rem, 2vw, 1.5rem);
+.project-type {
+    margin-bottom: .75rem;
+    font-size: .8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: #555;
+}
+
+.project-intro h1 {
+    margin: 0 0 .3rem;
+    font-size: clamp(3rem, 5vw, 5rem);
+    line-height: 1;
+    font-weight: 700;
+}
+
+.project-subtitle {
+    margin: 0 0 .75rem;
+    font-size: 1.4rem;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.project-summary {
+    max-width: 700px;
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.6;
 }
 
 .project-meta {
     display: grid;
-    gap: 0.25rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, .25);
+}
+
+.meta-item span {
+    visibility: visible;
+    display: block;
+    margin-bottom: .4rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: #000;
+}
+
+.meta-item p {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.45;
 }
 
 .hero-media {
@@ -236,10 +351,11 @@ header a:hover {
     font-size: var(--font-small);
     font-weight: 700;
     letter-spacing: 0.1em;
-    opacity: 0.58;
+    color: #555;
 }
 
-.section-label p {
+.section-label h2 {
+    margin: 0;
     font-size: var(--font-label);
     font-weight: 700;
     line-height: 1.2;
@@ -258,7 +374,7 @@ header a:hover {
     align-items: start;
 }
 
-.challenge-grid h2 {
+.challenge-grid h3 {
     max-width: 700px;
     font-size: clamp(2rem, 4vw, 3.25rem);
     font-weight: 400;
@@ -341,14 +457,14 @@ header a:hover {
 
 .research-heading {
     max-width: 760px;
-    margin: 0 0 var(--space-md);
+    margin: 0 0 var(--space-3);
     font-size: clamp(1.75rem, 3vw, 2.5rem);
     line-height: 1.2;
     font-weight: 700;
 }
 
 .research-intro {
-    margin: 0 0 var(--space-lg);
+    margin: 0 0 var(--space-6);
     font-size: var(--font-body);
     line-height: var(--line-height-body);
 }
@@ -358,7 +474,7 @@ header a:hover {
 }
 
 .research-section > h3,
-.principles-section > h3,
+.principles-section > h2,
 .design-heading {
     margin-bottom: var(--space-3);
 }
@@ -369,18 +485,17 @@ header a:hover {
 
 .artifact {
     display: block;
-    width: min(1000px, 100%);
-    margin: 0 auto var(--space-6);
+    width: 100%;
     border: 1px solid var(--color-line-strong);
 }
 
 /* ---------- Design principles ---------- */
 .principles-section {
     width: min(var(--content-width), 100%);
-    margin: var(--space-6) auto;
+    margin: var(--space-9) auto;
 }
 
-.principles-section > h3 {
+.principles-section > h2 {
     text-align: center;
 }
 
@@ -402,7 +517,7 @@ header a:hover {
     margin-bottom: var(--space-2);
 }
 
-.principle-card h4 {
+.principle-card h3 {
     margin-bottom: var(--space-1);
 }
 
@@ -413,12 +528,12 @@ header a:hover {
 
 /* ---------- Design decisions ---------- */
 .design-heading {
-    width: min(var(--wide-width), 92%);
-    margin: var(--space-6) auto var(--space-5);
+    width: 75%;
+    margin: var(--space-6) auto var(--space-3);
 }
 
 .design-decisions {
-    width: min(var(--wide-width), 92%);
+    width: 75%;
     margin-inline: auto;
 }
 
@@ -532,6 +647,8 @@ header a:hover {
     top: 1.25rem;
     right: 1.875rem;
     border: 0;
+    width: 44px;
+    height: 44px;
     padding: 0;
     color: white;
     background: transparent;
@@ -556,11 +673,11 @@ header a:hover {
     text-align: center;
 }
 
-.impact-intro h3 {
+.impact-intro h2 {
     margin-bottom: var(--space-2);
 }
 
-.impact-intro h4 {
+.impact-intro h3 {
     margin-bottom: 0.75rem;
     font-size: clamp(1.5rem, 3vw, 1.75rem);
     line-height: 1.2;
@@ -598,17 +715,115 @@ header a:hover {
 }
 
 /* ---------- Footer ---------- */
-footer {
+.site-footer {
     width: 100%;
-    padding: var(--space-2) 0;
-    background-color: var(--color-footer);
-    opacity: 0.96;
+    margin-top: 4rem;
+    padding: 3rem 0 1rem;
+    background-color: cornflowerblue;
 }
 
-footer p {
-    width: fit-content;
-    margin-inline: auto;
+.footer-inner {
+    width: min(1200px, 88%);
+    margin: 0 auto;
+}
+
+.footer-project-nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    padding: 0 0 2rem;
+    position: unset;
+}
+
+.footer-project-link {
+    font-size: 1.25rem;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.footer-project-link:hover,
+.footer-project-link:focus-visible {
+    border-bottom-color: lightpink;
+}
+
+.footer-bottom {
+    width: 100%;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(0, 0, 0, .25);
+}
+
+.footer-bottom p {
+    margin: 0;
     font-size: 1.125rem;
+    text-align: center;
+}
+/* =========================
+   BACK TO TOP
+========================= */
+
+.back-to-top {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+
+    background-color: lightpink;
+    color: black;
+
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+
+    cursor: pointer;
+    z-index: 1000;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease,
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+/* Button becomes visible after scrolling */
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Hover */
+.back-to-top:hover {
+    background-color: palevioletred;
+    transform: translateY(-3px);
+}
+
+/* Keyboard accessibility */
+.back-to-top:focus-visible {
+    outline: 2px solid black;
+    outline-offset: 3px;
 }
 
 /* ---------- Responsive ---------- */
@@ -617,11 +832,11 @@ footer p {
         display: none;
     }
 
-    nav {
+    header nav {
         right: 0;
     }
 
-    nav ul {
+    header nav ul {
         justify-content: center;
     }
 
@@ -664,7 +879,7 @@ footer p {
         font-size: 1.0625rem;
     }
 
-    nav ul {
+    header nav ul {
         gap: var(--space-2);
     }
 
@@ -691,50 +906,426 @@ footer p {
     }
 }
 
-@media (max-width: 600px) {
-    .case-nav {
-        gap: var(--space-4);
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media screen and (max-width: 600px) {
+
+    /* -----------------------------
+       GENERAL LAYOUT
+    ----------------------------- */
+
+    body {
+        background-color: rgba(245, 245, 220, 0.96);
+        background-blend-mode: lighten;
     }
+
+    .wrapper {
+        width: auto;
+        margin-inline: 20px;
+    }
+
+    .case-intro,
+    .research-section,
+    .expected-impact {
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+
+    /* -----------------------------
+       HEADER / NAVIGATION
+    ----------------------------- */
+
+    header {
+        height: auto;
+        min-height: 4.5rem;
+        padding-bottom: 1rem;
+    }
+
+    header nav {
+        top: 1rem;
+        right: 0;
+    }
+
+    header nav ul {
+        justify-content: center;
+        gap: .75rem;
+    }
+
+    header a {
+        font-size: .875rem;
+        padding: .6rem 1rem;
+    }
+
+
+    /* -----------------------------
+       PROJECT INTRO
+    ----------------------------- */
+
+    .project-intro {
+    width: auto;
+    margin: 2rem 20px 1.5rem;
+}
+
+.project-type {
+    margin-bottom: .6rem;
+    font-size: .7rem;
+}
+
+.project-intro h1 {
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: .4rem;
+}
+
+.project-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: .65rem;
+}
+
+.project-summary {
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+.project-meta {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem 1rem;
+    margin-top: 1.75rem;
+    padding-top: 1.25rem;
+}
+
+.meta-item span {
+    font-size: .7rem;
+}
+
+.meta-item p {
+    font-size: .9rem;
+    line-height: 1.4;
+}
+
+.polaroid {
+    width: calc(100% - 40px);
+    margin: 1.5rem auto 2.5rem;
+}
+
+
+    /* -----------------------------
+       CHALLENGE
+    ----------------------------- */
 
     .case-intro {
-        margin-block: var(--space-6);
+        margin-top: 3.5rem;
+        margin-bottom: 3.5rem;
     }
 
-    .problem-section,
-    .matter-section {
-        padding-top: var(--space-6);
+    .challenge-section {
+        padding-bottom: 3rem;
     }
+
+    .challenge-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .challenge-grid h3 {
+        max-width: none;
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+
+    .challenge-grid p {
+        margin-top: 0;
+        font-size: 1rem;
+    }
+
+
+    /* -----------------------------
+       SECTION LABELS
+    ----------------------------- */
+
+    .section-label {
+        margin-bottom: 1.25rem;
+        gap: .65rem;
+    }
+
+    .section-label span {
+        font-size: .75rem;
+    }
+
+    .section-label h2 {
+        font-size: .8rem;
+    }
+
+
+    /* -----------------------------
+       PROBLEM SECTION
+    ----------------------------- */
 
     .problem-section {
-        padding-bottom: var(--space-6);
+        padding: 3rem 0;
     }
 
-    .design-heading,
+    .problem-intro {
+        margin-bottom: 1.25rem;
+        font-size: 1rem;
+    }
+
+    .problem-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .problem-item {
+        padding: 2rem 0;
+    }
+
+    .problem-item:first-child {
+        padding-top: .75rem;
+    }
+
+    .problem-item + .problem-item {
+        border-left: none;
+        border-top: 1px solid rgba(0, 0, 0, .18);
+    }
+
+    .problem-item h3 {
+        font-size: 1.4rem;
+        line-height: 1.1;
+        margin-bottom: .75rem;
+    }
+
+    .problem-item p {
+        font-size: 1rem;
+        line-height: 1.55;
+    }
+
+
+    /* -----------------------------
+       WHY IT MATTERED
+    ----------------------------- */
+
+    .matter-section {
+        padding-top: 3rem;
+    }
+
+    .matter-statement {
+        font-size: 1.8rem;
+        line-height: 1.15;
+        margin-bottom: 1rem;
+    }
+
+    .matter-content > p:last-child {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+
+    /* -----------------------------
+       RESEARCH
+    ----------------------------- */
+
+    .research-section {
+        margin-top: 3.5rem;
+    }
+
+    .research-heading {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+
+    .research-intro {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+    }
+
+    .artifact {
+        width: 100%;
+        margin: 0 auto 1rem;
+    }
+
+    .artifact + .image-hint {
+        display: block;
+    }
+
+
+    /* -----------------------------
+       DESIGN PRINCIPLES
+    ----------------------------- */
+
+    .principles-section {
+        margin-top: 3.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .principles-section > h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .principle-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .principle-card {
+        padding: 1.4rem;
+    }
+
+    .principle-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .principle-card p {
+        font-size: 1rem;
+    }
+
+
+    /* -----------------------------
+       DESIGN DECISIONS
+    ----------------------------- */
+
     .design-decisions {
-        width: 90%;
+        width: auto;
+        margin: 3.5rem 20px 0;
     }
 
     .decision-row {
-        gap: var(--space-3);
-        margin-bottom: var(--space-6);
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 5.5rem;
+    }
+
+    /* Always text first on mobile */
+    .decision-row.reverse .decision-copy {
+        order: 1;
+    }
+
+    .decision-row.reverse .decision-visual {
+        order: 2;
+    }
+
+    .decision-copy {
+        max-width: none;
+    }
+
+    .decision-copy h3 {
+        font-size: 1.45rem;
+        line-height: 1.2;
+        margin-bottom: .75rem;
+    }
+
+    .decision-copy p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .decision-number {
+        font-size: .75rem;
+        margin-bottom: .75rem;
+    }
+
+    .decision-finding {
+        margin-bottom: .9rem;
+    }
+
+    .decision-principles {
+        font-size: .8rem;
+        line-height: 1.5;
+        margin-top: 1.25rem;
     }
 
     .decision-visual {
         grid-template-columns: 1fr;
-        gap: var(--space-3);
+        gap: 1.75rem;
     }
 
-    .decision-copy h3 {
-        font-size: 1.5rem;
+    .comparison-image {
+        width: 100%;
     }
+
+    .comparison-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .image-label {
+        font-size: .75rem;
+        margin-bottom: .5rem;
+    }
+
+
+    /* -----------------------------
+       EXPECTED IMPACT
+    ----------------------------- */
+
+    .expected-impact {
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+        padding: 2.5rem 0;
+    }
+
+    .impact-intro {
+        margin-bottom: 2rem;
+    }
+
+    .impact-intro h2 {
+        font-size: 1.6rem;
+    }
+
+    .impact-intro h3 {
+        font-size: 1.4rem;
+        line-height: 1.25;
+    }
+
+    .impact-intro p {
+        font-size: 1rem;
+    }
+
+    .impact-points {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+    }
+
+    .impact-item {
+        padding: .5rem 0;
+    }
+
+    .impact-label {
+        font-size: .8rem;
+    }
+
+    .impact-item p {
+        font-size: 1rem;
+    }
+
+
+    /* -----------------------------
+       LIGHTBOX
+    ----------------------------- */
 
     .lightbox {
-        padding: var(--space-2);
+        padding: 1rem;
+    }
+
+    .lightbox-image {
+        max-width: 96vw;
+        max-height: 86vh;
     }
 
     .lightbox-close {
-        top: 0.75rem;
-        right: 1rem;
+        top: 10px;
+        right: 15px;
+        font-size: 2.5rem;
     }
 }
 
