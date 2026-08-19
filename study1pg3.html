@@ -19,19 +19,225 @@
         </nav>
     </header>
     <h1>Case Study #1</h1>
-    <div class="box"><span>box</span></div>
+<div class="box" aria-hidden="true"></div>  
     <a href=""><img class="previous" src="images/arrow-right.svg" alt="right arrow button"></a>
     <a href="study1pg2.html"><img class="next" src="images/arrow-right.svg" alt="right arrow button"></a>
-    <article><img class="polaroid first" src="images/shot22.png" alt="header image">
-      <img class="polaroid" src="images/shot23.png" alt="">
-    </article>
-    <article class="wrapper"><p>Originally, my portfolio lacked any storytelling, clear hierarchy, and a compelling first impression. <br> This project focused on redesigning my portfolio to better communicate my value and showcase my work more effectively.</p>
-      <ul class="case"><h3>Problem</h3><h4>Weak first impression</h4><li>Generic landing page didn't communicate who I am<li>Missing a call-to-action</li><h4>Flat presentation</h4><li>Case studies focused on visuals<li>Lack of depth</li></ul>
-      <ul class="case"><h3>Design solutions</h3><h4>Landing page redesign</h4><li>Clear headline describes my role and focus<li>Include a call-to-action</li><h4>Case study overhaul</h4><li>Case studies now follow a clear structure<li>Shows my thinking process, not just what I designed</li><li>Included before and after images</li></ul>
-      <ul class="case"><h3>Impact</h3><li>Improved understanding of my skills<li>Better engagement with my projects</li><li>Clear structure and storytelling</li></ul>
-    </article>
-  </body>
+<main>
+
+    <section class="deepdive-intro" aria-labelledby="challenge-title">
+
+        <div class="section-label">
+            <span aria-hidden="true">01</span>
+            <p>The Challenge</p>
+        </div>
+
+        <div class="challenge-grid">
+
+            <h2 id="challenge-title">
+                How can a portfolio help recruiters quickly understand
+                not just what I designed, but how I think?
+            </h2>
+
+            <div class="challenge-copy">
+                <p>
+                    My original portfolio presented my projects, but it didn't
+                    communicate the story behind them clearly. Case studies
+                    relied heavily on screenshots and brief descriptions,
+                    making it difficult to understand the problems I was solving,
+                    the reasoning behind my decisions, or how my work connected
+                    to user needs.
+                </p>
+
+                <p>
+                    I wanted to rethink the portfolio as a UX problem itself:
+                    creating an experience that helps recruiters quickly
+                    understand who I am as a designer, how I approach problems,
+                    and the value behind my work.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="evaluation-deepdive" aria-labelledby="evaluation-title">
+
+    <div class="section-label">
+        <span aria-hidden="true">02</span>
+        <p>Evaluation</p>
+    </div>
+
+    <div class="evaluation-copy">
+
+        <h2 id="evaluation-title">
+            Reviewing the portfolio from first impression to project exploration.
+        </h2>
+
+        <p>
+            I followed the same path a visitor would take from the homepage
+            into individual projects, documenting where the experience failed
+            to clearly communicate my role, process, and work.
+        </p>
+
+    </div>
+
+    <div class="evaluation-process">
+
+        <div class="evaluation-step">
+
+            <h3>First Impression</h3>
+
+            <p>
+                Reviewed what was immediately visible before interacting
+                with the page.
+            </p>
+        </div>
+
+        <div class="evaluation-step">
+
+            <h3>Content Walkthrough</h3>
+
+            <p>
+                Followed the portfolio from homepage to project pages
+                and noted where context or reasoning was missing.
+            </p>
+        </div>
+
+        <div class="evaluation-step">
+
+            <h3>Hierarchy Check</h3>
+
+            <p>
+                Compared what was visually emphasized with what was
+                most important for understanding the work.
+            </p>
+        </div>
+
+        <div class="evaluation-step">
+
+            <h3>Navigation Check</h3>
+
+            <p>
+                Checked whether the interface made it clear where to go next
+                and how to move between projects.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+    <section class="problem-deepdive" aria-labelledby="problem-title">
+
+    <div class="section-label">
+        <span aria-hidden="true">03</span>
+        <p>The Problem</p>
+    </div>
+
+    <div class="problem-intro">
+
+        <h2 id="problem-title">
+            The original portfolio made it difficult to understand
+            my role, process, and value.
+        </h2>
+
+        <p>
+           The evaluation revealed three recurring problems in how my work was communicated.
+        </p>
+
+    </div>
+
+<!-- Original Portfolio Evidence -->
+<div class="problem-evidence">
+
+<figure class="problem-screenshot">
+    <img
+        class="zoomable"
+        src="images/shot22.png"
+        alt="Original portfolio design before the redesign"
+    >
+    <figcaption>Original portfolio before the redesign.</figcaption>
+</figure>
+
+    <div class="problem-findings">
+
+        <article class="problem-finding">
+            <h3>Unclear Positioning</h3>
+
+            <p class="finding-summary">
+                My role and strengths weren't immediately apparent.
+            </p>
+
+            <p>
+                The landing experience didn't clearly communicate what I do,
+                what kind of problems I solve, or what visitors should explore next.
+            </p>
+        </article>
+
+        <article class="problem-finding">
+            <h3>Shallow Case Studies</h3>
+
+            <p class="finding-summary">
+                Projects emphasized final screens over design reasoning.
+            </p>
+
+            <p>
+                Case studies relied heavily on screenshots and short descriptions,
+                leaving out much of the context, decision-making, and process
+                behind the final designs.
+            </p>
+        </article>
+
+        <article class="problem-finding">
+            <h3>Weak Storytelling</h3>
+
+            <p class="finding-summary">
+                Information lacked a clear narrative and hierarchy.
+            </p>
+
+            <p>
+                Project content wasn't structured around a progression from
+                problem to process to outcome, making the work harder to scan
+                and understand.
+            </p>
+        </article>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+</main>
   <footer>
     <p>&copy; 2025</p>
   </footer>
+  <div
+    class="lightbox"
+    id="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Expanded image"
+    aria-hidden="true"
+>
+    <button
+        class="lightbox-close"
+        type="button"
+        aria-label="Close expanded image"
+    >
+        &times;
+    </button>
+
+    <img
+        class="lightbox-image"
+        id="lightbox-image"
+        src=""
+        alt=""
+    >
+</div>
+
+<script src="study1pg3.js"></script>
+  </body>
 </html>
