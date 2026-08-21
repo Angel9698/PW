@@ -124,16 +124,6 @@ body {
     background-color: rgba(245, 245, 220, .9);
     background-blend-mode: lighten;
 }
-article {
-    width: 75%;
-    margin-top: 1em;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 2em;
-
-}
 .wrapper {
     margin-left: auto;
     text-align: center;
@@ -529,6 +519,326 @@ footer p {
     font-size: 1rem;
     line-height: 1.6;
 }
+
+/* ========================================
+   04 — DEFINING THE DIRECTION
+======================================== */
+
+.direction-section {
+    width: min(1200px, 88%);
+    margin: 0 auto 6rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid rgba(0, 0, 0, .25);
+}
+
+
+/* Intro */
+
+.direction-intro {
+    max-width: 900px;
+    margin-bottom: 4rem;
+}
+
+.direction-intro h2 {
+    max-width: 850px;
+    margin: 0 0 2.25rem;
+
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.12;
+}
+
+.direction-intro p {
+    max-width: 760px;
+    margin: 0;
+
+    font-size: 1.125rem;
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   FROM → TOWARD
+======================================== */
+
+.direction-shift {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 100px minmax(0, 1fr);
+    align-items: stretch;
+
+    border-top: 1px solid rgba(0, 0, 0, .25);
+    border-bottom: 1px solid rgba(0, 0, 0, .25);
+}
+
+
+/* Both sides */
+
+.direction-side {
+    padding: 3rem 2.5rem;
+}
+
+.direction-from {
+    padding-left: 0;
+}
+
+.direction-toward {
+    padding-right: 0;
+}
+
+
+/* FROM / TOWARD label */
+
+.direction-label {
+    display: block;
+    margin-bottom: .75rem;
+
+    font-size: .8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+
+    opacity: .85;
+}
+
+
+/* Main transformation text */
+
+.direction-side h3 {
+    margin: 0 0 2rem;
+
+    font-size: clamp(1.75rem, 3vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+
+/* Comparison points */
+
+.direction-side ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.direction-side li {
+    padding: 1rem 0;
+
+    font-size: 1.05rem;
+    line-height: 1.4;
+
+    border-top: 1px solid rgba(0, 0, 0, .15);
+}
+
+.direction-side li:last-child {
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+}
+
+
+/* Center arrow */
+
+.direction-transition {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-left: 1px solid rgba(0, 0, 0, .2);
+    border-right: 1px solid rgba(0, 0, 0, .2);
+}
+
+.direction-transition span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 4.5rem;
+    height: 4.5rem;
+
+    border-radius: 50%;
+
+    background-color: lightpink;
+
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+
+/* Closing statement */
+
+.direction-takeaway {
+    max-width: 800px;
+    margin: 3.5rem auto 0;
+
+    text-align: center;
+}
+
+.direction-takeaway p {
+    margin: 0;
+
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.55;
+    text-align: center;
+}
+
+/* ========================================
+   05 — REDESIGNING THE EXPERIENCE
+======================================== */
+
+.redesign-section {
+    width: min(1200px, 88%);
+    margin: 0 auto 7rem;
+    padding-bottom: 5rem;
+}
+
+
+/* Section introduction */
+
+.redesign-intro {
+    max-width: 900px;
+    margin-bottom: 4.5rem;
+}
+
+.redesign-intro h2 {
+    max-width: 800px;
+    margin: 0 0 1.25rem;
+
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.12;
+}
+
+.redesign-intro p {
+    max-width: 760px;
+    margin: 0;
+
+    font-size: 1.125rem;
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   DESIGN MOVE
+======================================== */
+
+.design-move {
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+
+/* Heading now sits ABOVE the image */
+
+.design-move-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+
+    max-width: 900px;
+    margin-bottom: 2rem;
+}
+
+.design-move-number {
+    padding-top: .3rem;
+
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+
+    opacity: .55;
+}
+
+.design-move-label {
+    margin: 0 0 .4rem;
+
+    font-size: .8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+}
+
+.design-move-heading h3 {
+    margin: 0;
+
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    line-height: 1.15;
+}
+
+
+/* ========================================
+   LARGE DESIGN SHOWCASE
+======================================== */
+
+.design-showcase {
+    width: 100%;
+    margin: 0;
+}
+
+.design-showcase img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border: 1px solid rgba(0, 0, 0, .3);
+}
+
+.design-showcase figcaption {
+    max-width: 760px;
+    margin-top: .75rem;
+
+    font-size: .9rem;
+    line-height: 1.5;
+
+    opacity: .75;
+}
+
+
+/* ========================================
+   DESIGN DETAILS
+======================================== */
+
+.design-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-top: 3rem;
+
+    border-top: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+.design-detail {
+    padding: 2.25rem;
+}
+
+.design-detail:first-child {
+    padding-left: 0;
+}
+
+.design-detail:last-child {
+    padding-right: 0;
+}
+
+.design-detail + .design-detail {
+    border-left: 1px solid rgba(0, 0, 0, .2);
+}
+
+.design-detail h4 {
+    margin: 0 0 .75rem;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.design-detail p {
+    margin: 0;
+
+    font-size: 1rem;
+    line-height: 1.6;
+}
 @media screen and (max-width: 980px) {
     .logo {
         visibility: hidden;
@@ -544,9 +854,6 @@ footer p {
     footer {
         position: unset;
         margin-top: 1em;
-    }
-    article {
-        grid-template-columns: unset;
     }
 }
 @media screen and (max-width: 780px) {
@@ -603,64 +910,162 @@ footer p {
     .first {
         width: 98%;
     }
-    article {
-        width: 78%;
-        grid-gap: 0;
-        margin-top: 0;
-    }
     ul {
         grid-gap: 1em;
     }
+.evaluation-deepdive {
+    width: auto;
+    margin: 0 20px 4rem;
+    padding-bottom: 3.5rem;
 }
-@media screen and (max-width: 780px) {
 
-    .evaluation-deepdive {
-        width: auto;
-        margin: 0 20px 4rem;
-        padding-bottom: 3.5rem;
+.evaluation-copy {
+    margin-bottom: 2rem;
+}
+
+.evaluation-copy h2 {
+    font-size: 1.7rem;
+    line-height: 1.15;
+}
+
+.evaluation-copy p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.evaluation-process {
+    grid-template-columns: 1fr;
+}
+
+.evaluation-step,
+.evaluation-step:first-child,
+.evaluation-step:last-child {
+    padding: 1.5rem 0;
+}
+
+.evaluation-step + .evaluation-step {
+    border-left: 0;
+    border-top: 1px solid rgba(0, 0, 0, .25);
+}
+
+.evaluation-step h3 {
+    font-size: 1.1rem;
+}
+        .problem-evidence {
+        margin-top: 2.5rem;
     }
 
-    .evaluation-header {
+    .problem-screenshot figcaption {
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .problem-findings {
         grid-template-columns: 1fr;
-        gap: 1.25rem;
-        margin-bottom: 2.5rem;
+        margin-top: 2.5rem;
+        padding-bottom: 2.5rem;
     }
 
-    .evaluation-header h2 {
-        max-width: none;
-        font-size: 1.9rem;
-        line-height: 1.15;
+    .problem-finding,
+    .problem-finding:first-child,
+    .problem-finding:last-child {
+        padding: 2rem 0;
     }
 
-    .evaluation-header p {
-        max-width: none;
-        font-size: 1rem;
-        line-height: 1.6;
+    .problem-finding:first-child {
+        padding-top: 0;
     }
 
-    .evaluation-strip {
-        grid-template-columns: 1fr;
-    }
-
-    .evaluation-area,
-    .evaluation-area:first-child,
-    .evaluation-area:last-child {
-        padding: 1.5rem 0;
-    }
-
-    .evaluation-area + .evaluation-area {
+    .problem-finding + .problem-finding {
         border-left: 0;
-        border-top: 1px solid rgba(0, 0, 0, .25);
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
     }
 
-    .evaluation-area h3 {
+    .problem-finding h3 {
+        margin-bottom: 1rem;
         font-size: 1.15rem;
     }
 
-    .evaluation-conclusion {
-        margin-top: 1.75rem;
-        font-size: 1rem;
+    .problem-finding .finding-summary {
+        margin-bottom: 1rem;
     }
+
+    /* ========================================
+   DEFINING THE DIRECTION — MOBILE
+======================================== */
+
+.direction-section {
+    width: auto;
+    margin: 0 20px 4rem;
+    padding-bottom: 3.5rem;
+}
+
+.direction-intro {
+    margin-bottom: 2.5rem;
+}
+
+.direction-intro h2 {
+    font-size: 1.85rem;
+    line-height: 1.15;
+}
+
+.direction-intro p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+/* Stack FROM and TOWARD */
+
+.direction-shift {
+    grid-template-columns: 1fr;
+}
+
+.direction-side,
+.direction-from,
+.direction-toward {
+    padding: 2rem 0;
+}
+
+.direction-side h3 {
+    margin-bottom: 1.5rem;
+
+    font-size: 1.75rem;
+}
+
+.direction-side li {
+    font-size: 1rem;
+}
+
+
+/* Arrow becomes downward */
+
+.direction-transition {
+    min-height: 5rem;
+
+    border-left: 0;
+    border-right: 0;
+    border-top: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+.direction-transition span {
+    width: 3rem;
+    height: 3rem;
+
+    font-size: 1.4rem;
+
+    transform: rotate(90deg);
+}
+
+
+.direction-takeaway {
+    margin-top: 2.5rem;
+}
+
+.direction-takeaway p {
+    font-size: 1.1rem;
+}
 }
 @media screen and (max-width: 390px) {
     header a {

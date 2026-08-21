@@ -1,28 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angel Garcia | Portfolio</title>
+
+    <title>Angel Garcia | UX Designer</title>
+
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header>
-      <a class="logo" href="index.html"><img id="logo" src="images/angel logo.png" alt="logo"></img></a>
-        <nav>
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <a class="logo" href="index.html" aria-label="Angel Garcia home">
+            <img
+                id="logo"
+                src="images/angel logo.png"
+                alt="Angel Garcia"
+            >
+        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation">
             <ul>
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="index.html" aria-current="page">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a class="contact-link" href="contact.html">Contact</a>
+                </li>
             </ul>
         </nav>
+
     </header>
-    <h1>Angel Garcia</h1>
-    <h2>User Experience (UX) Designer</h2>
-    <p>I transform user frustrations into clean, responsive, and user-centered design solutions that balance user needs with business goals.</p>
-    <div>
-      <a id="workbt" href="study1pg3.html">Explore My Work</a>
-    </div>
-  </body>
+
+
+    <main>
+
+        <!-- ========================================
+             HERO
+        ======================================== -->
+
+        <section class="hero" aria-labelledby="hero-title">
+
+            <div class="hero-content">
+
+                <p class="hero-eyebrow">
+                    UX Designer
+                    <span aria-hidden="true">·</span>
+                    Angel Garcia
+                </p>
+
+                <h1 id="hero-title">
+                    Turning complex problems into
+                    <span>clear, intentional experiences.</span>
+                </h1>
+
+                <p class="hero-description">
+                    I use research, usability principles, and iterative design
+                    to uncover friction and create experiences that are easier
+                    to understand and use.
+                </p>
+
+                <a class="hero-cta" href="#work">
+                    Explore My Work
+                    <span aria-hidden="true">↓</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             SELECTED WORK
+        ======================================== -->
+
+        <section
+            class="selected-work"
+            id="work"
+            aria-labelledby="work-title"
+        >
+
+            <div class="work-heading">
+
+                <p class="section-eyebrow">
+                    Selected Work
+                </p>
+
+                <h2 id="work-title">
+                    Projects shaped by research,
+                    reasoning, and iteration.
+                </h2>
+
+                <p>
+                    A selection of projects showing how I identify problems,
+                    make design decisions, and translate those decisions into
+                    clearer experiences.
+                </p>
+
+            </div>
+
+            <!-- Project layout comes next -->
+
+        </section>
+
+    </main>
+
+</body>
+
 </html>

@@ -1,168 +1,543 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* ========================================
+   RESET
+======================================== */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+* {
+    box-sizing: border-box;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
 }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* ========================================
+   BASE
+======================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-	line-height: 1;
+    margin: 0;
+
+    background-color: beige;
+    color: #000;
+
+    line-height: 1.5;
 }
-ol, ul {
-	list-style: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-header{
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 85%), rgba(-1, 0, 0, 0));
-    height: 9.5em;
-}
-.logo:hover {
-    background-color: transparent;
-}
-.logo {
-    background-color: transparent;
-}
-#logo {
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.site-header {
     position: absolute;
-    padding: .5em;
-    width: 225px;
-    z-index: 1;
-    min-width: 0;
     top: 0;
     left: 0;
-}
-a {
-    text-decoration: none;
-    background-color: lightpink;
-    color: black;
-    padding: .5em 2em;
-    border-radius: .5em;
-    font-size: 20px;
-}
-ul {
+
+    z-index: 100;
+
     display: flex;
-    justify-content: end;
-    position: relative;
-    top: 2.4em;
-    right: 3em;
-    grid-gap: 3em;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 1rem 3rem;
+
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, .9),
+            rgba(0, 0, 0, 0)
+        );
 }
-body{
-    height: 100dvh;
-    background-image: url(images/homeBG.avif); 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-position: center; 
-    background-color: rgba(20, 20, 20, .8);
-    background-blend-mode: saturation;
+
+
+/* Logo */
+
+.logo {
+    display: block;
+
+    background: transparent;
+    padding: 0;
 }
-h1{
-    width: fit-content;
-    font-size: 5em;
-    position: relative;
-    top: 25%;
-    margin-left: auto;
-    margin-right: auto;
-    color: beige;
+
+.logo:hover {
+    background: transparent;
 }
-h2 {
-    width: fit-content;
-    font-size: 3em;
-    position: relative;
-    top: 25%;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.2em;
-    margin-top: .2em;
-    color: beige;
+
+#logo {
+    display: block;
+    width: 190px;
 }
-p {
-    width: 70%;
-    font-size: 2em;
-    position: relative;
-    top: 25%;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.2em;
-    color: beige;
-}
-div {
+
+
+/* Navigation */
+
+.site-nav ul {
     display: flex;
+    align-items: center;
+    gap: 2.75rem;
+}
+
+.site-nav a {
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-    position: relative;
-    top: 30%;
+
+    min-height: 44px;
+
+    color: #fff;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+
+    transition:
+        border-color 160ms ease,
+        color 160ms ease,
+        background-color 160ms ease;
 }
-a:hover {
+
+.site-nav a:hover {
+    border-color: lightpink;
+}
+
+.site-nav a[aria-current="page"] {
+    color: lightpink;
+}
+
+
+/* Primary navigation action */
+
+.site-nav .contact-link {
+    padding: .65rem 1.35rem;
+
+    background-color: lightpink;
+    color: #000;
+
+    border: 0;
+    border-radius: .45rem;
+}
+
+.site-nav .contact-link:hover {
     background-color: palevioletred;
 }
-.active a {
-    background-color: gray;
+
+
+/* Keyboard focus */
+
+.site-nav a:focus-visible,
+.logo:focus-visible {
+    outline: 3px solid lightpink;
+    outline-offset: 4px;
 }
-@media screen and (max-width: 980px) {
-    .logo {
-        visibility: hidden;
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    position: relative;
+
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+
+    padding:
+        8rem
+        max(6vw, 2rem)
+        6rem;
+
+    background:
+        linear-gradient(
+            rgba(15, 15, 15, .68),
+            rgba(15, 15, 15, .68)
+        ),
+        url("images/homeBG.avif");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Hero content */
+
+.hero-content {
+    width: min(1300px, 100%);
+    margin-inline: auto;
+
+    text-align: center;
+    color: beige;
+}
+
+.hero h1 {
+    margin: 0 auto;
+
+    font-size: clamp(3rem, 5.5vw, 5.75rem);
+    font-weight: 600;
+    line-height: 1;
+
+    color: beige;
+}
+
+.hero h1 span {
+    display: inline;
+}
+
+.hero-description {
+    width: min(760px, 100%);
+    margin: 1.75rem auto 0;
+
+    font-size: clamp(1.05rem, 1.45vw, 1.7rem);
+    line-height: 1.65;
+
+    color: beige;
+}
+
+.hero-eyebrow {
+    margin-bottom: 1.25rem;
+
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: .13em;
+
+    color: beige;
+}
+
+.hero h1 span {
+    display: block;
+}
+
+
+/* Main CTA */
+
+.hero-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .7rem;
+
+    min-height: 46px;
+
+    margin-top: 2.25rem;
+    padding: .8rem 1.4rem;
+
+    background-color: lightpink;
+    color: #000;
+
+    border-radius: .45rem;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background-color 160ms ease,
+        transform 160ms ease;
+}
+
+.hero-cta:hover {
+    background-color: palevioletred;
+    transform: translateY(-2px);
+}
+
+.hero-cta:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 4px;
+}
+
+/* ========================================
+   SELECTED WORK
+======================================== */
+
+.selected-work {
+    padding:
+        7rem
+        max(6vw, 2rem);
+}
+
+.work-heading {
+    width: min(1100px, 100%);
+    margin-inline: auto;
+}
+
+.section-eyebrow {
+    margin-bottom: .8rem;
+
+    font-size: .8rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: .13em;
+}
+
+.work-heading h2 {
+    max-width: 850px;
+    margin: 0;
+
+    font-size: clamp(2.25rem, 4vw, 4rem);
+    font-weight: 600;
+    line-height: 1.05;
+}
+
+.work-heading > p:last-child {
+    max-width: 760px;
+    margin-top: 1.5rem;
+
+    font-size: 1.1rem;
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
     }
+
+    .hero-cta {
+        transition: none;
+    }
+
 }
+
+
+/* ========================================
+   TABLET / MOBILE
+======================================== */
+
 @media screen and (max-width: 780px) {
-    header a {
-        font-size: 17px;
+
+    .site-header {
+        padding: 1rem 1.25rem;
     }
-    nav {
-        right: 0;
+
+
+    /* Hide logo to preserve your current
+       mobile navigation approach */
+
+    .logo {
+        display: none;
     }
-    nav ul {
-        display: flex;
+
+    .site-header {
         justify-content: center;
     }
-    h1 {
-        font-size: 3em;
+
+    .site-nav ul {
+        gap: 1.25rem;
     }
-    h2 {
-        font-size: 2em;
-        padding: 0 .5em;
+
+    .site-nav a {
+        font-size: .95rem;
     }
-    p {
-        font-size: 18px;
+
+    .site-nav .contact-link {
+        padding: .55rem 1rem;
     }
-    #workbt {
-        font-size: 18px;
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 100svh;
+
+        padding:
+            7rem
+            1.25rem
+            6rem;
     }
-    ul {
-        grid-gap: 1em;
-        right: 0;
+
+    .hero-content {
+        text-align: left;
     }
+
+    .hero-eyebrow {
+        font-size: .75rem;
+    }
+
+    .hero h1 {
+        max-width: none;
+        margin: 0;
+
+        font-size: clamp(2.5rem, 11vw, 4.25rem);
+        line-height: 1.02;
+    }
+
+    .hero h1 span {
+        display: inline;
+    }
+
+    .hero-description {
+        width: 100%;
+        margin-left: 0;
+
+        font-size: 1rem;
+    }
+
+    .hero-cta {
+        margin-top: 1.75rem;
+    }
+
+
+    /* Selected work */
+
+    .selected-work {
+        padding:
+            5rem
+            1.25rem;
+    }
+
+    .work-heading h2 {
+        font-size: 2.25rem;
+    }
+
+    .work-heading > p:last-child {
+        font-size: 1rem;
+    }
+
 }
-@media screen and (max-width: 390px) {
-    header a {
-        font-size: 14px;
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media screen and (max-width: 420px) {
+
+    .site-nav ul {
+        gap: .8rem;
     }
-    h3 {
-        font-size: 19px;
+
+    .site-nav a {
+        font-size: .875rem;
     }
+
+    .site-nav .contact-link {
+        padding: .5rem .8rem;
+    }
+
 }
