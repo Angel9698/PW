@@ -305,7 +305,6 @@ body {
     margin: 1.75rem auto 0;
 
     font-size: clamp(1.05rem, 1.45vw, 1.7rem);
-    line-height: 1.65;
 
     color: beige;
 }
@@ -333,7 +332,7 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: .7rem;
+    gap: 1rem;
 
     min-height: 46px;
 
@@ -345,7 +344,7 @@ body {
 
     border-radius: .45rem;
 
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 700;
 
     text-decoration: none;
@@ -407,6 +406,156 @@ body {
     line-height: 1.65;
 }
 
+/* ========================================
+   PROJECT FEATURES
+======================================== */
+
+.projects-list {
+    width: min(1200px, 100%);
+    margin: 5rem auto 0;
+}
+
+
+/* Shared project layout */
+
+.project-feature {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(320px, .75fr);
+    gap: clamp(3rem, 6vw, 6rem);
+
+    align-items: center;
+
+    padding: 5rem 0;
+
+    border-top: 1px solid rgba(0, 0, 0, .22);
+}
+
+.project-feature:last-child {
+    border-bottom: 1px solid rgba(0, 0, 0, .22);
+}
+
+
+/* ========================================
+   PROJECT IMAGE
+======================================== */
+
+.project-media {
+    min-width: 0;
+}
+
+.project-media img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border: 1px solid rgba(0, 0, 0, .22);
+}
+
+
+/* Flagship gets more visual weight */
+
+.project-feature--flagship .project-media img {
+    width: 100%;
+}
+
+
+/* ========================================
+   PROJECT COPY
+======================================== */
+
+.project-copy {
+    min-width: 0;
+}
+
+.project-meta {
+    margin: 0 0 1rem;
+
+    font-size: .8rem;
+    font-weight: 700;
+
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.project-copy h3 {
+    margin: 0;
+
+    font-size: clamp(2rem, 3.4vw, 3.4rem);
+    font-weight: 600;
+    line-height: 1.05;
+}
+
+.project-summary {
+    margin: 1.5rem 0 0;
+
+    font-size: 1.05rem;
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   TAGS
+======================================== */
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+
+    margin-top: 1.75rem;
+}
+
+.project-tags li {
+    padding: .5rem .8rem;
+
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 999px;
+
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   PROJECT LINK
+======================================== */
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .65rem;
+
+    margin-top: 2rem;
+
+    color: #000;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    border-bottom: 2px solid lightpink;
+    padding-bottom: .2rem;
+}
+
+.project-link:hover {
+    border-bottom-color: palevioletred;
+}
+
+.project-link:focus-visible {
+    outline: 3px solid palevioletred;
+    outline-offset: 4px;
+}
+
+
+/* ========================================
+   SECONDARY PROJECT
+======================================== */
+
+.project-feature--secondary {
+    grid-template-columns: minmax(320px, .75fr) minmax(0, 1.1fr);
+}
 
 /* ========================================
    REDUCED MOTION
@@ -452,7 +601,7 @@ body {
     }
 
     .site-nav a {
-        font-size: .95rem;
+        font-size: 1rem;
     }
 
     .site-nav .contact-link {
@@ -519,6 +668,40 @@ body {
         font-size: 1rem;
     }
 
+    .projects-list {
+    margin-top: 3.5rem;
+}
+
+.project-feature,
+.project-feature--secondary {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    padding: 3.5rem 0;
+}
+
+
+/* Keep image above copy on mobile */
+
+.project-feature--secondary .project-media {
+    order: -1;
+}
+
+.project-copy h3 {
+    font-size: 2rem;
+}
+
+.project-summary {
+    font-size: 1rem;
+}
+
+.project-tags {
+    gap: .6rem;
+}
+
+.project-tags li {
+    font-size: .75rem;
+}
 }
 
 

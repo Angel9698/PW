@@ -26,70 +26,120 @@ footer, header, hgroup, menu, nav, section {
 ol, ul {
 	list-style: none;
 }
-header{
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 85%), rgba(-1, 0, 0, 0));
-    height: 9.5em;
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
-.logo:hover {
-    background-color: transparent;
+
+html {
+    scroll-behavior: smooth;
 }
-.logo {
-    background-color: transparent;
-}
-#logo {
-    position: absolute;
-    padding: .5em;
-    width: 225px;
-    z-index: 1;
-    min-width: 0;
+/* ---------- Header / navigation ---------- */
+.site-header {
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 65%);
-}
-nav {
-    position: relative;
-    top: 2.4em;
-    right: 3em;
-    
-}
-ul {
+    z-index: 100;
+
     display: flex;
-    justify-content: end;
-    grid-gap: 3em;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding: 1rem 3rem;
+
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, .88) 0%,
+            rgba(0, 0, 0, .68) 55%,
+            rgba(0, 0, 0, 0) 200%
+        );
 }
-header a{
+/* Logo */
+
+.logo {
+    display: block;
+
+    background: transparent;
+    padding: 0;
+}
+
+.logo:hover {
+    background: transparent;
+}
+
+#logo {
+    display: block;
+    width: 190px;
+}
+/* Navigation */
+
+.site-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2.75rem;
+    line-height: 1.5;
+}
+
+.site-nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+
+    color: #fff;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+
     text-decoration: none;
+    border-bottom: 2px solid transparent;
+
+    transition:
+        border-color 160ms ease,
+        color 160ms ease,
+        background-color 160ms ease;
+}
+
+.site-nav a:hover {
+    border-color: lightpink;
+}
+
+.site-nav a[aria-current="page"] {
+color: black;
+    outline: 4px solid lightpink;
+    outline-offset: 4px;
+}
+
+
+/* Primary navigation action */
+
+.site-nav .contact-link {
+    padding: .65rem 1.35rem;
+
     background-color: lightpink;
-    color: black;
-    padding: .5em 2em;
-    border-radius: .5em;
-    position: relative;
-    z-index: 2;
-    font-size: 20px;
-}.dropdown li {
-	padding: 1rem;
-	padding-right: 0;
+    color: #000;
+
+    border: 0;
+    border-radius: .45rem;
 }
-.dropdown li a {
-    padding: .5em .35em;
+
+.site-nav .contact-link:hover {
+    background-color: palevioletred;
 }
-nav ul li ul {
-    position: absolute;
-    left: -15px;
-    top: -10px;
-    z-index: 1;
-    display: none;
-    width: 156px;
-    background-color: cornflowerblue;
-    padding-top: 2.6em;
-    border-radius: .5em;
-    border: 2px solid;
-	}
-  ul li:hover > ul, ul li:focus-within > ul, ul li ul:hover, ul li ul:focus {
-	visibility: visible;
-	opacity: 1;
-	display: block;
-  }
+
+
+/* Keyboard focus */
+
+.site-nav a:focus-visible,
+.logo:focus-visible {
+    outline: 3px solid lightpink;
+    outline-offset: 4px;
+}
 h1 {
 	font-size: 4em;
     width: fit-content;
@@ -98,13 +148,6 @@ h1 {
 }
 span {
 	visibility: hidden;
-}
-.box {
-	background-color: lightpink;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: .35em;
 }
 .polaroid {
     width: 98%;
@@ -178,9 +221,6 @@ p {
     top: 10px;
     left: 52%;
 }
-header a:hover {
-    background-color: palevioletred;
-}
 .previous:hover {
     background-color: palevioletred;
 }
@@ -211,11 +251,6 @@ footer p {
     margin-left: auto;
     margin-right: auto;
 }
-@media screen and (max-width: 980px) {
-    .logo {
-        visibility: hidden;
-    }
-}
 @media screen and (max-width: 1460px) {
     body, html {
         height: unset;
@@ -232,15 +267,32 @@ footer p {
     }
 }
 @media screen and (max-width: 780px) {
-    header a {
-        font-size: 17px;
+    .site-header {
+        padding: 1rem 1.25rem;
     }
-    nav {
-        right: 0;
+
+
+    /* Hide logo to preserve your current
+       mobile navigation approach */
+
+    .logo {
+        display: none;
     }
-    nav ul {
-        display: flex;
+
+    .site-header {
         justify-content: center;
+    }
+
+    .site-nav ul {
+        gap: 1.25rem;
+    }
+
+    .site-nav a {
+        font-size: 1rem;
+    }
+
+    .site-nav .contact-link {
+        padding: .55rem 1rem;
     }
     h1 {
         font-size: 2em;
