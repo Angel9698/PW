@@ -1,551 +1,649 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angel Garcia | Portfolio</title>
-    <link rel="stylesheet" href="study1pg3.css">
-    <link rel="shortcut icon" href="images/favicon.ico">
-  </head>
-  <body>
-    <header class="site-header">
-
-    <a class="logo" href="index.html" aria-label="Angel Garcia home">
-        <img
-            id="logo"
-            src="images/angel logo.png"
-            alt="Angel Garcia"
-        >
-    </a>
-
-    <nav class="site-nav" aria-label="Primary navigation">
-        <ul>
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-
-            <li>
-                <a href="about.html">About</a>
-            </li>
-
-            <li>
-                <a class="contact-link" href="contact.html">Contact</a>
-            </li>
-        </ul>
-    </nav>
-
-</header>
-
-<div class="box" aria-hidden="true"></div>  
-    <a href=""><img class="previous" src="images/arrow-right.svg" alt="right arrow button"></a>
-    <a href="study1pg2.html"><img class="next" src="images/arrow-right.svg" alt="right arrow button"></a>
-<main>
-
-            <section class="project-intro">
-
-  <div class="project-title-group">
-    <p class="project-type">UX Case Study</p>
-
-    <h1>COSRX</h1>
-
-    <p class="project-subtitle">
-      E-commerce UX Redesign
-    </p>
-
-    <p class="project-summary">
-        Improving clarity, usability, and trust across key moments in the shopping experience.
-    </p>
+ <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>
+   Portfolio Website UX Redesign | Angel Garcia
+  </title>
+  <link href="study1pg3.css" rel="stylesheet">
+  <link href="images/favicon.ico" rel="shortcut icon">
+ </head>
+ <body>
+  <a class="skip-link" href="#main-content">
+   Skip to main content
+  </a>
+  <header class="site-header">
+   <a aria-label="Angel Garcia home" class="logo" href="index.html">
+    <img alt="Angel Garcia" id="logo" src="images/angel logo.png">
+   </a>
+   <nav aria-label="Primary navigation" class="site-nav">
+    <ul>
+     <li>
+      <a href="index.html">
+       Home
+      </a>
+     </li>
+     <li>
+      <a href="about.html">
+       About
+      </a>
+     </li>
+     <li>
+      <a class="contact-link" href="contact.html">
+       Contact
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </header>
+  <div aria-hidden="true" class="box">
   </div>
-
-  <div class="project-meta">
-
-    <div class="meta-item">
-      <span>Role</span>
-      <p>UX/UI Designer</p>
+  <a aria-hidden="true" hidden tabindex="-1">
+   <img alt aria-hidden="true" class="previous" src="images/arrow-right.svg">
+  </a>
+        <nav class="case-nav" aria-label="Case study navigation">
+            <a href="study1pg2.html" aria-label="Previous case study">
+                <img class="previous" src="images/arrow-right.svg" alt="">
+            </a>
+            <a href="study2pg1.html" aria-label="Next case study">
+                <img class="next" src="images/arrow-right.svg" alt="">
+            </a>
+        </nav>
+  </a>
+  <main id="main-content" tabindex="-1">
+   <section aria-labelledby="project-title" class="project-intro">
+    <div class="project-title-group">
+     <p class="project-type">
+      UX Case Study
+     </p>
+     <h1 id="project-title">
+      Portfolio Website
+     </h1>
+     <p class="project-subtitle">
+      Portfolio UX Redesign
+     </p>
+     <p class="project-summary">
+      Redesigning my portfolio to communicate my role, reasoning,
+    and design process more clearly.
+     </p>
     </div>
-
-    <div class="meta-item">
-      <span>Methods</span>
-      <p>Heuristic Evaluation, Competitive Analysis</p>
+    <dl class="project-meta">
+     <div class="meta-item">
+      <dt>
+       Role
+      </dt>
+      <dd>
+       UX/UI Designer
+      </dd>
+     </div>
+     <div class="meta-item">
+      <dt>
+       Methods
+      </dt>
+      <dd>
+       UX Evaluation, Information Architecture, Iterative Design
+      </dd>
+     </div>
+     <div class="meta-item">
+      <dt>
+       Tools
+      </dt>
+      <dd>
+       Figma, VS Code, Chrome DevTools
+      </dd>
+     </div>
+     <div class="meta-item">
+      <dt>
+       Timeline
+      </dt>
+      <dd>
+       3 Weeks
+      </dd>
+     </div>
+    </dl>
+   </section>
+   <section aria-labelledby="challenge-title" class="deepdive-intro">
+    <div class="section-label">
+     <span aria-hidden="true">
+      01
+     </span>
+     <p>
+      The Challenge
+     </p>
     </div>
-
-    <div class="meta-item">
-      <span>Tools</span>
-      <p>Figma, VS Code, Chrome DevTools</p>
-    </div>
-
-    <div class="meta-item">
-      <span>Timeline</span>
-      <p>2 Weeks</p>
-    </div>
-
-  </div>
-
-</section>
-
-    <section class="deepdive-intro" aria-labelledby="challenge-title">
-
-        <div class="section-label">
-            <span aria-hidden="true">01</span>
-            <p>The Challenge</p>
-        </div>
-
-        <div class="challenge-grid">
-
-            <h2 id="challenge-title">
-                How can a portfolio help recruiters quickly understand
+    <div class="challenge-grid">
+     <h2 id="challenge-title">
+      How can a portfolio help recruiters quickly understand
                 not just what I designed, but how I think?
-            </h2>
-
-            <div class="challenge-copy">
-                <p>
-                    My original portfolio presented my projects, but it didn't
+     </h2>
+     <div class="challenge-copy">
+      <p>
+       My original portfolio presented my projects, but it didn't
                     communicate the story behind them clearly. Case studies
                     relied heavily on screenshots and brief descriptions,
                     making it difficult to understand the problems I was solving,
                     the reasoning behind my decisions, or how my work connected
                     to user needs.
-                </p>
-
-                <p>
-                    I wanted to rethink the portfolio as a UX problem itself:
-                    creating an experience that helps recruiters quickly
-                    understand who I am as a designer, how I approach problems,
-                    and the value behind my work.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="evaluation-deepdive" aria-labelledby="evaluation-title">
-
-    <div class="section-label">
-        <span aria-hidden="true">02</span>
-        <p>Evaluation</p>
+      </p>
+      <p>
+       I reframed the portfolio as a UX problem itself: how could the
+                    experience communicate my value as clearly as the projects
+                    it was presenting?
+      </p>
+     </div>
     </div>
-
+   </section>
+   <section aria-labelledby="evaluation-title" class="evaluation-deepdive">
+    <div class="section-label">
+     <span aria-hidden="true">
+      02
+     </span>
+     <p>
+      Evaluation
+     </p>
+    </div>
     <div class="evaluation-copy">
-
-        <h2 id="evaluation-title">
-            Reviewing the portfolio from first impression to project exploration.
-        </h2>
-
-        <p>
-            I followed the same path a visitor would take from the homepage
+     <h2 id="evaluation-title">
+      Reviewing the portfolio from first impression to project exploration.
+     </h2>
+     <p>
+      I followed the same path a visitor would take from the homepage
             into individual projects, documenting where the experience failed
             to clearly communicate my role, process, and work.
-        </p>
-
+     </p>
     </div>
-
     <div class="evaluation-process">
-
-        <div class="evaluation-step">
-
-            <h3>First Impression</h3>
-
-            <p>
-                Reviewed what was immediately visible before interacting
+     <div class="evaluation-step">
+      <h3>
+       First Impression
+      </h3>
+      <p>
+       Reviewed what was immediately visible before interacting
                 with the page.
-            </p>
-        </div>
-
-        <div class="evaluation-step">
-
-            <h3>Content Walkthrough</h3>
-
-            <p>
-                Followed the portfolio from homepage to project pages
+      </p>
+     </div>
+     <div class="evaluation-step">
+      <h3>
+       Content Walkthrough
+      </h3>
+      <p>
+       Followed the portfolio from homepage to project pages
                 and noted where context or reasoning was missing.
-            </p>
-        </div>
-
-        <div class="evaluation-step">
-
-            <h3>Hierarchy Check</h3>
-
-            <p>
-                Compared what was visually emphasized with what was
+      </p>
+     </div>
+     <div class="evaluation-step">
+      <h3>
+       Hierarchy Check
+      </h3>
+      <p>
+       Compared what was visually emphasized with what was
                 most important for understanding the work.
-            </p>
-        </div>
-
-        <div class="evaluation-step">
-
-            <h3>Navigation Check</h3>
-
-            <p>
-                Checked whether the interface made it clear where to go next
+      </p>
+     </div>
+     <div class="evaluation-step">
+      <h3>
+       Navigation Check
+      </h3>
+      <p>
+       Checked whether the interface made it clear where to go next
                 and how to move between projects.
-            </p>
-        </div>
-
+      </p>
+     </div>
     </div>
-
-</section>
-
-    <section class="problem-deepdive" aria-labelledby="problem-title">
-
+   </section>
+   <section aria-labelledby="problem-title" class="problem-deepdive">
     <div class="section-label">
-        <span aria-hidden="true">03</span>
-        <p>The Problem</p>
+     <span aria-hidden="true">
+      03
+     </span>
+     <p>
+      The Problem
+     </p>
     </div>
-
     <div class="problem-intro">
-
-        <h2 id="problem-title">
-            The original portfolio made it difficult to understand
+     <h2 id="problem-title">
+      The original portfolio made it difficult to understand
             my role, process, and value.
-        </h2>
-
-        <p>
-           The evaluation revealed three recurring problems in how my work was communicated.
-        </p>
-
+     </h2>
     </div>
-
-<!-- Original Portfolio Evidence -->
-<div class="problem-evidence">
-
-<figure class="problem-screenshot">
-    <img
-        class="zoomable"
-        src="images/shot22.png"
-        alt="Original portfolio design before the redesign"
-    >
-    <figcaption>Original portfolio before the redesign.</figcaption>
-</figure>
-
-    <div class="problem-findings">
-
-        <article class="problem-finding">
-            <h3>Unclear Positioning</h3>
-
-            <p class="finding-summary">
-                My role and strengths weren't immediately apparent.
-            </p>
-
-            <p>
-                The landing experience didn't clearly communicate what I do,
+    <!-- Original Portfolio Evidence -->
+    <div class="problem-evidence">
+     <figure class="problem-screenshot">
+      <button aria-controls="lightbox" aria-haspopup="dialog" aria-label="Expand image: Original portfolio design before the redesign" class="zoom-trigger" type="button">
+       <img alt="Original portfolio design before the redesign" class="zoomable" src="images/shot22.png">
+      </button>
+      <figcaption>
+       Original portfolio before the redesign.
+      </figcaption>
+     </figure>
+     <div class="problem-findings">
+      <article class="problem-finding">
+       <h3>
+        Unclear Positioning
+       </h3>
+       <p class="finding-summary">
+        My role and strengths weren't immediately apparent.
+       </p>
+       <p>
+        The landing experience didn't clearly communicate what I do,
                 what kind of problems I solve, or what visitors should explore next.
-            </p>
-        </article>
-
-        <article class="problem-finding">
-            <h3>Shallow Case Studies</h3>
-
-            <p class="finding-summary">
-                Projects emphasized final screens over design reasoning.
-            </p>
-
-            <p>
-                Case studies relied heavily on screenshots and short descriptions,
-                leaving out much of the context, decision-making, and process
-                behind the final designs.
-            </p>
-        </article>
-
-        <article class="problem-finding">
-            <h3>Weak Storytelling</h3>
-
-            <p class="finding-summary">
-                Information lacked a clear narrative and hierarchy.
-            </p>
-
-            <p>
-                Project content wasn't structured around a progression from
-                problem to process to outcome, making the work harder to scan
-                and understand.
-            </p>
-        </article>
-
+       </p>
+      </article>
+      <article class="problem-finding">
+       <h3>
+        Shallow Case Studies
+       </h3>
+       <p class="finding-summary">
+        Projects emphasized final screens over design reasoning.
+       </p>
+       <p>
+        Case studies showed the outcomes, but gave readers little visibility
+                into the decisions and reasoning that produced them.
+       </p>
+      </article>
+      <article class="problem-finding">
+       <h3>
+        Weak Storytelling
+       </h3>
+       <p class="finding-summary">
+        Information lacked a clear narrative and hierarchy.
+       </p>
+       <p>
+        Without a clear progression from problem to process to outcome,
+                readers had to piece together the story themselves.
+       </p>
+      </article>
+     </div>
     </div>
-
-</div>
-
-</section>
-
-<!-- ========================================
+   </section>
+   <!-- ========================================
      04 — DEFINING THE DIRECTION
 ======================================== -->
-
-<section class="direction-section" aria-labelledby="direction-title">
-
+   <section aria-labelledby="direction-title" class="direction-section">
     <div class="section-label">
-        <span aria-hidden="true">04</span>
-        <p>Defining the Direction</p>
+     <span aria-hidden="true">
+      04
+     </span>
+     <p>
+      Defining the Direction
+     </p>
     </div>
-
     <div class="direction-intro">
-
-        <h2 id="direction-title">
-            The portfolio needed to shift from presenting work
+     <h2 id="direction-title">
+      The portfolio needed to shift from presenting work
             to communicating design thinking.
-        </h2>
-
-        <p>
-           The findings changed how I approached the redesign. Rather than treating each issue as an isolated fix, I used them to define a broader direction for the portfolio: make my value clear quickly, make my reasoning visible, and make deeper project stories easy to explore.
-        </p>
-
+     </h2>
+     <p>
+      Rather than treating each finding as an isolated fix, I used them
+            to define three priorities for the redesign: clarify my value,
+            expose the reasoning behind my work, and create clearer paths
+            into deeper project stories.
+     </p>
     </div>
-
-
     <!-- FROM → TOWARD -->
-
     <div class="direction-shift">
-
-        <div class="direction-side direction-from">
-
-            <span class="direction-label">From</span>
-
-            <h3>Presenting Work</h3>
-
-            <ul>
-                <li>Final screens</li>
-                <li>Brief descriptions</li>
-                <li>Passive browsing</li>
-            </ul>
-
-        </div>
-
-
-        <div class="direction-transition" aria-hidden="true">
-            <span>→</span>
-        </div>
-
-
-        <div class="direction-side direction-toward">
-
-            <span class="direction-label">Toward</span>
-
-            <h3>Communicating Thinking</h3>
-
-            <ul>
-                <li>Decisions + reasoning</li>
-                <li>Structured narratives</li>
-                <li>Clear paths to explore</li>
-            </ul>
-
-        </div>
-
+     <div class="direction-side direction-from">
+      <span class="direction-label">
+       From
+      </span>
+      <h3>
+       Presenting Work
+      </h3>
+      <ul>
+       <li>
+        Final screens
+       </li>
+       <li>
+        Brief descriptions
+       </li>
+       <li>
+        Passive browsing
+       </li>
+      </ul>
+     </div>
+     <div aria-hidden="true" class="direction-transition">
+      <span>
+       &rarr;
+      </span>
+     </div>
+     <div class="direction-side direction-toward">
+      <span class="direction-label">
+       Toward
+      </span>
+      <h3>
+       Communicating Thinking
+      </h3>
+      <ul>
+       <li>
+        Decisions + reasoning
+       </li>
+       <li>
+        Structured narratives
+       </li>
+       <li>
+        Clear paths to explore
+       </li>
+      </ul>
+     </div>
     </div>
-
-
     <div class="direction-takeaway">
-        <p>
-            This shift became the lens for every design decision that followed.
-        </p>
+     <p>
+      This shift became the lens for every design decision that followed.
+     </p>
     </div>
-
-</section>
-
-<!-- ========================================
+   </section>
+   <!-- ========================================
      05 — REDESIGNING THE EXPERIENCE
 ======================================== -->
-
-<section class="redesign-section" aria-labelledby="redesign-title">
-
+   <section aria-labelledby="redesign-title" class="redesign-section">
     <div class="section-label">
-        <span aria-hidden="true">05</span>
-        <p>Redesigning the Experience</p>
+     <span aria-hidden="true">
+      05
+     </span>
+     <p>
+      Redesigning the Experience
+     </p>
     </div>
-
     <div class="redesign-intro">
-
-        <h2 id="redesign-title">
-            Turning the strategy into a system.
-        </h2>
-
-        <p>
-            With the direction established, I redesigned the portfolio around
-            three parts of the experience: how visitors first understand me,
-            how they explore my design thinking, and how they move between
-            projects.
-        </p>
-
+     <h2 id="redesign-title">
+      Turning the strategy into a system.
+     </h2>
+     <p>
+      I translated those priorities across three levels of the portfolio:
+        the landing experience, individual project entry points, and the
+        structure of the case studies themselves.
+     </p>
     </div>
-
-
     <!-- 01 — LANDING EXPERIENCE -->
-
     <article class="design-move design-move--landing">
-
-        <div class="design-move-heading">
-
-            <span class="design-move-number" aria-hidden="true">01</span>
-
-            <div>
-                <p class="design-move-label">Landing Experience</p>
-
-                <h3>
-                    Establishing a clear entry point
-                </h3>
-            </div>
-
-        </div>
-
-
-        <figure class="design-showcase">
-
-            <img
-                src="images/landingpageafter.png"
-                alt="Redesigned portfolio homepage showing clearer positioning and project entry points"
-                class="zoomable"
-            >
-
-            <figcaption>
-                The redesigned landing page establishes a clearer starting point
+     <div class="design-move-heading">
+      <span aria-hidden="true" class="design-move-number">
+       05.1
+      </span>
+      <div>
+       <p class="design-move-label">
+        Landing Experience
+       </p>
+       <h3>
+        Establishing a clear entry point
+       </h3>
+      </div>
+     </div>
+     <figure class="design-showcase">
+      <button aria-controls="lightbox" aria-haspopup="dialog" aria-label="Expand image: Redesigned portfolio homepage showing clearer positioning and project entry points" class="zoom-trigger" type="button">
+       <img alt="Redesigned portfolio homepage showing clearer positioning and project entry points" class="zoomable" src="images/landingpageafter.png">
+      </button>
+      <figcaption>
+       The redesigned landing page establishes a clearer starting point
     for exploring the portfolio.
-            </figcaption>
-
-        </figure>
-
-
-        <div class="design-details">
-
-    <div class="design-detail">
-        <h4>Role-First Introduction</h4>
-
-        <p>
-            I reworked the opening content so visitors can understand
-            my role and design focus before exploring individual projects.
-        </p>
-    </div>
-
-
-    <div class="design-detail">
-        <h4>Clear Action Hierarchy</h4>
-
-        <p>
-            I centered the experience around one primary action, giving visitors a clear path from introduction to project exploration.
-        </p>
-    </div>
-
-
-    <div class="design-detail">
-        <h4>Direct Project Entry</h4>
-
-        <p>
-            I created a clearer path from the introduction into featured
-            case studies, reducing ambiguity about where visitors should go next.
-        </p>
-    </div>
-
-</div>
-
+      </figcaption>
+     </figure>
+     <div class="design-details">
+      <div class="design-detail">
+       <h4>
+        Role-First Introduction
+       </h4>
+       <p>
+        The opening statement now communicates my UX focus immediately,
+        replacing the ambiguous introduction of the previous portfolio.
+       </p>
+      </div>
+      <div class="design-detail">
+       <h4>
+        Clear Action Hierarchy
+       </h4>
+       <p>
+        A single primary CTA establishes the intended next step instead
+        of asking visitors to interpret several competing options.
+       </p>
+      </div>
+      <div class="design-detail">
+       <h4>
+        Featured Work Hierarchy
+       </h4>
+       <p>
+        Projects are introduced as part of the homepage narrative,
+        allowing visitors to evaluate the work before committing
+        to a full case study.
+       </p>
+      </div>
+     </div>
     </article>
     <!-- ========================================
      05.2 — PROJECT CONTEXT
 ======================================== -->
-
-<article class="design-move design-move--context">
-
-    <div class="design-move-heading">
-
-        <span class="design-move-number" aria-hidden="true">02</span>
-
-        <div>
-            <p class="design-move-label">Project Context</p>
-
-            <h3>
-                Making each project understandable at a glance
-            </h3>
+    <article class="design-move design-move--context">
+     <div class="design-move-heading">
+      <span aria-hidden="true" class="design-move-number">
+       05.2
+      </span>
+      <div>
+       <p class="design-move-label">
+        Project Context
+       </p>
+       <h3>
+        Making each project understandable at a glance
+       </h3>
+      </div>
+     </div>
+     <div class="context-layout">
+      <figure class="context-visual">
+       <button aria-controls="lightbox" aria-haspopup="dialog" aria-label="Expand image: Redesigned COSRX case study opening showing project title, summary, role, methods, tools, timeline, and project interface" class="zoom-trigger" type="button">
+        <img alt="Redesigned COSRX case study opening showing project title, summary, role, methods, tools, timeline, and project interface" class="zoomable" src="images/cosrxpreview.png">
+       </button>
+       <figcaption>
+       The COSRX project opening provides essential context before the deeper case study begins.
+       </figcaption>
+      </figure>
+      <div class="context-copy">
+       <p class="context-intro">
+        Opening a case study shouldn't require the reader to reconstruct
+    what the project is. I redesigned the project introduction to
+    answer the essential questions before the process begins.
+       </p>
+       <div class="context-points">
+        <div class="context-point">
+         <h4>
+          Immediate Context
+         </h4>
+         <p>
+          Project type and a concise description establish what
+                        the work is and why it matters before the reader enters
+                        the process.
+         </p>
         </div>
+        <div class="context-point">
+         <h4>
+          Role & Approach
+         </h4>
+         <p>
+          Role, methods, tools, and timeline make my contribution
+                        and approach visible without requiring the reader to
+                        search for context.
+         </p>
+        </div>
+        <div class="context-point">
+         <h4>
+          Visual Context
+         </h4>
+         <p>
+          Supporting visuals are introduced where they add context to the project, helping readers connect the overview to the work without interrupting the narrative.
+         </p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </article>
+    <!-- ========================================
+     05.3 — CASE STUDY STRUCTURE
+======================================== -->
+    <article class="design-move design-move--story">
+     <div class="design-move-heading">
+      <span aria-hidden="true" class="design-move-number">
+       05.3
+      </span>
+      <div>
+       <p class="design-move-label">
+        Case Study Structure
+       </p>
+       <h3>
+        Making the reasoning as visible as the final design
+       </h3>
+      </div>
+     </div>
+     <div class="story-intro">
+      <p>
+       The original case studies showed what I designed, but gave
+            readers little insight into how I arrived there. I restructured
+            each project around the decisions that shaped the outcome,
+            creating a clearer progression from problem to evidence,
+            reasoning, and design response.
+      </p>
+     </div>
+     <div aria-label="Case study narrative progresses from problem to evidence to reasoning to design response" class="story-flow" role="list">
+      <div class="story-step" role="listitem">
 
+       <p class="story-step-label">
+        Problem
+       </p>
+       <h4>
+        Establish the primary challenge
+       </h4>
+       <p>
+        Each case study begins by defining the problem and why
+                it matters before presenting a solution.
+       </p>
+      </div>
+      <div aria-hidden="true" class="story-arrow">
+       &rarr;
+      </div>
+      <div class="story-step" role="listitem">
+
+       <p class="story-step-label">
+        Evidence
+       </p>
+       <h4>
+        Show what informed the decision
+       </h4>
+       <p>
+        Research, evaluation findings, and observations provide
+                evidence for the problems being addressed.
+       </p>
+      </div>
+      <div aria-hidden="true" class="story-arrow">
+       &rarr;
+      </div>
+      <div class="story-step" role="listitem">
+
+       <p class="story-step-label">
+        Reasoning
+       </p>
+       <h4>
+        Connect findings to decisions
+       </h4>
+       <p>
+        Design choices are explained in relation to the findings
+                instead of appearing as isolated visual changes.
+       </p>
+      </div>
+      <div aria-hidden="true" class="story-arrow">
+       &rarr;
+      </div>
+      <div class="story-step" role="listitem">
+
+       <p class="story-step-label">
+        Design Response
+       </p>
+       <h4>
+        Show the resulting solution
+       </h4>
+       <p>
+        Final designs demonstrate how the earlier reasoning was
+                translated into a concrete response.
+       </p>
+      </div>
+     </div>
+     <div class="story-takeaway">
+      <p>
+       The goal wasn't to add more content. It was to make the
+            relationship between the problem, my reasoning, and the
+            resulting design easier to follow.
+      </p>
+     </div>
+    </article>
+   </section>
+   <!-- ========================================
+     06 — REFLECTION
+======================================== -->
+   <section aria-labelledby="reflection-title" class="reflection-section">
+    <div class="section-label">
+     <span aria-hidden="true">
+      06
+     </span>
+     <p>
+      Reflection
+     </p>
     </div>
-
-
-    <p class="design-move-intro">
-        Once a visitor enters a project, the introduction needs to establish
-        context before asking them to follow the process. I redesigned each
-        case study opening to surface the project purpose, my role, and the
-        approach upfront.
-    </p>
-
-
-    <figure class="design-showcase">
-
-        <img
-            src="images/cosrxpreview.png"
-            alt="Redesigned COSRX case study introduction showing the project title, description, role, methods, tools, timeline, and project interface"
-            class="zoomable"
-        >
-
-        <figcaption>
-            The redesigned case study opening gives readers the context they
-            need before moving into the deeper project story.
-        </figcaption>
-
-    </figure>
-
-
-    <div class="design-details">
-
-        <div class="design-detail">
-            <h4>Immediate Context</h4>
-
-            <p>
-                Project type and a concise description establish what the work
-                is and why it matters before the reader enters the process.
-            </p>
-        </div>
-
-
-        <div class="design-detail">
-            <h4>Role &amp; Approach</h4>
-
-            <p>
-                Role, methods, tools, and timeline make my contribution and
-                approach visible without requiring the reader to search for context.
-            </p>
-        </div>
-
-
-        <div class="design-detail">
-            <h4>Visual Entry Point</h4>
-
-            <p>
-                A prominent project visual connects the introduction directly
-                to the work and gives the reader a clear starting point for exploration.
-            </p>
-        </div>
-
+    <div class="reflection-content">
+     <h2 id="reflection-title">
+      The biggest redesign wasn't visual.
+            It was how I communicated my thinking.
+     </h2>
+     <div class="reflection-copy">
+      <p>
+       I began this project focused on improving the presentation of
+                my portfolio, but evaluating the experience revealed a deeper
+                problem: showing finished work wasn't enough if readers
+                couldn't understand the decisions behind it.
+      </p>
+      <p>
+       Redesigning the portfolio pushed me to think more deliberately
+                about what information a reader needs, when they need it, and
+                how one piece of context should lead into the next. That
+                changed both the structure of the portfolio and the way I
+                approach design work.
+      </p>
+     </div>
+     <div class="reflection-takeaway">
+      <p>
+       The project reinforced that communicating a design decision
+                clearly is part of the design itself.
+      </p>
+     </div>
     </div>
-
-</article>
-
-</section>
-
-</main>
-  <footer>
-    <p>&copy; 2025</p>
+   </section>
+  </main>
+  <footer class="site-footer">
+   <div class="footer-inner">
+    <nav aria-label="Case study navigation" class="footer-project-nav">
+             <a class="footer-project-link next-project" href="study1pg2.html">
+     &larr; [COSRX Project]
+     </a>
+     <a class="footer-project-link next-project" href="study2pg1.html">
+      [Theater Experience] &rarr;
+     </a>
+    </nav>
+    <div class="footer-bottom">
+     <p>
+      &copy; 2026 Angel Garcia
+     </p>
+    </div>
+   </div>
   </footer>
-  <div
-    class="lightbox"
-    id="lightbox"
-    role="dialog"
-    aria-modal="true"
-    aria-label="Expanded image"
-    aria-hidden="true"
->
-    <button
-        class="lightbox-close"
-        type="button"
-        aria-label="Close expanded image"
-    >
-        &times;
-    </button>
-
-    <img
-        class="lightbox-image"
-        id="lightbox-image"
-        src=""
-        alt=""
-    >
-</div>
-
-<script src="study1pg3.js"></script>
-  </body>
+  <div aria-hidden="true" aria-label="Expanded image" aria-modal="true" class="lightbox" hidden id="lightbox" role="dialog">
+   <button aria-label="Close expanded image" class="lightbox-close" type="button">
+    &times;
+   </button>
+   <img alt class="lightbox-image" id="lightbox-image" src>
+  </div>
+  <!-- Back to Top -->
+  <button aria-label="Back to top" class="back-to-top" id="backToTop" type="button">
+   <span aria-hidden="true">
+    &uarr;
+   </span>
+  </button>
+  <script src="study1pg3.js">
+  </script>
+ </body>
 </html>

@@ -1,93 +1,125 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightbox-image");
+  const closeButton = document.querySelector(".lightbox-close");
+  const zoomButtons = document.querySelectorAll(".zoom-trigger");
 
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImage = document.getElementById("lightbox-image");
-    const closeButton = document.querySelector(".lightbox-close");
-    const zoomableImages = document.querySelectorAll(".zoomable");
+  if (!lightbox || !lightboxImage || !closeButton) {
+    return;
+  }
 
-    let lastFocusedElement = null;
+  let previouslyFocusedElement = null;
 
+  function openLightbox(button) {
+    const image = button.querySelector("img");
 
-    function openLightbox(image) {
-
-        lastFocusedElement = document.activeElement;
-
-        lightboxImage.src = image.src;
-        lightboxImage.alt = image.alt;
-
-        lightbox.classList.add("open");
-        lightbox.setAttribute("aria-hidden", "false");
-
-        document.body.style.overflow = "hidden";
-
-        closeButton.focus();
+    if (!image) {
+      return;
     }
 
+    previouslyFocusedElement = document.activeElement;
 
-    function closeLightbox() {
+    lightboxImage.src = image.src;
+    lightboxImage.alt = image.alt;
 
-        lightbox.classList.remove("open");
-        lightbox.setAttribute("aria-hidden", "true");
+    lightbox.hidden = false;
+    document.body.classList.add("lightbox-open");
 
-        document.body.style.overflow = "";
+    closeButton.focus();
+  }
 
-        lightboxImage.src = "";
+  function closeLightbox() {
+    lightbox.hidden = true;
 
-        if (lastFocusedElement) {
-            lastFocusedElement.focus();
-        }
+    lightboxImage.src = "";
+    lightboxImage.alt = "";
+
+    document.body.classList.remove("lightbox-open");
+
+    if (
+      previouslyFocusedElement &&
+      typeof previouslyFocusedElement.focus === "function"
+    ) {
+      previouslyFocusedElement.focus();
+    }
+  }
+
+  zoomButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      openLightbox(button);
+    });
+  });
+
+  closeButton.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (lightbox.hidden) {
+      return;
     }
 
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeLightbox();
+      return;
+    }
 
-    zoomableImages.forEach(image => {
+    if (event.key === "Tab") {
+      trapFocus(event);
+    }
+  });
 
-        image.setAttribute("tabindex", "0");
-        image.setAttribute("role", "button");
-        image.setAttribute(
-            "aria-label",
-            `${image.alt}. Open full-size image`
-        );
+  function trapFocus(event) {
+    const focusableElements = lightbox.querySelectorAll(
+      'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    );
 
-        image.addEventListener("click", () => {
-            openLightbox(image);
-        });
+    if (!focusableElements.length) {
+      event.preventDefault();
+      closeButton.focus();
+      return;
+    }
 
-        image.addEventListener("keydown", event => {
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
 
-            if (
-                event.key === "Enter" ||
-                event.key === " "
-            ) {
-                event.preventDefault();
-                openLightbox(image);
-            }
+    if (event.shiftKey && document.activeElement === firstElement) {
+      event.preventDefault();
+      lastElement.focus();
+    } else if (
+      !event.shiftKey &&
+      document.activeElement === lastElement
+    ) {
+      event.preventDefault();
+      firstElement.focus();
+    }
+  }
+  const backToTopButton = document.getElementById("backToTop");
 
-        });
-
-    });
-
-
-    closeButton.addEventListener("click", closeLightbox);
-
-
-    lightbox.addEventListener("click", event => {
-
-        if (event.target === lightbox) {
-            closeLightbox();
+if (backToTopButton) {
+    const updateBackToTopVisibility = () => {
+        if (window.scrollY > 1200) {
+            backToTopButton.classList.add("show");
+        } else {
+            backToTopButton.classList.remove("show");
         }
+    };
 
+    window.addEventListener("scroll", updateBackToTopVisibility);
+
+    backToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     });
 
-
-    document.addEventListener("keydown", event => {
-
-        if (
-            event.key === "Escape" &&
-            lightbox.classList.contains("open")
-        ) {
-            closeLightbox();
-        }
-
-    });
-
+    // Check position when the page first loads
+    updateBackToTopVisibility();
+}
 });
