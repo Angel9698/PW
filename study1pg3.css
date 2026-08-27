@@ -635,7 +635,7 @@ figcaption {
 
 .direction-takeaway {
     max-width: 800px;
-    margin: 3.5rem auto 0;
+    margin: 3rem auto 0;
     text-align: center;
 }
 
@@ -802,7 +802,7 @@ figcaption {
 
 /* 05.3 — Case-study structure */
 .design-move--story {
-    padding-top: 5rem;
+    padding-top: 4rem;
     border-top: 1px solid var(--color-line-soft);
 }
 
@@ -910,20 +910,6 @@ figcaption {
     margin-top: 1.5rem;
 }
 
-.reflection-takeaway {
-    margin-top: 3.5rem;
-    padding: 2rem 0;
-    border-top: 1px solid var(--color-line-soft);
-    border-bottom: 1px solid var(--color-line-soft);
-}
-
-.reflection-takeaway p {
-    font-size: clamp(1.25rem, 2vw, 1.65rem);
-    font-weight: 600;
-    line-height: 1.45;
-    text-align: center;
-}
-
 /* ========================================
    LIGHTBOX
 ======================================== */
@@ -973,7 +959,7 @@ figcaption {
 
 .site-footer {
     width: 100%;
-    margin-top: 4rem;
+    margin-top: 6rem;
     padding: 3rem 0 1rem;
     color: #000;
     background-color: var(--color-footer);
@@ -1085,10 +1071,6 @@ figcaption {
     .story-arrow {
         display: none;
     }
-
-    .design-move--story {
-        margin-top: 7rem;
-    }
 }
 
 @media (max-width: 780px) {
@@ -1134,7 +1116,8 @@ figcaption {
     }
 
     .project-intro h1 {
-        font-size: clamp(2.5rem, 12vw, 3.5rem);
+        font-size: clamp(2.5rem, 12vw, 2.5rem);
+        margin-bottom: .4rem;
     }
 
     .project-summary,
@@ -1192,13 +1175,35 @@ figcaption {
         border-left: 0;
         border-top: 1px solid var(--color-line-soft);
     }
-
+    .evaluation-step h3 {
+        font-size: 1.25rem;
+    }
+    .evaluation-step p {
+        font-size: 1rem;
+    }
+    .problem-screenshot figcaption {
+        font-size: 1rem;
+    }
+    .problem-finding h3 {
+        font-size: 1.25rem;
+    }
+    .problem-finding p {
+        font-size: 1rem;
+    }
+    .problem-deepdive {
+        padding-bottom: 0;
+        margin-bottom: 4rem;
+    }
     .direction-transition {
         min-height: 5rem;
         border-left: 0;
         border-right: 0;
-        border-top: 1px solid var(--color-line-soft);
         border-bottom: 1px solid var(--color-line-soft);
+        align-items: unset;
+    }
+
+    .direction-shift {
+        border-bottom: none;
     }
 
     .direction-transition span {
@@ -1213,10 +1218,39 @@ figcaption {
     .direction-toward {
         padding: 2rem 0;
     }
+    .direction-side h3 {
+        font-size: 1.5rem;
+    }
+    .direction-side li {
+        font-size: 1rem;
+    }
 
+    .direction-toward {
+        padding-bottom: 0;
+    }
+
+    .direction-takeaway p {
+        font-size: 1.25rem;
+    }
+
+    .direction-section {
+        margin-bottom: 4rem;
+    }
+
+        .design-showcase figcaption {
+            font-size: 1rem;
+        }
     .design-move--context {
         margin-top: 4rem;
         padding-top: 3.5rem;
+    }
+
+    .design-detail h4 {
+        font-size: 1.25rem;
+    }
+
+        .design-detail p {
+        font-size: 1rem;
     }
 
     .context-layout {
@@ -1224,23 +1258,42 @@ figcaption {
         margin-top: 1.5rem;
     }
 
+    .context-visual figcaption {
+        font-size: 1rem;
+    }
+
+    .context-intro {
+        font-size: 1rem;
+    }
     .context-copy {
         padding-top: 0;
     }
 
+    .context-point h4 {
+        font-size: 1.25rem;
+    }
+
+        .context-point p {
+        font-size: 1rem;
+    }
+
+    .design-move--story {
+        padding-top: 4rem;
+    }
     .reflection-section {
         width: auto;
         margin-inline: 20px;
-        padding: 3.5rem 0 5rem;
+        padding: 3.5rem 0 0rem;
     }
 
     .reflection-content h2 {
-        font-size: clamp(2rem, 9vw, 2.75rem);
+        font-size: clamp(2rem, 9vw, 2.5rem);
     }
 
-    .footer-project-nav {
-        justify-content: flex-start;
+    .reflection-copy p {
+        font-size: 1rem;
     }
+
 }
 
 @media (max-width: 600px) {
@@ -1250,7 +1303,6 @@ figcaption {
     }
 
     .design-move--story {
-        margin-top: 5rem;
         padding-top: 3.5rem;
     }
 
@@ -1258,6 +1310,13 @@ figcaption {
         margin-top: 1.5rem;
     }
 
+    .story-intro p {
+        font-size: 1rem;
+    }
+
+    .story-step > p:last-child {
+        font-size: 1rem;
+    }
     .story-flow {
         margin-top: 2.75rem;
     }
@@ -1266,13 +1325,17 @@ figcaption {
         font-size: 1.2rem;
     }
 
+    .story-step, .story-step:first-child {
+        padding-bottom: 0;
+    }
+
     .story-takeaway {
         margin-top: 2.25rem;
         text-align: left;
     }
 
     .story-takeaway p {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 
     .lightbox {

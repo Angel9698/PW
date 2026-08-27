@@ -859,48 +859,7 @@ color: black;
     outline-offset: 3px;
 }
 
-/* ---------- Responsive ---------- */
-@media (max-width: 980px) {
-    .logo {
-        display: none;
-    }
 
-    header nav {
-        right: 0;
-    }
-
-    header nav ul {
-        justify-content: center;
-    }
-
-    .challenge-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-3);
-    }
-
-    .problem-grid,
-    .decision-row {
-        grid-template-columns: 1fr;
-    }
-
-    .problem-item {
-        padding: var(--space-4) 0;
-    }
-
-    .problem-item + .problem-item {
-        border-top: 1px solid var(--color-line);
-        border-left: 0;
-    }
-
-    .decision-row.reverse .decision-copy,
-    .decision-row.reverse .decision-visual {
-        order: initial;
-    }
-
-    .decision-copy {
-        max-width: 700px;
-    }
-}
 
 @media (max-width: 780px) {
     .site-header {
@@ -1001,18 +960,12 @@ color: black;
 
 .project-type {
     margin-bottom: .6rem;
-    font-size: .7rem;
 }
 
 .project-intro h1 {
     font-size: 2.5rem;
     line-height: 1;
     margin-bottom: .4rem;
-}
-
-.project-subtitle {
-    font-size: 1.2rem;
-    margin-bottom: .65rem;
 }
 
 .project-summary {
@@ -1027,12 +980,8 @@ color: black;
     padding-top: 1.25rem;
 }
 
-.meta-item span {
-    font-size: .7rem;
-}
-
 .meta-item p {
-    font-size: .9rem;
+    font-size: 1rem;
     line-height: 1.4;
 }
 
