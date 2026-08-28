@@ -282,7 +282,7 @@ color: black;
 
 .project-intro {
     width: min(1200px, 88%);
-    margin: 1rem auto 5rem;
+    margin: 1rem auto 2rem;
 }
 
 .project-title-group {

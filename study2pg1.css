@@ -10,6 +10,8 @@
     --color-accent: #ffb6c1;
     --color-accent-hover: #db7093;
 
+    --color-research: #deb887;
+
     --color-footer: #6495ed;
 
     --color-line: rgba(0, 0, 0, .25);
@@ -72,11 +74,13 @@ body {
     background-blend-mode: lighten;
 
     line-height: 1.5;
+
     overflow-wrap: anywhere;
 }
 
 img {
     display: block;
+
     max-width: 100%;
     height: auto;
 }
@@ -97,6 +101,7 @@ a {
 
 .skip-link {
     position: fixed;
+
     top: .75rem;
     left: .75rem;
 
@@ -115,7 +120,8 @@ a {
     transition: transform 160ms ease;
 }
 
-.skip-link:focus {
+.skip-link:focus,
+.skip-link:focus-visible {
     transform: translateY(0);
 }
 
@@ -240,10 +246,6 @@ main:focus {
     background-color: var(--color-accent-hover);
 }
 
-.site-nav .contact-link[aria-current="page"] {
-    box-shadow: 0 0 0 3px #000;
-}
-
 
 /* ========================================
    CASE STUDY NAVIGATION
@@ -253,8 +255,6 @@ main:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    gap: 3rem;
 
     margin: .75rem auto 1.5rem;
 }
@@ -270,8 +270,7 @@ main:focus {
     border-radius: 50%;
 }
 
-.previous,
-.next {
+.previous {
     display: block;
 
     width: 2.875rem;
@@ -282,30 +281,25 @@ main:focus {
 
     border-radius: 50%;
 
-    transition:
-        background-color 160ms ease,
-        transform 160ms ease;
-}
-.next {
-    visibility: hidden;
-}
-.previous {
     transform: rotate(180deg);
+
+    transition: background-color 160ms ease;
 }
 
-.previous:hover,
-.next:hover {
+.previous:hover {
     background-color: var(--color-accent-hover);
 }
 
 
 /* ========================================
-   SHARED SECTION SYSTEM
+   SHARED CONTENT
 ======================================== */
 
 .project-intro,
 .project-hero,
-.theater-problem {
+.theater-problem,
+.research-section,
+.failure-section {
     width: min(var(--content-width), var(--content-fluid));
 
     margin-inline: auto;
@@ -321,20 +315,16 @@ main:focus {
 }
 
 .section-label > span {
-    flex: 0 0 auto;
-
     color: var(--color-muted);
 
-    font-size: .875rem;
+    font-size: 1rem;
     font-weight: 700;
 
     letter-spacing: .1em;
 }
 
 .section-label > p {
-    color: var(--color-text);
-
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.2;
 
@@ -353,7 +343,7 @@ figcaption {
 
 .project-intro {
     margin-top: 1rem;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
 .project-title-group {
@@ -421,8 +411,6 @@ figcaption {
 }
 
 .meta-item dd {
-    margin: 0;
-
     font-size: 1.2rem;
     line-height: 1.45;
 }
@@ -436,16 +424,10 @@ figcaption {
     margin-bottom: 1rem;
 }
 
-.project-hero-figure {
-    margin: 0;
-}
-
 .project-hero-figure figcaption {
     margin-top: .75rem;
 
-    color: var(--color-muted);
-
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     line-height: 1.5;
 }
 
@@ -462,14 +444,11 @@ figcaption {
     margin: 0;
     padding: 0;
 
-    color: inherit;
     background-color: transparent;
 
     border: 0;
 
     cursor: zoom-in;
-
-    text-align: inherit;
 }
 
 .zoom-trigger img {
@@ -493,8 +472,8 @@ figcaption {
 ======================================== */
 
 .theater-problem {
-    margin-bottom: 7rem;
-    padding-top: 4rem;
+    margin-bottom: 3rem;
+    padding-top: 3rem;
 
     border-top: 1px solid var(--color-line-soft);
 }
@@ -512,7 +491,7 @@ figcaption {
     max-width: 700px;
 
     font-size: clamp(2.25rem, 4vw, 3.5rem);
-    font-weight: 500;
+    font-weight: 700;
     line-height: 1.08;
 }
 
@@ -533,42 +512,44 @@ figcaption {
 
 
 /* ========================================
-   CURRENT JOURNEY
+   02 — OBSERVING THE BEHAVIOR
 ======================================== */
 
-.journey-block {
-    margin-top: 5rem;
-    padding-top: 3rem;
+.research-section {
+    margin-bottom: 5rem;
+    padding-top: 2rem;
 
     border-top: 1px solid var(--color-line-soft);
 }
 
-.journey-heading {
-    max-width: 800px;
+
+/* Observation setup */
+
+.research-setup {
+    max-width: 760px;
+
+    margin-bottom: 2.5rem;
+
+    font-size: 1.25rem;
+    line-height: 1.65;
 }
 
-.journey-eyebrow {
-    margin-bottom: .75rem;
 
-    color: var(--color-muted);
+/* ========================================
+   OBSERVED JOURNEY
+======================================== */
 
-    font-size: .8rem;
+.journey-block {
+    margin-top: 0;
+}
+
+.journey-block > h2 {
+    margin-bottom: 1.5rem;
+
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
     font-weight: 700;
-
-    text-transform: uppercase;
-    letter-spacing: .12em;
+    line-height: 1.2;
 }
-
-.journey-heading h3 {
-    max-width: 780px;
-
-    font-size: clamp(1.75rem, 3vw, 2.6rem);
-    font-weight: 700;
-    line-height: 1.15;
-}
-
-
-/* Journey flow */
 
 .journey-flow {
     display: grid;
@@ -586,14 +567,12 @@ figcaption {
 
     align-items: stretch;
 
-    margin-top: 3rem;
-
     border-top: 1px solid var(--color-line-soft);
     border-bottom: 1px solid var(--color-line-soft);
 }
 
 .journey-step {
-    padding: 2rem 1.25rem;
+    padding: 1.65rem 1rem;
 }
 
 .journey-step:first-child {
@@ -609,107 +588,234 @@ figcaption {
     align-items: center;
     justify-content: center;
 
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 2.25rem;
+    height: 2.25rem;
 
-    margin-bottom: 1rem;
+    margin-bottom: .8rem;
 
     color: #000;
-    background-color: var(--color-accent);
+    background-color: var(--color-research);
 
     border-radius: 50%;
 
-    font-size: 1rem;
+    font-size: .85rem;
     font-weight: 700;
     line-height: 1;
 }
 
-.journey-step h4 {
-    margin-bottom: .65rem;
+.journey-step h3 {
+    margin-bottom: .45rem;
 
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.25;
 }
 
 .journey-step p {
     font-size: 1.25rem;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 
 /* Primary failure point */
 
+.journey-step-label {
+    margin-bottom: .35rem;
+
+    color: var(--color-muted);
+
+    font-size: .75rem !important;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
 .journey-step--problem {
-    background-color: rgba(0, 0, 0, .055);
+    padding-inline: 1.2rem;
+
+    background-color: rgba(0, 0, 0, .09);
 }
 
 
-/* Arrows */
+/* Journey arrows */
 
 .journey-arrow {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    padding-inline: .35rem;
+    padding-inline: .25rem;
 
     color: var(--color-muted);
 
-    font-size: 1.5rem;
-}
-
-
-/* Journey takeaway */
-
-.journey-takeaway {
-    max-width: 780px;
-
-    margin: 2.5rem auto 0;
-
-    font-size: 1.2rem;
-    font-weight: 600;
-    line-height: 1.55;
-
-    text-align: center;
+    font-size: 1.3rem;
 }
 
 
 /* ========================================
-   RESEARCH QUESTION
+   KEY FINDING
 ======================================== */
 
-.research-question {
-    max-width: 900px;
+.research-finding-compact {
+    max-width: 760px;
 
-    margin: 0rem auto 0;
-    padding: 2.5rem 0;
-
-    text-align: center;
+    margin-top: 2.75rem;
+    padding: 2rem 0;
 
     border-bottom: 1px solid var(--color-line-soft);
 }
 
-.research-question-label {
-    margin-bottom: .85rem;
+.research-stat {
+    display: inline-block;
 
-    color: var(--color-muted);
+    margin-bottom: .75rem;
+    padding: .4rem .7rem;
 
-    font-size: .8rem;
+    color: #000;
+    background-color: var(--color-research);
+
+    border-radius: 999px;
+
+    font-size: .85rem;
     font-weight: 700;
 
     text-transform: uppercase;
-    letter-spacing: .12em;
+    letter-spacing: .06em;
 }
 
-.research-question-text {
-    max-width: 760px;
+.research-finding-compact h2 {
+    max-width: 700px;
 
-    margin-inline: auto;
+    margin-bottom: .75rem;
 
-    font-size: clamp(1.4rem, 2.4vw, 2rem);
+    font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.research-finding-compact > p:last-child {
+    max-width: 700px;
+
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   03 — WHY THE EXPERIENCE FAILED
+======================================== */
+
+.failure-section {
+    margin-bottom: 6rem;
+    padding-top: 3.75rem;
+
+    border-top: 1px solid var(--color-line-soft);
+}
+
+
+/*
+   Section 03 is intentionally more compact.
+   Unlike Sections 01 and 02, it does not
+   introduce another narrative headline.
+*/
+
+.failure-section .section-label {
+    margin-bottom: .75rem;
+}
+
+
+/* Compact methodology note */
+
+.failure-method-note {
+    margin-bottom: 1.75rem;
+
+    color: var(--color-muted);
+
+    font-size: .9rem;
     font-weight: 600;
+    line-height: 1.5;
+
+    letter-spacing: .02em;
+}
+
+
+/* ========================================
+   HEURISTIC FINDINGS
+======================================== */
+
+.failure-findings {
+    border-top: 1px solid var(--color-line-soft);
+}
+
+.failure-finding {
+    display: grid;
+    grid-template-columns: minmax(210px, .65fr) 1.35fr;
+
+    gap: clamp(2rem, 5vw, 5rem);
+
+    padding: 2rem 0;
+
+    border-bottom: 1px solid var(--color-line-soft);
+}
+
+.failure-metric {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 1rem;
+}
+
+.failure-score {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 3.4rem;
+
+    padding: .4rem .65rem;
+
+    background-color: var(--color-accent);
+
+    border-radius: 999px;
+
+    font-size: .8rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.failure-metric p {
+    max-width: 220px;
+
+    font-size: .95rem;
+    font-weight: 700;
     line-height: 1.4;
+}
+
+.failure-finding-copy {
+    max-width: 700px;
+}
+
+.failure-finding-copy h3 {
+    margin-bottom: .55rem;
+
+    font-size: clamp(1.3rem, 2vw, 1.75rem);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.failure-finding-copy p {
+    font-size: 1.08rem;
+    line-height: 1.6;
+}
+
+
+/* Most severe issue */
+
+.failure-finding--critical {
+    padding-inline: 1rem;
+
+    background-color: rgba(0, 0, 0, .055);
 }
 
 
@@ -733,8 +839,6 @@ figcaption {
 }
 
 .lightbox-image {
-    display: block;
-
     width: auto;
     height: auto;
 
@@ -756,8 +860,6 @@ figcaption {
 
     min-width: 44px;
     min-height: 44px;
-
-    padding: .25rem;
 
     color: #fff;
     background-color: #000;
@@ -798,12 +900,6 @@ body.lightbox-open {
 
 .footer-project-nav {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    width: 100%;
-
-    gap: 2rem;
 
     padding-bottom: 2rem;
 }
@@ -813,8 +909,6 @@ body.lightbox-open {
     align-items: center;
 
     min-height: 44px;
-
-    padding: .5rem 0;
 
     color: #000;
 
@@ -832,8 +926,6 @@ body.lightbox-open {
 }
 
 .footer-bottom {
-    width: 100%;
-
     padding-top: 1.25rem;
 
     border-top: 1px solid rgba(0, 0, 0, .4);
@@ -870,6 +962,7 @@ body.lightbox-open {
     color: #000;
     background-color: var(--color-accent);
 
+    border: 0;
     border-radius: 50%;
 
     font-size: 1.5rem;
@@ -916,8 +1009,9 @@ body.lightbox-open {
 
     .journey-step,
     .journey-step:first-child,
-    .journey-step:last-child {
-        padding: 1.75rem 0;
+    .journey-step:last-child,
+    .journey-step--problem {
+        padding: 1.5rem 0;
     }
 
     .journey-step + .journey-step {
@@ -971,11 +1065,13 @@ body.lightbox-open {
     }
 
 
-    /* Shared containers */
+    /* Shared widths */
 
     .project-intro,
     .project-hero,
-    .theater-problem {
+    .theater-problem,
+    .research-section,
+    .failure-section {
         width: auto;
 
         margin-left: 20px;
@@ -987,7 +1083,7 @@ body.lightbox-open {
 
     .project-intro {
         margin-top: 2rem;
-        margin-bottom: 3.5rem;
+        margin-bottom: 3rem;
     }
 
     .project-intro h1 {
@@ -1003,16 +1099,26 @@ body.lightbox-open {
     /* Hero */
 
     .project-hero {
-        margin-bottom: 5rem;
+        margin-bottom: 1rem;
+    }
+
+    .project-hero-figure figcaption {
+        font-size: 1rem;
+    }
+
+
+    /* Sections */
+
+    .theater-problem,
+    .research-section,
+    .failure-section {
+        margin-bottom: 4.5rem;
+
+        padding-top: 3.5rem;
     }
 
 
     /* Problem */
-
-    .theater-problem {
-        margin-bottom: 5rem;
-        padding-top: 3.5rem;
-    }
 
     .challenge-grid {
         grid-template-columns: 1fr;
@@ -1021,10 +1127,7 @@ body.lightbox-open {
     }
 
     .challenge-grid h2 {
-        max-width: none;
-
         font-size: 2rem;
-        line-height: 1.1;
     }
 
     .challenge-copy {
@@ -1037,55 +1140,57 @@ body.lightbox-open {
     }
 
 
-    /* Journey */
+    /* Research */
 
-    .journey-block {
-        margin-top: 3.5rem;
-        padding-top: 2.5rem;
+    .research-setup {
+        margin-bottom: 2rem;
+
+        font-size: 1rem;
     }
 
-    .journey-heading h3 {
-        font-size: 1.75rem;
+    .journey-block > h2 {
+        font-size: 1.55rem;
     }
 
-    .journey-flow {
-        margin-top: 2rem;
+    .journey-step p {
+        font-size: 1rem;
     }
 
-    .journey-step {
-        padding: 1.5rem 0;
+    .research-finding-compact {
+        margin-top: 2.25rem;
     }
 
-    .journey-takeaway {
-        margin-top: 2rem;
-
-        font-size: 1.05rem;
-
-        text-align: left;
+    .research-finding-compact h2 {
+        font-size: 1.55rem;
     }
 
-
-    /* Research question */
-
-    .research-question {
-        margin-top: 3rem;
-        padding: 2rem 0;
-
-        text-align: left;
-    }
-
-    .research-question-text {
-        margin: 0;
-
-        font-size: 1.35rem;
+    .research-finding-compact > p:last-child {
+        font-size: 1rem;
     }
 
 
-    /* Footer */
+    /* Section 03 */
 
-    .footer-project-nav {
-        flex-direction: column;
-        align-items: flex-start;
+    .failure-method-note {
+        margin-bottom: 1.5rem;
+
+        font-size: .85rem;
+    }
+
+    .failure-finding {
+        grid-template-columns: 1fr;
+
+        gap: 1rem;
+
+        padding: 1.75rem 0;
+    }
+
+    .failure-finding-copy p {
+        font-size: 1rem;
+    }
+
+    .failure-finding--critical {
+        padding-inline: .75rem;
     }
 
 }
@@ -1115,15 +1220,6 @@ body.lightbox-open {
     .back-to-top {
         right: 1rem;
         bottom: 1rem;
-    }
-
-}
-
-
-@media screen and (max-width: 480px) {
-
-    .research-question-text {
-        font-size: 1.25rem;
     }
 
 }
