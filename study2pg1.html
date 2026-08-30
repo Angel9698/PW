@@ -79,21 +79,14 @@
          CASE STUDY NAVIGATION
     ======================================== -->
 
-    <nav
-        class="case-nav"
-        aria-label="Case study navigation"
-    >
-        <a
-            href="study1pg3.html"
-            aria-label="Previous case study: Portfolio Website"
-        >
-            <img
-                class="previous"
-                src="images/arrow-right.svg"
-                alt=""
-            >
-        </a>
-    </nav>
+        <nav class="case-nav" aria-label="Case study navigation">
+            <a href="study1pg3.html" aria-label="Previous case study">
+                <img class="previous" src="images/arrow-right.svg" alt="">
+            </a>
+            <a href="study2pg1.html" aria-label="Next case study">
+                <img class="next" src="images/arrow-right.svg" alt="">
+            </a>
+        </nav>
 
 
     <!-- ========================================
@@ -392,10 +385,6 @@
                             03
                         </span>
 
-                        <p class="journey-step-label">
-                            Primary Failure Point
-                        </p>
-
                         <h3>
                             Wait at Wrong Pickup
                         </h3>
@@ -521,9 +510,9 @@
                     03
                 </span>
 
-                <p id="failure-title">
+                <h2 id="failure-title">
                     Why the Experience Failed
-                </p>
+                </h2>
 
             </div>
 
@@ -543,17 +532,18 @@
                  HEURISTIC FINDINGS
             ======================================== -->
 
-            <div class="failure-findings">
+            <div class="failure-findings" role="list" aria-label="Heuristic findings">
 
 
                 <!-- Visibility of System Status -->
 
-                <article class="failure-finding">
+                <article class="failure-finding" role="listitem">
 
                     <div class="failure-metric">
 
                         <span class="failure-score">
-                            3 / 5
+                            <span aria-hidden="true">3 / 5</span>
+                            <span class="visually-hidden">Severity 3 out of 5</span>
                         </span>
 
                         <p>
@@ -585,12 +575,13 @@
 
                 <!-- Match Between System and Real World -->
 
-                <article class="failure-finding">
+                <article class="failure-finding" role="listitem">
 
                     <div class="failure-metric">
 
                         <span class="failure-score">
-                            2 / 5
+                            <span aria-hidden="true">2 / 5</span>
+                            <span class="visually-hidden">Severity 2 out of 5</span>
                         </span>
 
                         <p>
@@ -623,12 +614,14 @@
 
                 <article
                     class="failure-finding failure-finding--critical"
+                    role="listitem"
                 >
 
                     <div class="failure-metric">
 
                         <span class="failure-score">
-                            5 / 5
+                            <span aria-hidden="true">5 / 5</span>
+                            <span class="visually-hidden">Severity 5 out of 5</span>
                         </span>
 
                         <p>
@@ -659,6 +652,166 @@
             </div>
 
         </section>
+        <!-- ========================================
+     04 — DESIGNING A BETTER PATH
+======================================== -->
+
+<section
+    class="solution-section"
+    aria-labelledby="solution-title"
+>
+
+    <div class="section-label">
+
+        <span aria-hidden="true">
+            04
+        </span>
+
+        <p>
+            Designing a Better Path
+        </p>
+
+    </div>
+
+
+    <!-- ========================================
+         PRIMARY RECOMMENDATION
+    ======================================== -->
+
+    <div class="solution-intro">
+
+        <p class="solution-kicker">
+            Preferred Direction
+        </p>
+
+        <h2 id="solution-title">
+            Make the correct destination visible
+            before guests commit to the wrong one.
+        </h2>
+
+        <p>
+Repositioning the entrance and directional signage would make the mobile-order pickup area visible earlier in the guest journey.
+        </p>
+
+    </div>
+
+
+    <!-- ========================================
+         RECOMMENDATION VISUAL
+    ======================================== -->
+
+    <figure class="solution-visual">
+
+        <button
+            class="zoom-trigger"
+            type="button"
+            aria-haspopup="dialog"
+            aria-controls="lightbox"
+            aria-label="Expand recommended wayfinding solution"
+            aria-describedby="solution-caption"
+        >
+
+            <img
+                class="zoomable"
+                src="images/cosrxhero.png"
+                alt="Recommended theater layout showing improved entrance positioning and visibility of the mobile-order pickup area"
+            >
+
+        </button>
+
+
+        <figcaption id="solution-caption">
+Repositioning the entrance and directional signage would make mobile pickup visible earlier while addressing the highest-severity issue—Error Prevention—with less operational change than relocating the pickup area.        </figcaption>
+
+    </figure>
+
+
+    <!-- ========================================
+         ALTERNATIVES
+    ======================================== -->
+
+    <div class="solution-alternatives">
+
+        <div class="solution-alternatives-heading">
+
+            <h3 id="alternatives-title">
+                Other directions considered
+            </h3>
+
+        </div>
+
+
+        <!-- Alternative 02 -->
+
+        <article class="solution-alternative">
+
+            <div class="solution-alternative-meta">
+
+                <span aria-hidden="true">
+                    02
+                </span>
+
+                <p>
+                    Lower Intervention
+                </p>
+
+            </div>
+
+
+            <div class="solution-alternative-copy">
+
+                <h4>
+                    Clarify the existing pickup area.
+                </h4>
+
+                <p>
+                    Add a larger sign identifying the nearby counter
+                    as hot-food pickup and provide a clear direction
+                    toward the mobile-order area.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- Alternative 03 -->
+
+        <article class="solution-alternative">
+
+            <div class="solution-alternative-meta">
+
+                <span aria-hidden="true">
+                    03
+                </span>
+
+                <p>
+                    Higher Intervention
+                </p>
+
+            </div>
+
+
+            <div class="solution-alternative-copy">
+
+                <h4>
+                    Relocate the mobile-order pickup area.
+                </h4>
+
+                <p>
+                    Move mobile pickup to the opposite side of the concession
+                    area and support the new location with additional signage.
+                    This could improve visibility, but would require more
+                    operational change and resources.
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
 
     </main>
 
@@ -673,14 +826,15 @@
 
             <nav
                 class="footer-project-nav"
-                aria-label="Case study navigation"
+                aria-label="Case study navigation, footer"
             >
 
                 <a
                     class="footer-project-link"
                     href="study1pg3.html"
+                    aria-label="Previous case study: Portfolio Website Deep Dive"
                 >
-                    ← Portfolio Website
+                    ← [Deep Dive]
                 </a>
 
             </nav>
@@ -710,6 +864,7 @@
         aria-modal="true"
         aria-label="Expanded image"
         aria-hidden="true"
+        tabindex="-1"
         hidden
     >
 

@@ -251,46 +251,63 @@ main:focus {
    CASE STUDY NAVIGATION
 ======================================== */
 
-.case-nav {
-    display: flex;
+
+.case-nav-link {
+    position: relative;
+    left: 52%;
+    top: 10px;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-
-    margin: .75rem auto 1.5rem;
+    width: 44px;
+    height: 44px;
+    padding: 0.45rem;
+    background-color: var(--color-accent);
+    border-radius: 50%;
 }
 
+.case-nav-link:hover {
+    background-color: var(--color-accent-hover);
+}
 .case-nav a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     min-width: 44px;
     min-height: 44px;
+}
 
+.case-nav {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 0.75rem auto 1.5rem;
+}
+.previous,
+.next {
+    display: block;
+    width: 2.875rem;
+    padding: 0.5rem;
     border-radius: 50%;
+    background-color: var(--color-accent);
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
 }
 
 .previous {
-    display: block;
-
-    width: 2.875rem;
-
-    padding: .5rem;
-
-    background-color: var(--color-accent);
-
-    border-radius: 50%;
-
     transform: rotate(180deg);
-
-    transition: background-color 160ms ease;
 }
 
-.previous:hover {
+.next {
+    visibility: hidden;
+}
+.previous:hover,
+.next:hover {
     background-color: var(--color-accent-hover);
 }
 
-
+[hidden] {
+    display: none !important;
+}
 /* ========================================
    SHARED CONTENT
 ======================================== */
@@ -323,7 +340,8 @@ main:focus {
     letter-spacing: .1em;
 }
 
-.section-label > p {
+.section-label > p,
+.section-label > h2 {
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.2;
@@ -516,7 +534,7 @@ figcaption {
 ======================================== */
 
 .research-section {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     padding-top: 2rem;
 
     border-top: 1px solid var(--color-line-soft);
@@ -617,20 +635,6 @@ figcaption {
 }
 
 
-/* Primary failure point */
-
-.journey-step-label {
-    margin-bottom: .35rem;
-
-    color: var(--color-muted);
-
-    font-size: .75rem !important;
-    font-weight: 700;
-
-    text-transform: uppercase;
-    letter-spacing: .08em;
-}
-
 .journey-step--problem {
     padding-inline: 1.2rem;
 
@@ -661,9 +665,6 @@ figcaption {
     max-width: 760px;
 
     margin-top: 2.75rem;
-    padding: 2rem 0;
-
-    border-bottom: 1px solid var(--color-line-soft);
 }
 
 .research-stat {
@@ -697,7 +698,7 @@ figcaption {
 .research-finding-compact > p:last-child {
     max-width: 700px;
 
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     line-height: 1.6;
 }
 
@@ -708,7 +709,7 @@ figcaption {
 
 .failure-section {
     margin-bottom: 6rem;
-    padding-top: 3.75rem;
+    padding-top: 1.75rem;
 
     border-top: 1px solid var(--color-line-soft);
 }
@@ -732,7 +733,7 @@ figcaption {
 
     color: var(--color-muted);
 
-    font-size: .9rem;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.5;
 
@@ -787,7 +788,7 @@ figcaption {
 .failure-metric p {
     max-width: 220px;
 
-    font-size: .95rem;
+    font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.4;
 }
@@ -805,7 +806,7 @@ figcaption {
 }
 
 .failure-finding-copy p {
-    font-size: 1.08rem;
+    font-size: 1.25rem;
     line-height: 1.6;
 }
 
@@ -818,7 +819,255 @@ figcaption {
     background-color: rgba(0, 0, 0, .055);
 }
 
+/* ========================================
+   04 — DESIGNING A BETTER PATH
+======================================== */
 
+.solution-section {
+    width: min(var(--content-width), var(--content-fluid));
+
+    margin: 0 auto 6rem;
+}
+
+
+/* ========================================
+   PRIMARY RECOMMENDATION
+======================================== */
+
+.solution-intro {
+    max-width: 820px;
+
+    margin-bottom: 2.75rem;
+}
+
+.solution-kicker {
+    display: inline-block;
+
+    margin-bottom: .85rem;
+    padding: .4rem .7rem;
+
+    color: #000;
+    background-color: var(--color-research);
+
+    border-radius: 999px;
+
+    font-size: .8rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: .07em;
+}
+
+.solution-intro h2 {
+    max-width: 780px;
+
+    margin-bottom: 1rem;
+
+    font-size: clamp(2rem, 3.4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.12;
+}
+
+.solution-intro > p:last-child {
+    max-width: 700px;
+
+    font-size: 1.25rem;
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   RECOMMENDATION VISUAL
+======================================== */
+
+.solution-visual {
+    margin-bottom: 1rem;
+}
+
+.solution-visual img {
+    width: 100%;
+    height: auto;
+}
+
+.solution-visual figcaption {
+    margin-top: .75rem;
+
+
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   WHY THIS DIRECTION
+======================================== */
+
+
+.solution-rationale-label {
+    font-size: .9rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: .07em;
+}
+
+.solution-rationale > p:last-child {
+    max-width: 680px;
+
+    font-size: 1.1rem;
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   ALTERNATIVE DIRECTIONS
+======================================== */
+
+.solution-alternatives {
+    border-top: 1px solid var(--color-line-soft);
+}
+
+.solution-alternatives-heading {
+    padding: 1.5rem 0;
+}
+
+.solution-alternatives-heading h3 {
+    font-size: .9rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+.solution-alternative {
+    display: grid;
+    grid-template-columns: minmax(200px, .6fr) 1.4fr;
+
+    gap: clamp(2rem, 5vw, 5rem);
+
+    padding: 1.5rem 0;
+
+    border-top: 1px solid var(--color-line-soft);
+}
+
+.solution-alternative:last-child {
+    border-bottom: 1px solid var(--color-line-soft);
+}
+
+
+/* Alternative metadata */
+
+.solution-alternative-meta {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 1rem;
+}
+
+.solution-alternative-meta span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2.25rem;
+    height: 2.25rem;
+
+    flex: 0 0 auto;
+
+    color: #000;
+    background-color: var(--color-research);
+
+    border-radius: 50%;
+
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.solution-alternative-meta p {
+    padding-top: .35rem;
+
+    color: var(--color-muted);
+
+    font-size: .85rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+
+/* Alternative copy */
+
+.solution-alternative-copy {
+    max-width: 700px;
+}
+
+.solution-alternative-copy h4 {
+    margin-bottom: .55rem;
+
+    font-size: clamp(1.3rem, 2vw, 1.75rem);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.solution-alternative-copy p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   SECTION 04 — MOBILE
+======================================== */
+
+@media screen and (max-width: 780px) {
+
+    .solution-section {
+        width: auto;
+
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 4.5rem;
+
+        padding-top: 3.5rem;
+    }
+
+
+    .solution-intro h2 {
+        font-size: 2rem;
+    }
+
+    .solution-intro > p:last-child {
+        font-size: 1rem;
+    }
+
+
+    .solution-rationale {
+        grid-template-columns: 1fr;
+
+        gap: .75rem;
+
+        margin-bottom: 3rem;
+    }
+
+    .solution-rationale > p:last-child {
+        font-size: 1rem;
+    }
+
+
+    .solution-alternative {
+        grid-template-columns: 1fr;
+
+        gap: 1rem;
+
+        padding: 1.75rem 0;
+    }
+
+    .solution-alternative-copy p {
+        font-size: 1rem;
+    }
+
+}
 /* ========================================
    LIGHTBOX
 ======================================== */
@@ -1087,7 +1336,7 @@ body.lightbox-open {
     }
 
     .project-intro h1 {
-        font-size: clamp(2.5rem, 12vw, 3.5rem);
+        font-size: clamp(2.5rem, 12vw, 2.5rem);
     }
 
     .project-summary,
@@ -1263,3 +1512,56 @@ body.lightbox-open {
     }
 
 }
+
+/* ========================================
+   WCAG 2.2 AA — ACCESSIBILITY SUPPORT
+   No normal-state layout or font-size changes.
+======================================== */
+
+/* Screen-reader-only text used where the visual shorthand is ambiguous. */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Keyboard focus must remain visible against dark surfaces. */
+.site-nav a:focus-visible,
+.lightbox-close:focus-visible {
+    outline-color: #fff;
+}
+
+/* Prevent the intentionally unavailable next-case-study control from ever
+   becoming an invisible keyboard stop if later styles override .next. */
+.case-nav-next[hidden] {
+    display: none !important;
+}
+
+/* Keep focus indicators and important controls distinguishable in forced colors. */
+@media (forced-colors: active) {
+    a:focus-visible,
+    button:focus-visible,
+    [tabindex]:focus-visible {
+        outline: 3px solid Highlight;
+        outline-offset: 4px;
+    }
+
+    .site-nav .contact-link,
+    .previous,
+    .next,
+    .back-to-top,
+    .failure-score,
+    .research-stat,
+    .solution-kicker,
+    .journey-number,
+    .solution-alternative-meta span {
+        border: 1px solid ButtonText;
+    }
+}
+
