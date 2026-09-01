@@ -13,42 +13,68 @@
 
 <body>
 
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header class="site-header">
 
-        <a class="logo" href="index.html" aria-label="Angel Garcia home">
+        <a
+            class="logo"
+            href="index.html"
+            aria-label="Angel Garcia home"
+        >
             <img
                 id="logo"
                 src="images/angel logo.png"
-                alt="Angel Garcia"
+                alt=""
             >
         </a>
 
-        <nav class="site-nav" aria-label="Primary navigation">
+        <nav
+            class="site-nav"
+            aria-label="Primary navigation"
+        >
             <ul>
+
                 <li>
-                    <a href="index.html" aria-current="page">Home</a>
+                    <a
+                        href="index.html"
+                        aria-current="page"
+                    >
+                        Home
+                    </a>
                 </li>
 
                 <li>
-                    <a href="about.html">About</a>
+                    <a href="about.html">
+                        About
+                    </a>
                 </li>
 
                 <li>
-                    <a class="contact-link" href="contact.html">Contact</a>
+                    <a
+                        class="contact-link"
+                        href="contact.html"
+                    >
+                        Contact
+                    </a>
                 </li>
+
             </ul>
         </nav>
 
     </header>
 
 
-    <main>
+    <main id="main-content" tabindex="-1">
 
         <!-- ========================================
              HERO
         ======================================== -->
 
-        <section class="hero" aria-labelledby="hero-title">
+        <section
+            class="hero"
+            aria-labelledby="hero-title"
+        >
 
             <div class="hero-content">
 
@@ -69,7 +95,10 @@
                     to understand and use.
                 </p>
 
-                <a class="hero-cta" href="#work">
+                <a
+                    class="hero-cta"
+                    href="#work"
+                >
                     Explore My Work
                     <span aria-hidden="true">↓</span>
                 </a>
@@ -101,121 +130,235 @@
                 </h2>
 
                 <p>
-                    A selection of projects showing how I identify problems,
-                    make design decisions, and translate those decisions into
-                    clearer experiences.
+A selection of projects showing how I identify problems, make design decisions, and translate them into clearer experiences.
                 </p>
 
             </div>
 
-            <!-- Project layout comes next -->
-             <div class="projects-list">
 
-    <!-- ========================================
-         01 — COSRX
-    ======================================== -->
-
-    <article class="project-feature project-feature--flagship">
-
-        <div class="project-media">
-            <img
-                src="images/cosrxpreview.png"
-                alt="COSRX redesign case study preview"
-            >
-        </div>
-
-        <div class="project-copy">
-
-            <p class="project-meta">
-                01 / COSRX · FEATURED CASE STUDY
-            </p>
-
-            <h3>
-                Bringing the experience back to the brand's promise
-                of trust and transparency.
-            </h3>
-
-            <p class="project-summary">
-                A heuristic evaluation revealed usability issues that made
-                important information difficult to find and weakened the
-                clarity of the experience.
-            </p>
-
-            <p class="project-summary">
-                I redesigned key pages around clearer hierarchy, visibility,
-                and more confident decision-making.
-            </p>
-
-            <ul class="project-tags" aria-label="Methods and skills used">
-                <li>Heuristic Evaluation</li>
-                <li>UX Research</li>
-                <li>UI Design</li>
-            </ul>
-
-            <a class="project-link" href="study1pg2.html">
-                View Case Study
-                <span aria-hidden="true">→</span>
-            </a>
-
-        </div>
-
-    </article>
+            <div class="projects-list">
 
 
-    <!-- ========================================
-         02 — PORTFOLIO DEEP DIVE
-    ======================================== -->
+                <!-- ========================================
+                     01 — COSRX
+                ======================================== -->
 
-    <article class="project-feature project-feature--secondary">
+                <article
+                    class="project-feature project-feature--flagship"
+                    aria-labelledby="cosrx-project-title"
+                >
 
-        <div class="project-copy">
+                    <div class="project-media">
 
-            <p class="project-meta">
-                02 / PORTFOLIO DEEP DIVE
-            </p>
+                        <img
+                            src="images/cosrxpreview.png"
+                            alt="COSRX redesign case study preview"
+                        >
 
-            <h3>
-                Redesigning my portfolio to reveal the thinking behind my work.
-            </h3>
-
-            <p class="project-summary">
-                An evaluation of my original portfolio revealed that while
-                the work was visible, the reasoning behind it wasn't.
-            </p>
-
-            <p class="project-summary">
-                I rebuilt the experience around clearer positioning,
-                deeper project storytelling, and easier exploration.
-            </p>
-
-            <ul class="project-tags" aria-label="Methods and skills used">
-                <li>UX Strategy</li>
-                <li>Information Architecture</li>
-                <li>UI Design</li>
-            </ul>
-
-            <a class="project-link" href="study1pg3.html">
-                View Case Study
-                <span aria-hidden="true">→</span>
-            </a>
-
-        </div>
+                    </div>
 
 
-        <div class="project-media">
-            <img
-                src="images/porfoliopreview.png"
-                alt="Portfolio redesign deep dive preview"
-            >
-        </div>
+                    <div class="project-copy">
 
-    </article>
+                        <p class="project-meta">
+                            01 / COSRX · Featured Case Study
+                        </p>
 
-</div>
+                        <h3 id="cosrx-project-title">
+                            Bringing the experience back to the brand's promise
+                            of trust and transparency.
+                        </h3>
+
+                        <p class="project-summary">
+                            A heuristic evaluation revealed usability issues that made
+                            important information difficult to find and weakened the
+                            clarity of the experience.
+                        </p>
+
+                        <p class="project-summary">
+I redesigned key pages around clearer hierarchy, greater visibility, and more confident decision-making.
+                        </p>
+
+                        <ul
+                            class="project-tags"
+                            aria-label="COSRX methods and skills used"
+                        >
+                            <li>Heuristic Evaluation</li>
+                            <li>UX Research</li>
+                            <li>UI Design</li>
+                        </ul>
+
+                        <a
+                            class="project-link"
+                            href="study1pg2.html"
+                            aria-label="View Case Study: COSRX"
+                        >
+                            View Case Study
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ========================================
+                     02 — PORTFOLIO DEEP DIVE
+                ======================================== -->
+
+                <article
+                    class="project-feature project-feature--secondary"
+                    aria-labelledby="portfolio-project-title"
+                >
+
+                    <div class="project-copy">
+
+                        <p class="project-meta">
+                            02 / Portfolio Deep Dive
+                        </p>
+
+                        <h3 id="portfolio-project-title">
+                            Redesigning my portfolio to reveal the thinking behind my work.
+                        </h3>
+
+                        <p class="project-summary">
+                            An evaluation of my original portfolio revealed that while
+                            the work was visible, the reasoning behind it wasn't.
+                        </p>
+
+                        <p class="project-summary">
+                            I rebuilt the experience around clearer positioning,
+                            deeper project storytelling, and easier exploration.
+                        </p>
+
+                        <ul
+                            class="project-tags"
+                            aria-label="Portfolio Deep Dive methods and skills used"
+                        >
+                            <li>UX Strategy</li>
+                            <li>Information Architecture</li>
+                            <li>UI Design</li>
+                        </ul>
+
+                        <a
+                            class="project-link"
+                            href="study1pg3.html"
+                            aria-label="View Case Study: Portfolio Deep Dive"
+                        >
+                            View Case Study
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                    </div>
+
+
+                    <div class="project-media">
+
+                        <img
+                            src="images/porfoliopreview.png"
+                            alt="Portfolio redesign deep dive preview"
+                        >
+
+                    </div>
+
+                </article>
+
+
+                <!-- ========================================
+                     03 — MOVIE THEATER WAYFINDING
+                ======================================== -->
+
+                <article
+                    class="supporting-project"
+                    aria-labelledby="theater-project-title"
+                >
+
+                    <a
+                        class="supporting-project-visual"
+                        href="study2pg1.html"
+                        aria-label="View Movie Theater Wayfinding case study"
+                    >
+                        <img
+                            src="images/wayfindingunmarked.png"
+                            alt="Movie theater concession area used in the wayfinding study"
+                        >
+                    </a>
+
+
+                    <div class="supporting-project-content">
+
+                        <div class="supporting-project-meta">
+                            <span>03</span>
+                            <span>Physical Experience Usability Study</span>
+                        </div>
+
+                        <h3 id="theater-project-title">
+                            Movie Theater Wayfinding
+                        </h3>
+
+                        <p class="supporting-project-description">
+                            Evaluating how environmental cues and directional signage
+                            shaped the mobile-order pickup experience.
+                        </p>
+
+                        <p class="supporting-project-methods">
+                            Observational Research · Heuristic Evaluation · Physical UX
+                        </p>
+
+                        <a
+                            class="supporting-project-link"
+                            href="study2pg1.html"
+                            aria-label="View Case Study: Movie Theater Wayfinding"
+                        >
+                            View Case Study
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
 
         </section>
 
     </main>
+
+    <footer class="site-footer" aria-labelledby="footer-title">
+
+    <div class="footer-inner">
+
+        <div class="footer-cta">
+
+            <p class="footer-eyebrow">
+                Let's Connect
+            </p>
+
+            <h2 id="footer-title">
+                Interested in working together?
+            </h2>
+
+            <p class="footer-description">
+                I'm currently exploring junior UX design opportunities
+                and collaborations.
+            </p>
+
+            <a class="footer-cta-link" href="contact.html">
+                Get in Touch
+                <span aria-hidden="true">→</span>
+            </a>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 Angel Garcia
+            </p>
+        </div>
+
+    </div>
+
+</footer>
 
 </body>
 
