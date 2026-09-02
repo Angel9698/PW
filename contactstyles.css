@@ -1,60 +1,115 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* ========================================
+   RESET
+======================================== */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-    min-height: 100dvh;
-	line-height: 1.5;
-    background-color: rgba(104, 200, 220, .5);
-    background-blend-mode: lighten;
-    background-image: url(images/aboutBG.avif);
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-position: center; 
-    background-blend-mode: multiply;
-}
-ol, ul {
-	list-style: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+p,
+a,
+img,
+ul,
+li,
+form,
+label,
+input,
+textarea,
+button,
+header,
+nav,
+main,
+section,
+footer {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* ========================================
+   BASE
+======================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+        display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    background-color: beige;
+    color: #000;
+
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   SKIP LINK
+======================================== */
+
+.skip-link {
+    position: fixed;
+    top: .75rem;
+    left: .75rem;
+
+    z-index: 10000;
+
+    padding: .75rem 1rem;
+
+    background-color: #fff;
+    color: #000;
+
+    border: 3px solid #000;
+    border-radius: .25rem;
+
+    font-weight: 700;
+    text-decoration: none;
+
+    transform: translateY(-200%);
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+    transform: translateY(0);
+
+    outline: 3px solid #000;
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
 .site-header {
     position: absolute;
     top: 0;
     left: 0;
+
     z-index: 100;
 
     display: flex;
@@ -68,33 +123,33 @@ table {
     background-image:
         linear-gradient(
             to bottom,
-            rgba(0, 0, 0, .88) 0%,
-            rgba(0, 0, 0, .68) 55%,
-            rgba(0, 0, 0, 0) 200%
+            rgba(0, 0, 0, 0.94),
+            rgba(0, 0, 0, 0.68)
         );
 }
+
+
 /* Logo */
 
 .logo {
     display: block;
 
-    background: transparent;
     padding: 0;
-}
 
-.logo:hover {
     background: transparent;
 }
 
 #logo {
-    display: block;
     width: 190px;
 }
+
+
 /* Navigation */
 
 .site-nav ul {
     display: flex;
     align-items: center;
+
     gap: 2.75rem;
 }
 
@@ -111,6 +166,7 @@ table {
     font-weight: 600;
 
     text-decoration: none;
+
     border-bottom: 2px solid transparent;
 
     transition:
@@ -123,14 +179,8 @@ table {
     border-color: lightpink;
 }
 
-.site-nav a[aria-current="page"] {
-color: black;
-    outline: 4px solid lightpink;
-    outline-offset: 4px;
-}
 
-
-/* Primary navigation action */
+/* Contact button */
 
 .site-nav .contact-link {
     padding: .65rem 1.35rem;
@@ -147,175 +197,487 @@ color: black;
 }
 
 
+/* Current page */
+
+.site-nav .contact-link[aria-current="page"] {
+    background-color: lightpink;
+    color: #000;
+
+    box-shadow:
+        inset 0 0 0 7px palevioletred;
+}
+
+
 /* Keyboard focus */
 
 .site-nav a:focus-visible,
 .logo:focus-visible {
-    outline: 3px solid lightpink;
+    outline: 3px solid #fff;
     outline-offset: 4px;
 }
-iframe {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 900px;
+
+.site-nav .contact-link:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 4px;
 }
-h1 {
-    font-size: 3em;
-    text-align: center;
-    margin-top: 2.7em;
-    padding: 0 .5em;
-}
-/* 1. Center the form on the page and set a maximum width */
-form {
-  max-width: 450px;
-  margin: 2em auto;
-  padding: 30px;
-  border-radius: 12px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  font-family: system-ui, -apple-system, sans-serif;
+ main {
+    flex: 1;
 }
 
-/* 2. Style the spacing and layout of form rows */
-form div {
-  margin-bottom: 20px;
+/* ========================================
+   CONTACT
+======================================== */
+
+.contact-section {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: calc(100svh - 80px);
+
+    overflow: hidden;
+
+    padding:
+        17rem
+        max(6vw, 2rem)
+        8rem;
 }
 
-/* 3. Style the labels to sit cleanly above the fields */
-label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #333333;
-  font-size: 20px;
-}
 
-/* 4. Style both inputs and textareas together */
-input[type="email"],
-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #cccccc;
-  border-radius: 6px;
-  font-size: 16px;
-  box-sizing: border-box; /* Prevents padding from breaking width */
-  transition: border-color 0.2s, box-shadow 0.2s;
-  margin-top: 10px;
-  background-color: aliceblue;
-}
+/* Floral accent — lower left */
 
-/* 5. Highlight fields when the user clicks into them */
-input[type="email"]:focus,
-textarea :focus {
-  outline: none;
-  border-color: #0066cc;
-  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.15);
-}
+.contact-section::after {
+    content: "";
 
-/* 6. Make the submission button look modern and interactive */
-button[type="submit"] {
-  width: 100%;
-  padding: 12px;
-  background-color: #0066cc;
-  color: #ffffff;
-  border: none;
-  border-radius: 6px;
-  font-size: 17px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-/* 7. Change button color slightly when hovered */
-button[type="submit"]:hover {
-  background-color: #0052a3;
-}
-.contactBG1 {
-    position: absolute;
-    top: -6%;
-    right: 62%;
-    z-index: -1;
-    opacity: .2;
-    min-width: 500px;
-}
-.active a {
-    background-color: gray;
-}
-footer {
     position: absolute;
     bottom: 0;
+    left: 0;
+
     width: 100%;
+    height: 27rem;
+
+    background-image: url(images/aboutBG.avif);
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    opacity: .1;
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   CONTACT LAYOUT
+======================================== */
+
+.contact-inner {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, .9fr)
+        minmax(360px, 1.1fr);
+
+    gap: clamp(5rem, 10vw, 9rem);
+
+    align-items: start;
+
+    width: min(1200px, 100%);
+    margin-inline: auto;
+}
+
+
+/* ========================================
+   CONTACT COPY
+======================================== */
+
+.contact-copy {
+    max-width: 560px;
+}
+
+.section-eyebrow {
+    margin-bottom: 1rem;
+
+    font-size: .8rem;
+    font-weight: 700;
+
+    letter-spacing: .13em;
+    text-transform: uppercase;
+}
+
+.contact-copy h1 {
+    max-width: 600px;
+
+    font-size: clamp(3.5rem, 6vw, 6rem);
+    font-weight: 600;
+    line-height: .98;
+
+    letter-spacing: -.03em;
+}
+
+.contact-description {
+    max-width: 500px;
+
+    margin-top: 2rem;
+
+    font-size: 1.25rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   FORM
+======================================== */
+
+.contact-form {
+    width: 95%;
+    max-width: 620px;
+
+    padding:
+        2.5rem
+        0;
+
+    border-top: 1px solid rgba(0, 0, 0, .28);
+    border-bottom: 1px solid rgba(0, 0, 0, .28);
+}
+
+
+/* Fields */
+
+.form-field + .form-field {
+    margin-top: 2rem;
+}
+
+.form-field label {
+    display: block;
+
+    margin-bottom: .7rem;
+
+    font-size: .9rem;
+    font-weight: 700;
+
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.form-field input,
+.form-field textarea {
+    display: block;
+
+    width: 100%;
+
+    padding: 1rem;
+
+    background-color: rgba(255, 255, 255, .45);
+    color: #000;
+
+    border: 1px solid rgba(0, 0, 0, .38);
+    border-radius: 0;
+
+    font-size: 1rem;
+    line-height: 1.5;
+
+    transition:
+        border-color 160ms ease,
+        box-shadow 160ms ease,
+        background-color 160ms ease;
+}
+
+.form-field textarea {
+    resize: vertical;
+
+    min-height: 180px;
+}
+
+
+/* Hover */
+
+.form-field input:hover,
+.form-field textarea:hover {
+    border-color: rgba(0, 0, 0, .65);
+}
+
+
+/* Focus */
+
+.form-field input:focus-visible,
+.form-field textarea:focus-visible {
+    outline: 3px solid #000;
+    outline-offset: 3px;
+
+    border-color: #000;
+
+    background-color: #fff;
+}
+
+
+/* ========================================
+   SUBMIT BUTTON
+======================================== */
+
+.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+
+    gap: .75rem;
+
+    min-height: 48px;
+
+    margin: 1.75rem auto 0;
+    padding: .85rem 1.4rem;
+
+    background-color: lightpink;
+    color: #000;
+
+    border: 0;
+    border-radius: .45rem;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 160ms ease,
+        transform 160ms ease;
+}
+
+.submit-button span {
+    transition: transform 160ms ease;
+}
+
+.submit-button:hover {
+    background-color: palevioletred;
+}
+
+.submit-button:hover span {
+    transform: translateX(.3rem);
+}
+
+.submit-button:focus-visible {
+    outline: 3px solid #000;
+    outline-offset: 4px;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.site-footer {
+    padding:
+        1.6rem
+        max(6vw, 2rem);
+
     background-color: cornflowerblue;
-    opacity: .96;
-    padding: 1em 0;
+    color: #000;
 }
-footer p {
-    width: 200px;
-    min-width: 0;
+
+.footer-inner {
+    width: min(1200px, 100%);
+    margin-inline: auto;
+}
+
+.footer-bottom p {
     text-align: center;
-    font-size: 24px;
-    margin-right: auto;
-    margin-left: auto;
+
+    font-size: 1.125rem;
 }
-@media screen and (max-width: 1090px) {
-    .logo {
-        visibility: hidden;
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media screen and (max-width: 900px) {
+
+    .contact-section {
+        align-items: flex-start;
     }
-    h1 {
-        font-size: 2.5em;
-        margin-top: 128px;
+
+    .contact-inner {
+        grid-template-columns: 1fr;
+
+        gap: 4rem;
     }
+
+    .contact-copy,
+    .contact-form {
+        max-width: 700px;
+    }
+
 }
-@media screen and (max-height: 1050px) {
-    h1 {
-        margin-top: 96px;
-    }
-    body {
-        background-position: top;
-    }
-}
-@media screen and (max-height: 700px) {
-    footer {
-        position: unset;
-    }
-}
-@media screen and (max-width: 860px) {
-    h1 {
-        margin-top: 80px;
-        font-size: 24px;
-        width: 200px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    header a {
-        font-size: 17px;
-    }
-    nav ul {
-        display: flex;
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media screen and (max-width: 780px) {
+
+    .site-header {
+        padding: 1rem 1.25rem;
+
         justify-content: center;
-        right: 0;
     }
-    ul {
-        grid-gap: 1em;
+
+    .logo {
+        display: none;
     }
-    form {
-        margin-top: 1.4em;
+
+    .site-nav ul {
+        gap: 1.25rem;
     }
-    label {
-        font-size: 15px;
+
+    .site-nav a {
+        font-size: 1rem;
     }
+
+    .site-nav .contact-link {
+        padding: .55rem 1rem;
+    }
+
+
+    /* Contact */
+
+    .contact-section {
+        min-height: auto;
+
+        padding:
+            8rem
+            1.25rem
+            5rem;
+    }
+
+    .contact-inner {
+        gap: 3.5rem;
+    }
+
+    .contact-copy h1 {
+        font-size: clamp(3rem, 14vw, 4.5rem);
+    }
+
+    .contact-description {
+        font-size: 1rem;
+    }
+
+
+    /* Form */
+
+    .contact-form {
+        padding:
+            2rem
+            0;
+    }
+
+    .form-field + .form-field {
+        margin-top: 1.75rem;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+
+
+    /* Footer */
+
+    .site-footer {
+        padding:
+            1.5rem
+            1.25rem;
+    }
+
 }
-@media screen and (max-width: 600px) {
-    header a {
-        font-size: 14px;
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media screen and (max-width: 420px) {
+
+    .site-nav ul {
+        gap: .8rem;
     }
+
+    .site-nav a {
+        font-size: .875rem;
+    }
+
+    .site-nav .contact-link {
+        padding: .5rem .8rem;
+    }
+
 }
-@media screen and (max-width: 430px) {
-    header a {
-        font-size: 9px;
+
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
     }
-    body {
-        background-size: unset;
+
+    .site-nav a,
+    .form-field input,
+    .form-field textarea,
+    .submit-button,
+    .submit-button span {
+        transition: none;
     }
+
+    .submit-button:hover,
+    .submit-button:hover span {
+        transform: none;
+    }
+
+}
+
+
+/* ========================================
+   WINDOWS HIGH CONTRAST / FORCED COLORS
+======================================== */
+
+@media (forced-colors: active) {
+
+    .skip-link,
+    .site-nav a:focus-visible,
+    .logo:focus-visible,
+    .site-nav .contact-link:focus-visible,
+    .form-field input:focus-visible,
+    .form-field textarea:focus-visible,
+    .submit-button:focus-visible {
+        outline:
+            3px
+            solid
+            Highlight;
+    }
+
+    .site-nav .contact-link,
+    .submit-button {
+        border:
+            1px
+            solid
+            ButtonText;
+    }
+
+    .site-nav .contact-link[aria-current="page"] {
+        box-shadow:
+            inset
+            0
+            0
+            0
+            3px
+            Highlight;
+    }
+
 }

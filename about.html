@@ -1,46 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angel Garcia | Portfolio</title>
+
+    <title>About | Angel Garcia</title>
+
     <link rel="stylesheet" href="aboutstyles.css">
     <link rel="shortcut icon" href="images/favicon.ico">
-  </head>
-  <body>
-    <header class="site-header">
+</head>
 
-    <a class="logo" href="index.html" aria-label="Angel Garcia home">
-        <img
-            id="logo"
-            src="images/angel logo.png"
-            alt="Angel Garcia"
-        >
+<body>
+
+    <a class="skip-link" href="#main-content">
+        Skip to main content
     </a>
 
-    <nav class="site-nav" aria-label="Primary navigation">
-        <ul>
-            <li>
-                <a href="index.html">Home</a>
-            </li>
+    <!-- ========================================
+         HEADER
+    ======================================== -->
 
-            <li>
-                <a href="about.html" aria-current="page">About</a>
-            </li>
+    <header class="site-header">
 
-            <li>
-                <a class="contact-link" href="contact.html">Contact</a>
-            </li>
-        </ul>
-    </nav>
+        <a
+            class="logo"
+            href="index.html"
+            aria-label="Angel Garcia home"
+        >
+            <img
+                id="logo"
+                src="images/angel logo.png"
+                alt=""
+            >
+        </a>
 
-</header>
-    <div>
-      <h1>About Me!</h1>
-      <p>To be honest, UX design wasn’t even my first choice for a career. I wanted to be a chemical engineer before, which is something vastly different, but as I was taking my courses I suddenly realized that I don’t really like chemistry. <br> <br> Having realized that I wouldn’t be happy going down this path, I had to find another path to transition towards. Long story short, I eventually decided on UX design, reason being, I am a person who heavily values positive and clean user experience. So being able to create and design  a well-crafted and positive user experience fills me with a sense of fulfilment, which is something I didn’t realize at the time when I was looking for a new door to open. <br> <br> I even have a personal wordmark that I created using my first name (it’s the one in the top left), and I am very happy with how it turned out because I think it perfectly encompasses the values I feel are important to me.</p>
-    </div>
-      <footer>
-    <p>&copy; 2025</p>
-  </footer>
-  </body>
+        <nav
+            class="site-nav"
+            aria-label="Primary navigation"
+        >
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="about.html"
+                        aria-current="page"
+                    >
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        class="contact-link"
+                        href="contact.html"
+                    >
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- ========================================
+         MAIN
+    ======================================== -->
+
+    <main id="main-content" tabindex="-1">
+
+        <!-- ========================================
+             INTRO
+        ======================================== -->
+
+        <section
+            class="about-hero"
+            aria-labelledby="about-title"
+        >
+
+            <div class="about-hero-inner">
+
+                <div class="about-heading">
+
+                    <p class="section-eyebrow">
+                        About
+                    </p>
+
+                    <h1 id="about-title">
+                        I found UX by realizing
+                        <span>what kind of problems I wanted to solve.</span>
+                    </h1>
+
+                </div>
+
+                <div class="about-intro">
+
+                    <p>
+                        UX design wasn't the career path I originally expected to follow. I began college pursuing chemical engineering, but over time I realized I was more interested in solving problems around how people understand and interact with products, systems, and everyday experiences.
+                    </p>
+
+                    <p>
+                        That shift eventually led me to UX design—a field where research, problem-solving, and visual communication come together in a way that feels both analytical and creative.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================================
+             WHY UX
+        ======================================== -->
+
+        <section
+            class="about-values"
+            aria-labelledby="values-title"
+        >
+
+            <div class="about-values-inner">
+
+                <div class="values-heading">
+
+                    <p class="section-eyebrow">
+                        Why UX
+                    </p>
+
+                    <h2 id="values-title">
+                        Clarity is what keeps me interested in design.
+                    </h2>
+
+                </div>
+
+                <div class="values-copy">
+
+                    <p>
+                        I value experiences that feel intentional, understandable,
+                        and considerate of the person using them. What I enjoy most
+                        is identifying where an experience creates unnecessary
+                        friction and finding a way to make that interaction feel
+                        simpler without stripping away what makes it meaningful.
+                    </p>
+
+                    <p>
+                        That mindset is what I try to bring into my work: understand the problem first, make deliberate decisions, and let each design choice serve a clear purpose.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================================
+             PERSONAL IDENTITY
+        ======================================== -->
+
+        <section
+            class="identity-section"
+            aria-labelledby="identity-title"
+        >
+
+            <div class="identity-inner">
+
+                <div class="identity-copy">
+
+                    <p class="section-eyebrow">
+                        Personal Identity
+                    </p>
+
+                    <h2 id="identity-title">
+                        A personal identity shaped by intention.
+                    </h2>
+
+                    <p>
+                        I created the Angel wordmark from my first name as a small personal design project. The colors shift across the mark to represent a transition from negative to positive, while the facial details come together to form a subtle happy expression. For me, it reflects the balance I value in design: personality with intention.
+                    </p>
+
+                </div>
+
+                <div class="identity-mark">
+                    <img
+                        src="images/angel logo.png"
+                        alt="Angel wordmark with a left-to-right color shift and subtle facial details"
+                    >
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+
+    <footer
+        class="site-footer"
+        aria-labelledby="footer-title"
+    >
+
+        <div class="footer-inner">
+
+            <div class="footer-cta">
+
+                <p class="footer-eyebrow">
+                    Let's Connect
+                </p>
+
+                <h2 id="footer-title">
+                    Interested in working together?
+                </h2>
+
+                <p class="footer-description">
+                    I'm currently exploring junior UX design opportunities
+                    and collaborations.
+                </p>
+
+                <a
+                    class="footer-cta-link"
+                    href="contact.html"
+                >
+                    Get in Touch
+                    <span aria-hidden="true">→</span>
+                </a>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Angel Garcia
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
 </html>

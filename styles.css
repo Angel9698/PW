@@ -410,6 +410,7 @@ body {
 .work-heading {
     width: min(1100px, 100%);
     margin-inline: auto;
+    padding: 2rem 0;
 }
 
 .section-eyebrow {
@@ -591,6 +592,7 @@ body {
     grid-template-columns:
         minmax(320px, .75fr)
         minmax(0, 1.1fr);
+        padding-bottom: 0;
 }
 
 
@@ -604,8 +606,8 @@ body {
        main projects while preserving its
        supporting-project hierarchy.
     */
-    margin: 6.5rem 0 7rem;
-    padding-top: 2.5rem;
+    margin: 6.5rem 0 3rem;
+    padding-top: 5.5rem;
 
     display: grid;
 

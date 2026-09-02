@@ -1,58 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angel Garcia | Portfolio</title>
+
+    <title>Contact | Angel Garcia</title>
+
     <link rel="stylesheet" href="contactstyles.css">
     <link rel="shortcut icon" href="images/favicon.ico">
-  </head>
-  <body>
-    <header class="site-header">
+</head>
 
-    <a class="logo" href="index.html" aria-label="Angel Garcia home">
-        <img
-            id="logo"
-            src="images/angel logo.png"
-            alt="Angel Garcia"
-        >
+<body>
+
+    <a class="skip-link" href="#main-content">
+        Skip to main content
     </a>
 
-    <nav class="site-nav" aria-label="Primary navigation">
-        <ul>
-            <li>
-                <a href="index.html">Home</a>
-            </li>
 
-            <li>
-                <a href="about.html">About</a>
-            </li>
+    <!-- ========================================
+         HEADER
+    ======================================== -->
 
-            <li>
-                <a class="contact-link" href="contact.html" aria-current="page">Contact</a>
-            </li>
-        </ul>
-    </nav>
+    <header class="site-header">
 
-</header>
-    <div>
-      <h1>Enough About Me, Tell Me About You!!</h1>
-    </div>
-      <form action="https://formspree.io" method="POST">
-        <div>
-          <label>Your email:
-            <input type="email" name="email" required>
-          </label>
+        <a
+            class="logo"
+            href="index.html"
+            aria-label="Angel Garcia home"
+        >
+            <img
+                id="logo"
+                src="images/angel logo.png"
+                alt=""
+            >
+        </a>
+
+        <nav
+            class="site-nav"
+            aria-label="Primary navigation"
+        >
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        class="contact-link"
+                        href="contact.html"
+                        aria-current="page"
+                    >
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- ========================================
+         MAIN
+    ======================================== -->
+
+    <main
+        id="main-content"
+        tabindex="-1"
+    >
+
+        <section
+            class="contact-section"
+            aria-labelledby="contact-title"
+        >
+
+            <div class="contact-inner">
+
+
+                <!-- ========================================
+                     INTRO
+                ======================================== -->
+
+                <div class="contact-copy">
+
+                    <p class="section-eyebrow">
+                        Contact
+                    </p>
+
+                    <h1 id="contact-title">
+                        Let's work together.
+                    </h1>
+
+                    <p
+                        class="contact-description"
+                        id="contact-description"
+                    >
+                        Have a role, project, or opportunity in mind?
+                        Send me a message and I'll get back to you.
+                    </p>
+
+                </div>
+
+
+                <!-- ========================================
+                     FORM
+                ======================================== -->
+
+                <form
+                    class="contact-form"
+                    action="https://formspree.io/f/mpqvalww"
+                    method="POST"
+                    aria-label="Contact form"
+                    aria-describedby="contact-description"
+                >
+
+                    <div class="form-field">
+
+                        <label for="name">
+                            Name
+                        </label>
+
+                        <input
+                            id="name"
+                            name="name"
+                            type="text"
+                            autocomplete="name"
+                            required
+                            aria-required="true"
+                        >
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            autocomplete="email"
+                            required
+                            aria-required="true"
+                        >
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="7"
+                            required
+                            aria-required="true"
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        class="submit-button"
+                        type="submit"
+                    >
+                        Send Message
+                        <span aria-hidden="true">→</span>
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-inner">
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Angel Garcia
+                </p>
+
+            </div>
+
         </div>
-        <div>
-          <label>Your message:
-            <textarea name="message" rows="4" required></textarea>
-          </label>
-        </div>
-        <button type="submit">Send</button>
-      </form>
-  </body>
-  <footer>
-    <p>&copy; 2025</p>
-  </footer>
+
+    </footer>
+
+</body>
+
 </html>
